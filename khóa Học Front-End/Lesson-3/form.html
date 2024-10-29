@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- action xác định hành động sẽ được thực hiện khi biểu mẫu được gửi và giá trị là một đường dẫn -->
+    <!-- method: thuộc tính chỉ định giao thức HTTP sẽ được sử dụng khi gửi biểu mẫu. 
+        có hai phương thức GET và POST 
+        GET: 1. Nối dữ liệu vào URL, theo cặp name/value 
+            2.KHÔNG BAO GIỜ SỬ DỤNG GET để gửi dữ liệu bảo mật. như tài khoản mật khẩu. 
+            3.Độ dài của URL bị giới hạn (2048 kí tự)
+        POST: 1. Dữ liệu biểu mẫu đã gửi không được hiển thị trong URL
+            2. POST không có giới hạn về kích thước và có thể được sử dụng để gửi một lượng lớn dữ liệu -->
+    <form action="https://www.w3schools.com/action_page.php" target="_blank" method="get" novalidate>
+        <!-- autocomplete: là tính năng tự động điền, trình duyệt tự động gợi ý các giá trị mà người dùng đã nhập trước đó -->
+        <!-- novalidate: thuộc tính này đặc tả dữ liệu form không cần kiểm tra tính xác thực khi gửi đi. -->
+        <!-- ví dụ như email không cần nhập đúng vẫn gửi được -->
+        <!-- thẻ lable: xác định nhãn cho một element trong biểu mẫu -->
+        <!-- thuộc tính for của label phải bằng thuộc tính id của input để liên kết chúng lại với nhau,
+         khi click vào label thì sẽ focus vào ô input đó -->
+        <label for="fullname">Họ tên:</label>
+        <input id="fullname" name="ho_ten" type="text" autocomplete="off" placeholder="Nhập họ tên của bạn">
+        <input type="submit" value="gửi">
+        <br><br>
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="my_email" placeholder="nhập email của bạn ở đây">
+        <input type="submit" value="gửi">
+        <br><br>
+        <label for="">Color:</label>
+        <!-- phương thức multiple cho phép chọn nhiều option -->
+        <select name="color" multiple>
+            <option value="đỏ">Red</option>
+            <option value="xanh blue" selected>Blue</option>
+            <option value="xanh lá cây">Green</option>
+        </select>
+        <input type="submit" value="Gửi">
+        <br><br>
+        <!-- thẻ textarea: xác định trường nhập nhiều dòng
+       method row:chỉ định số dòng hiển thị trong mỗi văn bản 
+       method col: chỉ định chiểu rộng trong mỗi văn bản -->
+        <label for="Lyric">Lyric</label>
+        <textarea name="Note" id="Lyric" rows="5"></textarea>
+        <!-- <input type="submit" value="Gửi"> -->
+        <!-- thẻ button: là một nút có thể nhấp -->
+         <button>Gửi</button>
+         <br><br>
+         <!-- các kiểu của thẻ input:  -->
+         <!-- 1. <input type="text">: dùng để nhập text -->
+          <label for="">text:</label>
+          <input type="text">
+          <input type="submit" value="gửi">
+          <br><br>
+         <!-- 2. <input type="email">: dùng để nhập email -->
+          <label for="">Email:</label>
+          <input type="email">
+          <input type="submit" value="gửi">
+          <br><br>
+         <!-- 3. <input type="password">: dùng để nhập mật khẩu -->
+          <label for="">password:</label>
+          <input type="password">
+          <input type="submit" value="gửi">
+          <br><br>
+         <!-- 4. <input type="number">: dùng để nhập số, không nhập được chữ -->
+          <label for="">number:</label>
+          <input type="number">
+          <input type="submit" value="gửi">
+          <br><br>
+         <!-- 5. <input type="date">: dùng để chọn tháng ngày năm -->
+          <label for="">date:</label>
+          <input type="date"> 
+          <input type="submit" value="gửi">
+          <br><br>
+         <!-- 6. <input type="time">: dùng để chọn giờ phút giây -->
+          <label for="">time:</label>
+          <input type="time">
+          <input type="submit" value="gửi">
+          <br><br>
+         <!-- 7. <input type="datetime-local">: dùng để chọn năm tháng ngày giờ phút giây -->
+          <label for="">datetime:</label>
+          <input type="datetime">
+          <input type="submit" value="gửi">
+          <br><br>
+         <!-- 8. <input type="file">: dùng để tải file lên  -->
+          <label for="">file</label>
+          <input type="file">
+          <input type="submit" value="gửi">
+          <br><br>
+         <!-- 9. <input type="checkbox">: các hộp kiểm cho phép người dùng chọn KHÔNG hoặc NHIỀU tùy chọn trong số các lựa chọn -->
+          <p> những ngôn ngữ lập trình đã học</p>
+          <label for="java">Java:</label>
+          <input type="checkbox" name="ngonngu" id="java" value="java">
+          <br>
+          <label for="C">C</label>
+          <input type="checkbox" name="ngonngu" id="C" value="C">
+          <br>
+          <label for="C++">C++</label>
+          <input type="checkbox" name="ngonngu" id="C++" value="C++">
+          <br>
+          <label for="python">Python</label>
+          <input type="checkbox" name="ngonngu" id="python" value="python">
+          <input type="submit" value="gửi">
+          <br><br>
+          <!-- 10. <input type="radio"> các nút radio cho phép người dùng chỉ chọn một trong số các lựa chọn -->
+          <p> Ngôn ngữ bạn thích nhất</p>
+          <label for="java">Java:</label>
+          <input type="radio" name="ngonngu" id="java" value="java">
+          <br>
+          <label for="C">C</label>
+          <input type="radio" name="ngonngu" id="C" value="C">
+          <br>
+          <label for="C++">C++</label>
+          <input type="radio" name="ngonngu" id="C++" value="C++">
+          <br>
+          <label for="python">Python</label>
+          <input type="radio" name="ngonngu" id="python" value="python">
+          <input type="submit" value="gửi">
+          <br><br>
+          <!-- 11. <input type="range"> tạo thanh trượt giá trị, phạm vi mặc định từ 0 tới 100, step mặc định là 1 -->
+           <label for="">range</label>
+          0 <input type="range" type="50" step="2">100
+          <input type="submit" value="gửi">
+          <br><br>
+          <!-- 12.<input type="color"> chọn màu sắc -->
+           <label for="">color</label>
+           <input type="color">
+           <input type="submit" value="gửi">
+           <br><br>
+           <!-- II. các thuộc tính của thẻ input 
+           1. value: thuộc tính value chỉ định giá trị ban đầu cho trường đầu vào. -->
+           <label for="">Value</label>
+           <input type="text" name="Fullname" value="Nguyen Van A"> <input type="submit" value=" Gửi">
+           <br><br>
+           <!-- 2.readonly: thuộc tính readonly xác định trường đầu vào chỉ đọc, giá trị của readonly sẽ được gửi khi gửi biểu mẫu.  -->
+            <label for="">readonly</label>
+            <input type="text" name="cccd" value="1234567890" readonly>
+            <br><br>
+           <!-- 3.disabled: thộc tính chỉ định rằng một trường đầu vào sẽ bị vô hiệu hóa.  -->
+            <label for="">disabled</label>
+            <input type="email" name="email" value="minhmeo2k413@gmail.com" disabled>
+            <br><br>
+           <!-- 4.maxlengh: thuộc tính chỉ định số lượng ký tự tối đa được phép trong một trường đầu vào.  -->
+            <label for="">maxlengh</label>
+            <input type="text" name="fullname" maxlength="10">
+            <br><br>
+           <!-- 5.min và max: chỉ định các giá trị tối thiểu và tối đa cho một trường đầu vào. -->
+            <label for="">min and max</label>
+            <input type="number" name="number" min="1" max="10">
+            <br><br>
+            <!-- 6. placeholder: chỉ định một gợi ý ngắn để mô tả dự kiến của trường đầu vào -->
+             <label for="">placeholder</label>
+             <input type="text" placeholder="Nhập họ và tên">
+             <input type="submit" value="gửi">
+             <br><br>
+             <!-- 7. required: xác định trường đầu vào phải được điền trước khi gửi biểu mẫu -->
+              <label for="">required</label>
+              <input type="text" placeholder="Nhập mã sinh viên" required>
+              <input type="submit" value="gửi">
+    </form>
+</body>
+
+</html>

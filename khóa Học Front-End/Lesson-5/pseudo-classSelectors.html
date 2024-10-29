@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<!-- =================================================PSEUDO-CLASS SELECTORS(Bộ chọn lớp giả)======================================================-->
+<!-- 
+:link: khi liên kết chưa được truy cập lần nào. (Chỉ dùng cho thẻ a)
+:visited: khi liên kết đã được truy cập sau lần đầu tiên. (Chỉ dùng cho thẻ a)
+:hover: khi di chuyển chuột lên element.
+:active: khi phần tử được click vào, áp dụng cho tất cả các thẻ.
+:first-child: thiết lập thuộc tính cho element đầu tiên.
+:last-child: thiết lập thuộc tính cho element cuối cùng.
+:nth-child(n): n có thể là các giá trị even (chẵn), odd (lẻ), một số, một biểu thức (an + b) -->
+
+<body>
+
+    <style>
+        a {
+            color: black;
+        }
+
+        a:link {
+            color: rgb(41, 41, 195);
+        }
+
+        a:visited {
+            color: red;
+        }
+
+
+
+        .box {
+            background-color: bisque;
+            width: 250px;
+            height: 250px;
+            color: blueviolet;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .fa-facebook {
+            color: blue;
+            font-size: 5em;
+            padding-top: 50px;
+        }
+
+        .box i {
+            display: none;
+        }
+
+        .box:hover {
+            background-color: rgb(186, 183, 177);
+        }
+
+        .box:hover i {
+            display: block;
+        }
+
+        .box:active {
+            background-color: black;
+        }
+
+        /* .child li:first-child {
+            background-color: aqua;
+        }
+        .child li:last-child {
+            background-color: green;
+        } */
+        .child li:nth-child(odd) {
+            background-color: orange;
+        }
+    </style>
+    <a href="#123">
+        link sang trang nào đấy
+    </a>
+
+
+    <div class="box">
+        facebook
+        <div>
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+    </div>
+    <div>
+        <ul class="child">
+            <li>Mục 1</li>
+            <li>Mục 2</li>
+            <li>Mục 3</li>
+            <li>Mục 4</li>
+        </ul>
+    </div>
+    <br><br>
+    <!-- ============================================================================================================================================ -->
+    <!-- ::before: Chèn nội dung nào đó trước nội dung của mỗi element. (Phải thêm content: "";)
+    ::after: Chèn nội dung nào đó sau nội dung của mỗi element. (Phải thêm content: "";)
+    ::first-letter: Chọn chữ cái đầu tiên của mỗi element.
+    ::first-line: Chọn dòng đầu tiên của mỗi element.
+    ::marker: Chọn các điểm đánh dấu của các mục danh sách (thẻ <ul> và <ol>)
+    ::selection: Được dùng để style cho một vùng văn bản được người dùng chọn (hay còn gọi là "bôi đen"). Chỉ có
+     một số thuộc tính css khả dụng với ::selection là color, background, cursor, và outline. -->
+    <!-- 10. opacity: độ mờ -->
+            <style>
+                .box-1::before {
+
+                    content: "*";
+                    background-color: orange;
+                    border-radius: 50%;
+                    height: 15px;
+                    width: 15px;
+                    text-align: center;
+                }
+
+                .box-1 {
+                    display: block;
+                }
+                .box-2::first-letter{
+                    font-size: 40px;
+                }
+                .box-2::first-line{
+                    text-transform: uppercase;
+                }
+                .marker ul li::marker{
+                    color: red;
+                }
+                .box-2::selection {
+                    background-color: black;
+                    color: white;
+                }
+                .text {
+                    opacity: 0.3;
+                }
+            </style>
+            <div class="box-1">
+                Nội dung 1
+            </div>
+            <div class="box-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod illum suscipit natus quibusdam, neque laudantium illo aliquam enim eius incidunt rerum earum in? Dolorem quisquam voluptatum in consectetur earum veniam!
+            </div>
+            <br><br>
+            <div class="marker">
+                <ul>
+                    <li>Mục 1</li>
+                    <li>Mục 2</li>
+                    <li>Mục 3</li>
+                    <li>Mục 4</li>
+                </ul>
+            </div>
+            <div class="text">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolore cum eaque? Doloremque, id rem, nobis facere illo deserunt ut natus aut ipsum modi, obcaecati nemo officia. Dicta, ullam voluptas!
+            </p>
+            </div>
+</body>
+
+</html>

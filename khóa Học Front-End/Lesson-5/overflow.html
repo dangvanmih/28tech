@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- ==============================OVERFOW ATRIBUTE: XÁC ĐỊNH ĐIỀU GÌ SẼ XẢY RA NẾU MỘT THÀNH PHẦN BOX TRÀN NỘI DUNG================================= -->
+<body>
+    <style>
+        .box {
+            background-color: yellow;
+            border: 1px solid black;
+            width: 100px;
+            height: 200px;
+            /* verflow: hidden; // Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được ẩn đi. */
+            /* overflow: hidden; */
+            /* overflow: scroll; // Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được ẩn đi và xuất hiện thanh scroll, khi cuộn sẽ hiển thị text. Khi sử dụng thành phần này sẽ xuất hiện cả thanh scroll ngang và dọc. */
+            /* overflow: scroll; */
+            /* overflow: auto; // Khi chiều cao của box không đủ chứa text, thì thanh scroll sẽ tự động hiển thị. Khi sử dụng thành phần này sẽ xuất hiện thanh scroll dọc. */
+            overflow: auto;
+
+        }
+    </style>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia natus autem eaque impedit sit dignissimos
+        animi in, esse placeat labore dolorum qui voluptatibus quaerat molestias dicta tempora asperiores voluptate
+        repellat!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat commodi dignissimos necessitatibus hic magni
+        debitis excepturi eligendi dolorem expedita est laudantium, facere rerum quas quisquam eveniet neque rem,
+        voluptates nam!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eum at necessitatibus nam aliquam nesciunt quaerat
+        debitis, quod sit aspernatur animi quia veniam neque et doloremque quae! Molestiae, fuga earum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum natus et omnis exercitationem sed
+        distinctio reprehenderit ducimus accusamus culpa, ipsam iusto autem laboriosam quam provident sint officia cum
+        deserunt!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit eum nisi quae asperiores voluptates
+        soluta repellat laudantium, velit dignissimos, tempore eligendi iste incidunt odio! Exercitationem sapiente
+        atque animi consequatur quam!Lorem
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, eveniet debitis! Culpa fugiat facere nisi magni,
+        ab laudantium blanditiis quisquam nemo sunt doloribus repellat porro quasi iure, quia et consectetur.
+    </div>
+</body>
+
+</html>

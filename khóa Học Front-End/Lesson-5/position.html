@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <!-- ======POSSITION ATRIBUTE ĐỂ XÁC ĐỊNH VỊ TRÍ ELEMENT MUỐN HIỂN THỊ VÀ CHỈ ÁP DỤNG CHO CÁC THẺ ELEMENT VÀ CÓ NĂM GIÁ TRỊ KHÁC NHAU======== -->
+<body>
+   
+    <style>
+        .box-1,
+        .box-2 {
+            /* position: static vị trí ô mặc định không áp dụng được các thuộc tính top buttom left right */
+            background-color: olivedrab;
+            border: 2px solid black;
+            font-size: 20px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .box-2 {
+            /* position: relative áp dụng được các thuộc tính top left right buttom */
+            position: relative;
+            top: 100px;
+            left: 50px;
+        }
+
+        .box-3 {
+            background-color: lightblue;
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            /* dùng position: absolute thì box cha, cụ thể ở đây là box-2 không được là position:static, có thể ở dạng khác với static như relative..; và absolute dùng để căn chỉnh vị trí box con trong box cha */
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        .box-4 {
+            background-color: lightblue;
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            /* position: fixed; // Được định vị so với khung nhìn (viewport), có nghĩa là nó luôn ở một vị trí cố định ngay cả khi trang được cuộn. Các thuộc tính top, right, bottom và left được sử dụng để định vị element. */
+            position: fixed;
+            top: 0;
+            left: 300px;
+        }
+
+        .box-5 {
+            background-color: rgb(51, 156, 191);
+            border: 2px solid black;
+            width: 50%;
+            height: 50px;
+            /* position: sticky; // Có thể hiểu đơn giản là sự kết hợp của position: relative và position: fixed. Nó cũng na ná relative nhưng mà khi các bạn scroll đến vị trí của nó sẽ giống hệt như fixed và khi các bạn scroll lên ra khỏi nó thì nó sẽ quay lại vị trí ban đầu dưới dạng relative             */
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 5px;
+        }
+
+        .header {
+            position: sticky;
+            background-color: orangered;
+            width: 100%;
+            height: 50px;
+            top: 0;
+            left: 0;
+            /* huộc tính z-index thiết lập thứ tự xếp chồng nhau của một thành phần vị trí. Giá trị mặc định là 0. z-index càng cao thì element đó càng nằm trên. Chú ý: z-index chỉ làm việc cùng với thuộc tính position có giá trị sau: absolute, fixed, relative, sticky. Đối với giá trị static thì z-index không áp dụng được. lưu ý chỉ áp dụng cho các thẻ element*/
+            z-index: 1;
+        }
+        body {
+            margin-top: 0px;
+        }
+    </style>
+    <header class="header">
+        Header
+    </header>
+    <div class="box-1"> Box 1</div>
+    <div class="box-2"> Box 2
+        <div class="box-3">
+            Box 3
+            <div class="box-4">
+                Box 4
+            </div>
+        </div>
+    </div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <div class="box-5">
+        Box 5
+    </div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, nemo facilis harum incidunt, ut natus a dolor
+        tempora, id fuga tempore vel ducimus dolore? Facere odio aut suscipit aliquam optio!</p>
+
+
+</body>
+
+</html>

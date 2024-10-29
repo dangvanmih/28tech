@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        /* bộ chọn tất cả */
+        * {
+            text-align: center
+        }
+
+        h1 {
+            color: red;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        #test {
+            color: blue;
+        }
+
+        /* chọn theo nhóm */
+        h1,
+        p,
+        #test,
+        .text-orange {
+            background: purple;
+        }
+
+        .text-orange {
+            color: orange;
+        }
+
+        h1,
+        #test,
+        .text-orange,
+        h3 {
+            background-color: rgb(203, 91, 203);
+        }
+    </style>
+    <h1> Nội dung thẻ h1</h1>
+
+    <p id="test">Nội dung 01</p>
+    <p class="text-orange">Nội dung 02</p>
+    <p class="text-orange">Nội dung 03</p>
+    <p class="text-orange">Nội dung 04</p>
+    <p class="text-orange">Nội dung 05</p>
+    <p class="h1">Nội dung 06</p>
+    <h3>Nội dung thẻ h3</h3>
+</body>
+
+</html>

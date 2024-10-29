@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box {
+            /* background-clip dùng để căn chỉnh nền màu sắc */
+            /* background-origin tương tự nhưng để căn chỉnh ảnh */
+            background-color: green;
+            border: 2px solid black;
+            padding: 50px;
+            /* đổ màu từ content đến hết border */
+            background-clip: border-box;
+            /* đổ màu từ content đến hết padding */
+            background-clip: padding-box;
+            /* đổ màu phần content */
+            background-clip: content-box;
+        }
+    </style>
+
+    <div class="box">
+        Nội Dung Thẻ Div
+    </div>
+</body>
+</html>
