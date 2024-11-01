@@ -96,12 +96,106 @@
         // console.log(myString.charAt(5));
     
     //split(): chuyển một chuỗi thành một mảng
-    var myString = "HTML , CSS , JavaScript"
-    console.log(myString.split()); // cả đoạn string là 1 phần tử
-    console.log(myString.split("")); // mỗi kí tự là một phần tử 
-    console.log(myString.split(",")); // mỗi từ là một phần tử
-    console.log(myString.split(",",2)); // mỗi từ là một phần tử, lấy tối đa 2 phần tử
+        // var myString = "HTML , CSS , JavaScript"
+        // console.log(myString.split()); // cả đoạn string là 1 phần tử
+        // console.log(myString.split("")); // mỗi kí tự là một phần tử 
+        // console.log(myString.split(",")); // mỗi từ là một phần tử
+        // console.log(myString.split(",",2)); // mỗi từ là một phần tử, lấy tối đa 2 phần tử
     
+    // isNAN(): not a number , hàm kiểm tra xem kết quả có phải là NAN hay không
+        // var a = 10
+        // var b = "abc"
+        // var result = a/b
+        // console.log(result);
+        // console.log(isNaN(result));
+        
+    // toString(): chuyển kiểu số thành kiểu String
+        // var a = 10;
+        // var b = a.toString();
+        // var c = (20).toString();
+        // var list = ["HTML","CSS","JavaScript"]
+        // console.log(a);
+        // console.log(typeof a);
+        // console.log(b);
+        // console.log(typeof b);
+        // console.log(c);
+        // console.log(typeof c);
+        // console.log(list.toString())
+
+    // toFixed(): dùng để làm tròn số thập phân
+        // var a = 12.3456;
+        // console.log(a.toFixed()); // trả về 12
+        // console.log(a.toFixed(0)); // trả về 12
+        // console.log(a.toFixed(1)); // trả về 12.3
+        // console.log(a.toFixed(2)); // trả về 12.35
+        // console.log(a.toFixed(3)); // trả về 12.346
+    
+    //join(): chuyển array thành String và thêm dâu bất kỳ để ngăn cách giữa các phần tử
+        // var list = ["HTML","CSS","JavaScript"]
+        // console.log(list.join());
+        // console.log(list.join("."));
+        // console.log(list.join(" "));
+        
+    //pop(): xóa phần tử cuối mảng và trả về phần tử cuối mảng
+        // var list = ["HTML","CSS","JavaScript"]
+        // console.log(list.pop());
+        // console.log(list);
+
+    //push(): thêm một hoặc nhiều phần tử vào cuối mảng và trả về độ dài mảng
+        // var list = ["HTML","CSS","JavaScript"] 
+        // console.log(list.push("Bootstrap 4","ReactJS"));
+        // console.log(list);
+        
+    //shift(): xóa phần tử đầu mảng và trả về phần tử đầu mảng
+        // var list = ["HTML","CSS","JavaScript"]
+        // console.log(list.shift());
+        // console.log(list);
+    
+    //unshift(): thêm một hoặc nhiều phần tử vào đầu mảng và trả về độ dài mảng
+        // var list = ["HTML","CSS","JavaScript"]
+        // console.log(list.unshift("Bootstrap 4" , "ReactJS"));
+        // console.log(list);
+        
+    //splice(): xóa hoặc chèn phần tử mới vào mảng và TRẢ VỀ MẢNG BỊ XÓA 
+    // cú pháp array.splice(index,howmany,item1...itemX)
+    //index: vị trí thêm xóa phần tử
+    //HowMany: số phần tử cần xóa
+    //item1...itemX: các phần tử mới được thêm vào
+        // ví dụ 1: chèn phần tử mới vào mảng
+        //     var list = ["HTML","CSS","JavaScript"]
+        //     console.log(list.splice(2,0,"Bootstrap 4","ReactJS"));
+        //     console.log(list);
+        // // ví dụ 2: xóa phần tử trong mảng
+        //     var list = ["HTML","CSS","JavaScript"]
+        //     console.log(list.splice(1,1,));
+        //     console.log(list);
+        // // ví dự 3: xóa và chèn phần tử mới vào mảng
+        //     var list = ["HTML","CSS","JavaScript"]
+        //     console.log(list.splice(2,1,"Bootstrap 4","ReactJS"));
+        //     console.log(list);
+        
+    //concat(): dùng để nối 2 array. không làm ảnh hưởng đến mảng ban đầu
+        // var list = ["HTML","CSS","JavaScript"]
+        // var list2 = ["Bootstrap 4","ReactJS"]
+        // console.log(list.concat(list2));
+
+    //slice(start,end): dùng để cắt các phần tử. không làm ảnh hưởng đến mảng ban đầu
+        // var list = ["HTML","CSS","JavaScript","Bootstrap 4","ReactJS"]
+        // console.log(list.slice(3));
+        // console.log(list.slice(1,3));
+        // console.log(list.slice(-3,-1));
+        // console.log(list);
+
+        
+           
+        
+        
+        
+        
+        
+        
+        
+        
     </script>
 </body>
 </html>
