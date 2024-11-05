@@ -10,6 +10,11 @@
 }
 
 body {
+    
+    /* width: 100%; */
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    color: rgba(0, 0, 0, 0.73);
     margin: -25px 0px;
 }
 
@@ -184,4 +189,40 @@ nav {
 }
 .walpaper{
     text-align: center;
+}
+#content{
+    margin-bottom: 40px;
+    margin-top: 40px;
+    display: flex;
+    gap: 100px;
+    justify-content: center
+}
+#content .inner-content-1{
+    display: flex;
+}
+
+#content .inner-content-1 img{
+    position:relative;
+    top: -3px;
+    padding: 0px 5px;
+}
+#content .inner-content-1 .inner-1{
+    margin: 0;
+    color: rgba(128, 128, 128, 0.658);
+}
+.list-dohieumixi{
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+#dohieumixi h1{
+    text-align: center;
+}
+#dohieumixi .list-dohieumixi p{
+    text-align: center;
+}
+.list-dohieumixi div :hover {
+    opacity: .7;
+    transform: scale(1.08);
+    transition: all 0.3s ease;
 }
