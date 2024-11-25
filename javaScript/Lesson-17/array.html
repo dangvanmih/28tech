@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Hàm forEach: duyệt qua mỗi phần tử của mảng và thực hiện một hành động nào đó
+        // let numBers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        // let tong = 0;
+        // numBers.forEach(function(item, index,array){
+        //     // console.log(item, index, array);
+            
+        //     tong += item;
+        //     // numBers[index] = 20;
+        // })
+        // console.log(tong);
+        // console.log(numBers);
+        
+
+    </script>
+
+    <script>
+        // hàm every : kiểm tra tất cả các phần tử của một mảng phải thỏa mãn một điều kiện gì đó.
+        // const monHoc = [
+        //     {
+        //         ten: "Toan",
+        //         diem: 8.6
+        //     },
+        //     {
+        //         ten: "van",
+        //         diem: 9
+        //     },
+        //     {
+        //         ten: "Anh",
+        //         diem: 8
+        //     },
+        //     {
+        //          ten: "Tin",
+        //          diem: 8
+        //     }
+
+        //     ]
+        // const hocSinhGioi = monHoc.every(function(item)
+        //     {
+        //         return item.diem >=8
+        //     })
+        //     if(hocSinhGioi){
+        //         console.log("Day la hoc sinh gioi");
+                
+        //     }
+        //     else{
+        //         console.log("Day khong la hoc sinh gioi");
+                
+        //     }       
+
+    </script>
+
+    <script>
+        // hàm some: kiểm tra chỉ cần một phần tử của một mảng thỏa mãn một điều kiện gì đó là được.
+        // const monHoc = [
+        //     {
+        //         ten: "Toan",
+        //         diem: 8.6
+        //     },
+        //     {
+        //         ten: "van",
+        //         diem: 9
+        //     },
+        //     {
+        //         ten: "Anh",
+        //         diem: 8
+        //     },
+        //     {
+        //          ten: "Tin",
+        //          diem: 3
+        //     }
+
+        //     ]
+        // const aiLenLop = monHoc.some(function(item)
+        // {
+        //     return item.diem < 4
+        // })
+        // if(aiLenLop){
+        //     console.log("o lai lop");
+            
+        // }
+        // else{
+        //     console.log("len lop");
+            
+        // }
+    </script>
+
+
+    <script>
+        //Hàm find(): tìm xem trong mảng có giá trị giống với giá trị đang cần tìm ko, nếu có thì trả về chính phần tử của mảng đó và nếu ko thì trả về undefined
+        // const monHoc = [
+        //     {
+        //         ten: "Toan",
+        //         diem: 8.6
+        //     },
+        //     {
+        //         ten: "van",
+        //         diem: 9
+        //     },
+        //     {
+        //         ten: "Anh",
+        //         diem: 8
+        //     },
+        //     {
+        //          ten: "Tin",
+        //          diem: 3
+        //     }
+
+        //     ]
+        // const checkPoin = monHoc.find(function(item){
+        //     return item.ten == "Toan"
+        // })
+        // if(checkPoin){
+        //     console.log("Diem cua ban la: ",checkPoin.ten,checkPoin.diem);
+            
+        // }   
+        // else{
+        //     console.log("Khong tim thay mon hoc");
+            
+        // }         
+    </script>
+
+    <script>
+        // Hàm filter: giống hàm find nhưng cho phép tìm được nhiều phần tử và trả về một array gồm các phần tử đã tìm được.
+        // const monHoc = [
+        // {
+        //     ten: "Toan",
+        //     diem: 8.6
+        // },
+        // {
+        //     ten: "van",
+        //     diem: 9
+        // },
+        // {
+        //     ten: "Anh",
+        //     diem: 8
+        // },
+        // {
+        //     ten: "Tin",
+        //     diem: 3
+        // },
+        // {
+        //     ten: "Toan",
+        //     diem: 9
+        //     }
+        // ];
+
+        // const checkPoin = monHoc.filter(function (item) {
+        //     return item.ten == "Toan";
+        // });
+
+        // if (checkPoin) {
+        //     checkPoin.forEach(function (item) {
+        //         console.log("Diem cua ban la: ",item.ten, item.diem);
+        //     });
+        // } else {
+        //     console.log("Khong tim thay mon hoc");
+        // }
+
+    </script>
+
+    <script>
+        //Hàm map(): lặp qua từng phần tử mảng. giá trị trả về của map là một mảng mới với số lượng phần tử bằng với mảng cũ. nhưng giá trị của các phần tử thì được quyết định bởi lệnh return của hàm map.
+        let numBers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let ketQua = numBers.map((item, index, array) => {
+            return array
+        });
+        console.log(ketQua);
+        
+    </script>
+</body>
+
+</html>

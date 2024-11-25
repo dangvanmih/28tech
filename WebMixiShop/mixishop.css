@@ -10,8 +10,6 @@
 }
 
 body {
-    
-    /* width: 100%; */
     margin: 0;
     font-family: "Josefin Sans", sans-serif;
     color: rgba(0, 0, 0, 0.73);
@@ -19,11 +17,15 @@ body {
 }
 
 #tabar p {
-    bottom: -20px;
+    bottom: 5px;
     position: relative;
 }
-
+#tabar{
+    z-index: 1;
+    position: fixed;
+}
 #header {
+    height: 66px;
     background-color: #f8f8f8;
 }
 
@@ -66,14 +68,12 @@ nav {
 }
 
 #main-menu .sub-menu ul {
-    margin-top: 30px;
+    margin-top: 15px;
     position: absolute;
     background-color: #f8f8f8;
     padding: 12px 0px 12px 0px;
     list-style: none;
     width: 200px;
-    border: 1px solid #3333331f;
-
 }
 
 #main-menu .sub-menu ul a {
@@ -84,7 +84,6 @@ nav {
 #main-menu .sub-menu ul li {
     padding: 15px 0px 0px 0px;
     font-size: 14px;
-    border-bottom: 1px solid #3333331f;
 }
 
 #main-menu .sub-menu ul li:last-child {
@@ -108,20 +107,14 @@ nav {
     display: block;
 }
 
-#main-menu>li a::after {
-    content: "";
-    height: 2px;
-    width: 0px;
-    background: black;
-    position: absolute;
-    bottom: 25px;
-    left: 0px;
-    transition: all 0.3s ease-in-out;
+#main-menu li a {
+    color: black; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
 }
 
-#main-menu>li a:hover:after {
-    width: 45%;
-    transform: translate(100%);
+#main-menu li a:hover {
+    color:#1490b9; 
 }
 
 .icon-tabar {
@@ -194,7 +187,7 @@ nav {
     margin-bottom: 40px;
     margin-top: 40px;
     display: flex;
-    gap: 100px;
+    gap: 35px;
     justify-content: center
 }
 #content .inner-content-1{
@@ -207,13 +200,19 @@ nav {
     padding: 0px 5px;
 }
 #content .inner-content-1 .inner-1{
+    padding-top: 5px;
+    font-size: 15px;
     margin: 0;
     color: rgba(128, 128, 128, 0.658);
 }
 .list-dohieumixi{
-    gap: 20px;
+    gap: 25px;
     display: flex;
     justify-content: center;
+}
+.list-dohieumixi img{
+    width: 100%;
+    height: 160px;
 }
 #dohieumixi h1{
     text-align: center;
@@ -222,7 +221,328 @@ nav {
     text-align: center;
 }
 .list-dohieumixi div :hover {
-    opacity: .7;
+    opacity: .7;     
+    /* làm phần tử trong suốt hơn một chút với độ trong suốt là 70% */
     transform: scale(1.08);
+     /* phóng to phần tử lên 108% tạo cảm giác khi hover vào thì phần tử sẽ lớn hơn một chút*/
     transition: all 0.3s ease;
+    /*Tạo hiệu ứng chuyển động mượt mà cho các thay đổi của thuộc tính opacity và transform. Cụ thể:
+    all: Áp dụng cho tất cả các thuộc tính có thay đổi.
+    0.3s: Hiệu ứng diễn ra trong 0.3 giây.
+    ease: Kiểu chuyển động bắt đầu nhanh, chậm dần rồi kết thúc. */
+
+}
+#header{
+    margin-top: 40px;
+    z-index: 10;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#hot-deal{
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 90px;
+    padding-left: 200px;
+}
+#hot-deal img{
+    width: 50px;
+    height: 50px;
+}
+li{
+    list-style: none;
+}
+a{
+   text-decoration: none;
+}
+hr{
+    border: 0.5px solid rgba(128, 128, 128, 0.416);
+    width: 75%;
+
+}
+.frame{
+    position: relative;
+    display: inline-block;
+}
+.frame-khung{
+    width: 200px;
+    height: 300px;
+}
+.frame-content{
+    border-radius: 3px;
+    top: 9px;
+    left: 9px;
+    position: absolute;
+    width: 182px;
+    height: 254px;
+}
+/*---------------------------------css danh sach san pham---------------------------------------------*/
+ul.products{
+    margin-right: 100px;
+    margin-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+ul.products li img{
+    max-width: 100%;
+}
+ul.products li{
+    padding: 20px;
+}
+ul.products li a{
+    padding-top: 8px;
+    display: block;
+}
+.product-item .product-info .product-cat{
+    font-size: 12px;
+    padding-top: 5px;
+    color: rgba(128, 128, 128, 0.416);
+}
+
+.product-item .product-info .product-name{
+    padding-bottom: 5px;
+    color: #000;
+}
+.product-item .product-info .product-name:hover{
+    color: #426ae3;
+}
+.product-item .product-info .product-price{
+    color: #426ae3;
+}
+.button{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.button button{
+    font-family: inherit;
+    border-radius: 30em;
+    width: 140px;
+    height: 50px;
+    background-color: transparent;
+}
+.button button:hover{
+    background-color: #000;
+    color: white;
+}
+/*--------------------------------------------end css danh sach san pham-----------------------------------------------------*/
+.title{
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+}
+.container-3 {
+    justify-content: center;
+    gap: 30px;
+    display: flex;
+    margin-bottom: 100px;
+}
+.info{
+    padding-top: 10px;
+    text-align: center;
+}
+.buy{
+    color: #000;
+    display: block;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+.view{
+    color: #426ae3;
+    text-decoration:underline;
+    padding-bottom: 20px;
+}
+.walpaper-2 img{
+    max-width: 1070px;
+    height: auto;
+}
+.walpaper-2{
+    text-align: center;
+    padding-bottom: 100px;
+}
+.category-list{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    gap: 30px;
+    font-size: 18px;
+}
+.category-list li{
+    color: #00000054;    
+}
+.category-list li:hover{
+    color: #000;
+}
+.title-1{
+    gap: 15px;
+    font-size: 40px;
+    width: 100%;
+    justify-content: center;
+    display:flex;
+}
+.title-1 p:first-child{
+    color: #00000061;
+}
+.feed-back{
+    width: 100%;
+    height: 550px;
+    background-color: #F5F5F5;
+}
+.product-thumb:hover{
+    opacity: .7;
+    transform: scale(0.9);
+    transition: all 0.5 ease-in-out;
+}
+.feed-back .title{
+   padding-top: 70px;
+}
+.container-4{
+    margin-top: 50px;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.feedback-info{
+    background-color: #ffff;
+    width: 300px;
+    height: 260px;
+    padding:2% ;
+    border-radius: 8px;
+}
+.rate{
+    padding-top: 10px;
+    display: flex;
+    position: relative;
+}
+.avt-fback{
+    top: -25px;
+    right: -5px;
+    position: absolute;
+}
+.comment-fback{
+    width: 200px;
+}
+hr{
+    width: 100%;
+}
+.img-fback{
+    display: flex;
+}
+.img-fback p{
+    padding-top: 30px;
+    padding-left: 10px;
+}
+.cus-name{
+    font-size: 20px;
+}
+.fa-star{
+    color: #FABD0D;
+}.thumnail{
+    padding-top: 50px;
+    text-align: center;
+}
+.heading-bar-title{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.season-ig{
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+}
+.season-ig a img{
+    width: 220px;
+    height: 230px;
+}
+.season-ig-season{
+    position: relative;
+}
+.icon-ins{
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffffdb;
+    top: 100px;
+    left: 40%;
+    display: none;
+}
+.fa-instagram{
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #F77737, #FCB045);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    font-size: 30px;
+}
+.season-ig-season:hover .icon-ins{
+    display: block;
+}
+.ins-user:hover{
+    opacity: 0.7;
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+}
+.conect{
+    margin-bottom: 50px;
+}
+.footer{
+    background-color: #14B8B9;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    height: 400px;
+    padding-top: 35px;
+    width: 100%;
+}
+.footer ul li{
+    color: #ffff;
+    padding-top: 20px;
+}
+.footer ul li a{
+    color: #ffff;
+}
+.fa-facebook{
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    font-size: 30px;
+    color: #426ae3;
+    height: 30px;
+}
+.icon-footer img{
+    width: 33px;
+}
+.icon-footer{
+    display: flex;
+    gap: 30px;
+}
+.footer ul li input{
+    width: 230px;
+    height: 48px;
+    border-radius: 50px;
+    border: none;
+}
+.email{
+    position: relative;
+}
+.register{
+    color: white;
+    background: black;
+    position: absolute;
+    border-radius: 50px;
+    right: 32px;
+    width: 100px;
+    height: 50px;
+    right: 150px;
+}
+.sponsor{
+    margin-top: 300px;
+    position: absolute;
 }
