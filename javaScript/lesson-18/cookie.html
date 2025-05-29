@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="login()">Đăng Nhập</button>
+    <button onclick="updateInfo()">Cập Nhật Thông Tin</button>
+    <button onclick="reLoadWeb()">Reload</button>
+    <button onclick="deleteinfo()">Xóa Thông tin</button>
+    <script>
+        // hàm set ngày cho cookie
+        function setCookie(cname, cvalue, exday) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exday * 24 * 60 * 60 * 1000));
+            var expires = 'expires = ' + d.toUTCString();
+            document.cookie = cname + " = " + cvalue + ";" + expires;
+        }
+
+        // hàm lấy ra các giá trị trong cookie
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(";");
+            for(var i = 0; i < ca.length; i++){
+                var c = ca[i];
+                while(c.charAt(0) == ' '){
+                    c = c.substring(1);
+                }
+                if(c.indexOf(name)== 0){
+                    return c.substring(name.length,c.length);
+                }
+            }
+            return "";
+        }
+        
+
+        function login() {
+            if (true) {
+                setCookie("fullName", "Đặng Văn Minh", 1);
+                setCookie("Age", "20", 1);
+                setCookie("email","minhmeo2k413@gmail.com",1)
+            }
+        }
+
+        let allCookie = document.cookie;
+        console.log(allCookie);
+        let email = getCookie('email');
+        let age = getCookie('Age')
+        console.log(email);
+        console.log(age);
+        
+        
+        function updateInfo(){
+            document.cookie = 'email = dangminh@gmail.com';
+            document.cookie = 'Age = 22';
+        }
+        function reLoadWeb(){
+            location.reload();
+        }
+        // hàm xóa cookie
+        function deleteCookie(cname) {
+            document.cookie = `${cname}=; expires=thu, 01 Jan 1970 00:00:00 UTC`;
+        }
+        function deleteinfo() {
+            deleteCookie('email');
+            deleteCookie('fullName');
+            deleteCookie('Age')
+        }
+
+
+        
+    </script>
+</body>
+
+</html>
