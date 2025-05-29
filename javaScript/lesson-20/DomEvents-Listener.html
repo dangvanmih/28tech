@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- DomEvent-listener khác DomEvent ở chỗ DomEvent-listener: một element có thể gọi được nhiều sự kiện và có thể hủy bỏ lắng nghe sự kiện -->
+    <div>
+        <button id="button">Button</button>
+    </div>
+    <script>
+        function hamMot(){
+           console.log("Viec 1");
+            
+        }
+        function hamHai(){
+            console.log("viec 2");
+            
+        }
+        const button = document.querySelector("#button");
+
+        // button.onclick = function(){
+        //     hammot();
+        // }
+        
+        // button.onclick = function(){
+        //     hamhai();
+        // }
+
+        // button.addEventListener("click",function(){
+        //     hammot();
+        // })
+        // button.addEventListener("click",function(){
+        //     hamhai();
+        // })
+
+        button.addEventListener('click',hamMot);
+        button.addEventListener("click",hamHai)
+        setTimeout(() =>{
+            button.removeEventListener('click',hamHai);
+        }, 5000);
+            
+    
+    </script>
+</body>
+</html>
