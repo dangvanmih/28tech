@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Dom element    -->
+    <!-- <div>
+        <style>
+            .light {
+                background-color: rgb(250, 250, 250);
+            }
+
+            .dark {
+                background-color: rgb(4, 4, 4);
+                color: white;
+            }
+        </style>
+
+        <div class="light" id="box">Nội dung thẻ div</div>
+        <div class="light" id="box">Nội dung thẻ div</div>
+        <div class="light" id="box">Nội dung thẻ div</div>
+        <div class="light" id="box">Nội dung thẻ div</div>
+        <div class="light" id="box">Nội dung thẻ div</div>
+
+        <script>
+            // const box = document.getElementById('box');
+            // // add thêm class vào thẻ div
+            // box.classList.add('dark')
+        </script>
+    </div>
+
+
+    <div>
+        <ul id="menu">
+            <li>Mục 1</li>
+            <li>Mục 2</li>
+            <li>Mục 3</li>
+        </ul>
+
+        <script>
+            // const menu = document.getElementById('menu');
+            // console.log(menu);
+        </script>
+    
+    </div>
+    
+
+    <div>
+        <h2>Thẻ h2 01</h2>
+        <h2>Thẻ h2 02</h2>
+        <h2>Thẻ h2 03</h2>
+        <h2>Thẻ h2 04</h2>
+        <h2>Thẻ h2 05</h2>
+    
+        <script>
+            const listH2 = document.getElementsByTagName('h2');
+            console.log(listH2);
+            console.log(listH2[3]);
+        </script>    
+    </div>
+
+    <div>
+        <h3 class="test">Thẻ 01</h3>
+        <h4 class="test">Thẻ 02</h4>
+        <h5 class="test">Thẻ 03</h5>
+        <h6 class="test">Thẻ 04</h6>
+        <h7 class="test">Thẻ 05</h7>        
+        <style>
+            .test2{
+                color: blue;
+            }
+        </style>
+
+        <script>
+            const listTest = document.getElementsByClassName('test');
+            // console.log(listTest);
+            // console.log(...listTest)
+            // console.log([...listTest])
+            [...listTest].forEach(item => {
+                item.classList.add('test2'); // add clas = test2 vao cac item
+                item.classList.remove('test'); // xoa class = test
+            });            
+        </script>
+
+    </div> -->
+
+
+    <div>
+
+        <style>
+            .box-1 .box-2 h2 .link{
+                background-color: yellow;
+            }
+
+            .box-1 .box-2 h2 .link.active{
+                background-color: orange;
+            }
+        </style>
+
+        <div class="box-1">
+            <div class="box-2">
+                <h2>
+                    <a href="" class="link">Nội dung thẻ a</a>
+                </h2>
+                <h2>
+                    <a href="" class="link">Nội dung thẻ a</a>
+                </h2>
+            </div>
+        </div>
+
+        <script>
+            const elements = document.querySelector('.box-1 .box-2 h2 .link')
+            elements.classList.add('active')
+            console.log(active);
+
+            const element = document.querySelectorAll('.box-1 .box-2 h2 .link');
+            [...element].forEach(item =>{
+                item.classList.add('test')
+            })
+        </script>
+    </div>
+   <!-- End Dom element    -->
+</body>
+
+</html>

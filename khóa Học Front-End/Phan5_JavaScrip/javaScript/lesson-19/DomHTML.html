@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <!-- <h2 id="h2">
+            <span>Nội dung span 1</span>
+            <span>Nội dung span 2</span>
+            <span>Nội dung span 3</span>
+        </h2>
+
+        <div id="box"></div>
+        <script>
+            const h2 = document.querySelector('h2');
+            // const contenth2 = h2.innerHTML
+            // const contenth2 = h2.textContent
+            const contenth2 = h2.innerText; // loại bỏ khoảng trắng
+            // console.log(h2);
+            console.log(contenth2); 
+            // thay nội dung bên trong thẻ h2
+            // h2.innerHTML = "Test"
+            // console.log(content);
+
+            // const box = document.querySelector('#box');
+            // box.innerHTML = contenth2 -->
+        </script>
+    </div>
+
+    <div>
+        <div class="product-item" data-id="1234" data-category="123">
+            ảnh
+            tiêu đề
+            giá
+        </div>
+        <div class="product-item" data-id="12345678" data-category="123">
+            ảnh
+            tiêu đề
+            giá
+        </div>
+
+       
+        <script>
+            let cart = [];
+            const productList = document.querySelectorAll('.product-item');
+            // console.log(productList);
+            [...productList].forEach(item =>{
+                const dataId = item.getAttribute("data-id")
+               cart.push(dataId); 
+
+               item.setAttribute("data-category","234")
+               item.setAttribute("class","product-items product-test")
+            })
+            console.log(cart);
+            
+        </script>
+    </div>
+</body>
+</html>

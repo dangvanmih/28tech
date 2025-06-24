@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <!-- onload event: khi trình duyệt load xong mọi thứ thì những đoạn code nằm bên trong đó mới được chạy -->
+
+
+        <!-- <script>
+            //     //trường hợp để js lên đầu thì dùng thêm hàm onload
+            //     window.onload = function () {
+            //         const menu = document.querySelector("#menu")
+            //         console.log(menu);
+            //     }
+        </script> -->
+
+
+        <!-- <ul id="menu">
+            <li>Mục 1</li>
+            <li>Mục 2</li>
+            <li>Mục 3</li>
+        </ul> -->
+    </div>
+
+    <div>
+        <!-- onblur and onfocus event: kích hoạt khi một phần tử mất trọng tâm(không được focus vào nữa)
+         onfocus: kích hoạt khi một phần tử hiển thị đúng trọng tâm(được focus vào) -->
+        <!-- <input type="text" id="inputName" placeholder="Nhập họ tên">
+
+        <style>
+            .focus{
+                background-color: #4fb3e5;
+            }
+        </style>
+        <script>
+            const inputName = document.querySelector("#inputName");
+            inputName.onblur = function(){
+                inputName.value = inputName.value.toUpperCase();
+                inputName.classList.remove('focus');
+            }
+
+            inputName.onfocus = function() {
+                inputName.classList.add('focus')
+            }
+        </script> -->
+    </div>
+
+    <div>
+        <!-- onkeydown and onkeyup: kích hoạt khi một phím được nhấn và kích hoạt khi một phím được nhả ra -->
+         <!-- <input type="text" placeholder="Nhập họ và tên" id="inputName"> -->
+
+
+         <script>
+            // const inputName = document.querySelector("#inputName");
+
+            // inputName.onkeydown = function() {
+            //     console.log('onkeydown');
+            //     alert("onkeydown"); 
+            // }
+
+            // inputName.onkeyup = function() {
+            //      console.log('onkeyup');
+            //         alert("onkeyup")
+                
+            // }
+         </script>
+    </div>
+
+    <div>
+        <!-- onclick event: kích hoạt trên con chuột vừa nhấn vào phần tử -->
+         <!-- <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+            }
+            .menu{
+                background-color: orange;
+                top: 0;
+                left: 0;
+                position: fixed;
+                height: 100vh;
+                width: 250px;
+                display: none;
+            }
+            .menu.show{
+                display: block;
+            }
+            .menu ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                margin-top: 30px;
+            }
+            .menu ul li {
+                padding: 10px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.344);
+            }
+            .button {
+                top: 20px;
+                right: 20px;
+                position: absolute;
+            }
+            .menu .inner-close{
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            
+         </style> -->
+
+        <!-- <div id="menu" class="menu">
+            <button class="inner-close" id="buttonClose">Đóng</button>
+            <ul>
+                <li>Mục 1</li>
+                <li>Mục 2</li>
+                <li>Mục 3</li>
+            </ul>
+        </div>
+
+        <button class="button" id="buttonMenu">Menu</button>
+
+        <script>
+            const buttonMenu = document.querySelector("#buttonMenu");
+            const menu = document.querySelector("#menu")
+            const buttonClose = document.querySelector("#buttonClose")
+
+            buttonMenu.onclick = function(){
+                menu.classList.add("show");
+            }
+            buttonClose.onclick = function(){
+                menu.classList.remove("show")
+            }
+        </script> -->
+    </div>
+
+    <div>
+        <!-- onchange: kích hoạt khi giá trị được thay đổi khác đi so với giá trị trước đó -->
+<!-- 
+        <select  id="colors">
+            <option value="red">Màu đỏ</option>
+            <option value="yellow">Màu vàng</option>
+            <option value="black">Màu đen</option>
+        </select>
+
+        <script>
+            const colors = document.querySelector("#colors")
+
+            colors.onchange = function(){
+                let currentColor = colors.value;
+                console.log(currentColor);
+                
+            }
+        </script> -->
+    </div>
+    
+</body>
+
+</html>

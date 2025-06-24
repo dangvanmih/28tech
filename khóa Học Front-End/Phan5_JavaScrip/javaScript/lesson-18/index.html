@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openTab()">Mở  tab mới</button>
+    <button onclick="closeTab()">Đóng tab</button>
+    <button onclick="reloadWeb()">Reload Web</button>
+
+    
+    <script>
+        // console.log(window);
+        // console.log(window.innerHeight);
+        // console.log(window.innerWidth);
+       
+    </script>
+
+    <script>
+         let tab;
+        function openTab() {
+           tab =  window.open("http://127.0.0.1:5501/javaScript/lesson-18/28tech.html", "_blank", "width=1000, height=500, top=200, left=300");
+        }
+        function closeTab() {
+            tab.close()
+        }
+    </script>
+
+    <script>
+        // console.log(window.location);
+        
+        // let href = window.location.href;
+        // setTimeout(()=>{
+        //     console.log(href);
+            
+        // },5000);
+    </script>
+
+    <script>
+        // let = screenWidth = window.screen.width; // lấy ra chiều rộng của màn hình máy tính
+        // let = screenHeight = window.screen.height // lấy ra chiều cao của màn hình máy tính
+        // setTimeout(()=>{
+        //     console.log(screenWidth);
+        //     console.log(screenHeight);
+        // },5000)
+    </script>
+
+    <script>
+        // console.log(window.location);
+        function reloadWeb() {
+         window.location.reload();
+        }
+        //có thể sử dụng setInterval: để load lại trang liên tục sau bao nhiêu giây khác vs settimeout là chỉ load lại 1 lần
+        // setInterval(()=>{
+        //     window.location.reload();
+        // },5000)
+    </script>
+
+    <script>
+        // console.log(window.history); // kiểm tra lịch sử web
+
+        // history.back() // để  trở lại trang trước
+        
+
+        // history.forward() // để chuyển qua trang kế tiếp
+
+
+        // history.go(number) // để chuyển tới trang cụ thể.
+        
+    </script>
+
+    <script>
+        // console.log(navigator); // kiểm tra thông tin của người dùng
+    </script>
+
+    
+
+</body>
+</html>

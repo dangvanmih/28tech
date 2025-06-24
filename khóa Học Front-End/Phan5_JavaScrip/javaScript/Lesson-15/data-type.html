@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// //Các kiểu dữ liệu
+    //     // kiểu number
+    //     var a = 10;
+    //     // kiểu string
+    //     var b = "abcd";
+    //     var c = 'efg';
+    //     var d = `hjk`;
+    //     //kiểu undefined
+    //     var e;
+    //     //kiểu boolean
+    //     var f = true;
+    //     //kiểu null
+    //     var g = null;
+// //hết kiểu dữ liệu
+
+// ví dụ nhỏ về Function
+
+    // function sum(a,b) {
+    //     console.log(a+b);
+        
+    // }
+    // sum(10,20) ;
+
+//Opject
+
+// var inforUser = {
+//     name : "Nguyen Van A",
+//     age: 18,
+//     email: "nguyenvana@gmail.com",
+//     sdt: "0987654321",
+// // add function vào opject
+//     sum:function(a,b) {
+//         console.log(a+b);
+//     }
+// }
+//     console.log(inforUser.email)
+//     inforUser.sum(10,20)
+
+//end opject
+
+// Array[]
+
+var listUser = [
+    "Nguyen Van B",
+    "Nguyen Van C",
+    "Nguyen Van D"
+]   
+    //add hàm function vào mảng
+    listUser.sum = function(a,b) {
+        console.log(a+b);
+        
+    }
+    // add 1 key vào mảng
+    listUser.age = 20;
+    
+    console.log(listUser)
+    console.log(listUser[0])
+    listUser.sum(10,20)
+    
+    </script>
+</body>
+</html>
