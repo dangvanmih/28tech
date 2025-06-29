@@ -23,7 +23,7 @@
 
 <body>
 
-    <style>
+    <!-- <style>
         a {
             color: black;
         }
@@ -76,7 +76,7 @@
         .child li:last-child {
             background-color: green;
         } */
-        .child li:nth-child(odd) {
+        .child li:nth-child(4) {
             background-color: orange;
         }
     </style>
@@ -98,7 +98,7 @@
             <li>Mục 3</li>
             <li>Mục 4</li>
         </ul>
-    </div>
+    </div> -->
     <br><br>
     <!-- ============================================================================================================================================ -->
     <!-- ::before: Chèn nội dung nào đó trước nội dung của mỗi element. (Phải thêm content: "";)
@@ -112,17 +112,15 @@
             <style>
                 .box-1::before {
 
-                    content: "*";
+                    content: "v";
                     background-color: orange;
                     border-radius: 50%;
-                    height: 15px;
-                    width: 15px;
+                    height: 20px;
+                    width: 20px;
                     text-align: center;
+                    display: inline-block;
                 }
-
-                .box-1 {
-                    display: block;
-                }
+             
                 .box-2::first-letter{
                     font-size: 40px;
                 }
@@ -133,8 +131,8 @@
                     color: red;
                 }
                 .box-2::selection {
-                    background-color: black;
-                    color: white;
+                    background-color: rgb(232, 26, 74);
+                    color: rgb(14, 183, 240);
                 }
                 .text {
                     opacity: 0.3;
