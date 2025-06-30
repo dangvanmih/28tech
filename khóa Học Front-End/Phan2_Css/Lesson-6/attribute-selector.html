@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+       /* a[target]{
+            background-color: yellow;
+        } */
+        /* a[target='_blank']{
+            background-color: aqua;
+        } */
+        /* a[title='website google']{
+            background-color: red;
+        } */
+        /* a[title~='google']{
+            background-color: red;
+        }
+        p[class|='top']{
+            background-color: yellow;
+        } */
+        /* chỉ css được khi giá trị duy nhất hoặc đi sau nó là một dấu - */
+
+        /* p[class^='top']{
+            background-color: yellow;
+        } */
+        /* css được tất cả khi bắt đầu bằng giá trị đó */
+        /* p[class$='top']{
+            background-color: yellow;
+        } */
+        /* ngược lại với ^ chọn tất cả khi cuối nó là giá trị đó */
+        /* p[class*='top']{
+            background-color: yellow;
+        } */
+        /* chọn tất cả các giá trị có giá trị đó */
+    </style>
+    <a href="https://www.google.com/" title="website google">Google</a>
+    <a href="https://www.facebook.com" title="website facebook" target="_blank">Facebook</a>
+    <a href="https://www.youtobe.com" title="website youtobe" target="">Youtube</a>
+
+
+    <p class="top-header test">Nội dung 1</p>
+    <p class="top- header test">Nội dung 2</p>
+    <p class="topheader">Nội dung 3</p>
+    <p class="top test">Nội dung 4</p>
+    <p class="top">Nội dung 5</p>
+    <div class="test">Nội dung 6</div>
+    <!-- 1h13' -->
+</body>
+</html>
