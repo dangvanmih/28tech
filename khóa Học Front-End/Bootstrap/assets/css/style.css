@@ -1,0 +1,70 @@
+/* section-one */
+
+.section-one {
+    margin-bottom: 100px;
+    margin-top: 100px;
+    padding: 60px 0px;
+    background-color: #e4dbdb5d;
+}
+
+.section-one .row .inner-box .icon {
+    font-size: 36px;
+    color: #5CB774;
+    /* margin-bottom: 20px; */
+
+}
+
+.section-one .inner-box .inner-title {
+    color: #5CB774;
+    font-size: 20px;
+    /* margin-bottom: 20px; */
+}
+.inner-box{
+    margin-bottom: 20px;
+}
+.section-one .row .inner-box{
+    margin: 15px 0px;
+}
+/* end-section-one */
+
+/* Section-two */
+
+
+
+
+
+/* Thêm icon trước các đoạn text */
+.section-two{
+    margin: 100px 0;
+}
+.section-two .head{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-two .inner-content-mid .inner-desc::before {
+    content: "\f560"; /* Mã unicode cho fa-check-double */
+    font-family: "Font Awesome 6 Free"; 
+    font-weight: 900; 
+    display: inline-block;
+    margin-right: 8px;
+    color: #28a745; /* Màu icon (tùy chỉnh) */
+}
+.section-two .row .banner img{
+    width: 100%;
+    margin-bottom: 20px
+}
+.section-two .inner-content-top{
+    margin-bottom: 30px
+}
+.section-two .inner-content-mid{
+    margin-bottom: 30px
+}
+@media (max-width: 991.98px){
+.section-two .inner-right{
+    order: 0;
+}
+.section-two .inner-left{
+    order: 1;
+}
+}
+/* End-Section-two */
