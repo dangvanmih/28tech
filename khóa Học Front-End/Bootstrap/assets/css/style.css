@@ -68,3 +68,22 @@
 }
 }
 /* End-Section-two */
+
+/* Section-three */
+.section-three{
+    padding: 30px 0;
+    background-color:#e4dbdb5d;
+}
+.section-three .row-head{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-three .row .col-xl-4{
+    text-align: center;
+}
+.section-three .row .inner-box{
+    background-color: #ffff;
+    padding: 50px;
+    margin-right: -5px;
+    margin-left: -5px;
+}
