@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="/Bootstrap/Lession-10/assets/boostrap/bootstrap.min.css">
+</head>
+
+<body>
+    <style>
+        .section-one .inner-main{
+            border-radius: 15px 15px 0px 0px;
+            overflow: hidden;        
+        }
+        .section-one .inner-head{
+            background: -webkit-linear-gradient(-30deg, #f57f20, #d62b08 100%);
+            text-align: center;
+            padding: 10px;
+         
+      
+        }
+         .section-one .inner-head .inner-title{
+            color: #ffff;
+            font-weight: 600;
+         }
+         .section-one .inner-body{
+            /* font-weight: 600;
+            color: #000;
+            text-align: left;
+            width: 100%;
+            text-decoration: none;
+            border: 1px solid #54515184;
+            border-radius: 10px; */
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 0 0 10px 10px;
+        }
+        .section-one .card{
+            border: none;
+            margin-bottom: 10px;
+        }
+        .section-one .card-header{
+            background-color: #fff;
+            border: none;
+            padding: 0;
+        }
+        .section-one .btn{
+            color: #d62b08;
+            text-decoration: none;
+        }
+        .section-one .collapsed{
+            color: #000;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+    </style>
+    <div class="section-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="inner-main">
+                        <div class="inner-head">
+                            <h2 class="inner-title">Câu hỏi thường gặp</h2>
+                        </div>
+
+                        <div class="inner-body">
+                            <div class="accordion" id="accordionFaqs">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-left" type="button"
+                                                data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">
+                                                Logo là gì?
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                        data-parent="#accordionFaqs">
+                                        <div class="card-body">
+                                            Logo là một hình ảnh đại diện thương hiệu được có thể được tạo thành từ văn
+                                            bản và biểu tượng. Một logo tốt thể hiện những gì một thương hiệu làm và giá
+                                            trị của thương hiệu.
+                                            Thiết kế logo là việc tạo ra hình ảnh thương hiệu trực quan hoàn hảo cho một
+                                            công ty. Tùy thuộc vào loại logo, logo có thể bao gồm biểu tượng, tên thương
+                                            hiệu (tên viết tắt cùng với dòng giới thiệu (tagline)).
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                                aria-controls="collapseTwo">
+                                                Vì sao cần thiết kế Logo chuyên nghiệp? </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                        data-parent="#accordionFaqs">
+                                        <div class="card-body">
+                                            Logo là điểm chạm đầu tiên với khách hàng và là nền tảng để xây dựng thương
+                                            hiệu bền vững.
+                                            Thiết kế Logo chuyên nghiệp là cách đảm bảo logo của doanh nghiệp được xây
+                                            dựng dựa trên mục tiêu doanh nghiệp, có định hướng và gắn kết với khách hàng
+                                            mục tiêu.
+                                            Thiết kế Logo chuyên nghiệp giúp doanh nghiệp:
+                                            - An tâm đầu tư xây dựng thương hiệu bài bản
+                                            - Đảm bảo tính ứng dụng, linh hoạt
+                                            -Thu hút khách hàng
+                                            -Thúc đẩy lòng trung thành thương hiệu
+                                            - Nổi bật hơn so với đối thủ
+                                            - Gia tăng giá trị thương hiệu
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                                data-toggle="collapse" data-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                Một Logo công ty đủ tốt là như thế nào? </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseThree" class="collapse " aria-labelledby="headingThree"
+                                        data-parent="#accordionFaqs">
+                                        <div class="card-body">
+                                            Một logo công ty tốt làm được ba điều:
+                                            1. Logo cho khách hàng tiềm năng biết liệu sản phẩm có phù hợp với họ hay
+                                            không
+                                            2. Logo truyền đạt những gì thương hiệu của bạn đại diện
+                                            3. Logo khiến khách hàng nhớ đến thương hiệu của bạn.
+                                            Và cách tốt nhất để thiết kế thiết kế nên một Logo công ty tốt là tìm sự hỗ
+                                            trợ của chuyên gia. Dựa trên mục tiêu của bạn, các chuyên gia sẽ có thể đề
+                                            xuất loại biểu tượng, màu sắc phù hợp, hình dạng và phông chữ hỗ trợ truyền
+                                            tải thông điệp thương hiệu.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <script src="/Bootstrap/Lession-10/assets/boostrap/jquery-3.5.1.slim.min.js"></script>
+            <script src="/Bootstrap/Lession-10/assets/boostrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
