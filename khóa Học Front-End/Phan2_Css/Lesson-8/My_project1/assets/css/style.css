@@ -1,7 +1,7 @@
 /* header */
 .header{
     width: 100%;
-    /* box-shadow:0 1px 3px rgb(0 0 0 / 10%) ; */
+    box-shadow:0 1px 3px rgb(0 0 0 / 10%) ;
     position:fixed;
     
 }
@@ -242,7 +242,7 @@
 
 /* footer */
 .footer{
-    background-color: #F5F5F7;
+    background-color: var(--color-two);
 }
 .footer .inner-wrap{
     display: flex;
@@ -255,12 +255,12 @@ padding: 10px;
 }
 .footer .inner-wrap .title{
     font-weight: 600;
-    color: var(--color-text);
+    color:#000;
 }
 .footer .inner-wrap ul li a{
-    color: rgba(24, 107, 207, 0.873);
+    color: #fff;
 }
 .footer .inner-wrap ul li a:hover{
-    color: #000;
+    color: var(--color-text);
 }
 /* Endfooter */
