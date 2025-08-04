@@ -7,12 +7,13 @@
     --color-one: #efefef;
     --color-two: #FFFFFF;
     --color-text: #232323;
-    --font:"Roboto", sans-serif;
+    --font:"DM Sans", sans-serif;;
 }
 
 body{
     
-    font-family: var(--font)
+    font-family: var(--font);
+    margin: 0;
 }
 
 a{
