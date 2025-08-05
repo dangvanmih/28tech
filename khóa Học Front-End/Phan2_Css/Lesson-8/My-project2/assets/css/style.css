@@ -435,3 +435,58 @@
 }
 
 /* End section-five */
+
+/* section-six */
+.section-six{
+    background-color: #1B2026;
+    padding: 100px 100px;
+
+}
+.section-six .row{
+    background-color: #fff;
+    padding: 70px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+   
+}
+.section-six .row .inner-content{
+    width: 55%;
+    margin-right: 30px
+}
+.section-six .row .inner-content .inner-title{
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(119, 119, 119);
+    margin-bottom: 10px;
+}
+.section-six .row .inner-content .inner-desc{
+    font-size: 60px;
+    font-weight: 600;
+}
+.section-six .row .inner-box{
+    margin-top: 10px;
+    flex: 1;
+}
+.section-six .row .inner-box .box{
+    border: 1px solid rgba(119, 119, 119, 0.199);
+    border-radius: 8px;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgb(119, 119, 119);
+}
+.section-six .row .inner-box .box .icon-box i{
+    color: rgb(119, 119, 119);
+    margin-right: 10px;
+
+}
+.section-six .row .inner-box .box .icon-box {
+    display: flex;
+}
+.section-six .row .inner-box .box .icon-arrow i{
+    color: rgb(119, 119, 119);   
+}
+/* End-section-six */
