@@ -6,8 +6,8 @@
 :root{
     --color-one: #efefef;
     --color-two: #FFFFFF;
-    --color-text: #232323;
-    --font:"DM Sans", sans-serif;;
+    --color-text:rgb(119, 119, 119);
+    --font:"DM Sans", sans-serif;
 }
 
 body{
