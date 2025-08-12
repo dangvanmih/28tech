@@ -1,141 +1,133 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-}
-
-/* head */
-
-.head {
-    background-image: url(/Bootstrap/project-mini-1/assets/image/banner-bg.png);
-    height: 100vh;
-    background-position: center center;
-    background-size: cover;
-
-}
-
-.head .nav {
+/* header */
+.header {
     position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
-.head .row .col-12 {
-    margin-top: 300px;
-}
-
-.head .inner-menu {
-    background-color: #fff;
-    padding: 25px 10px;
+.header .inner-main {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     display: flex;
-    margin-top: 30px;
-    margin-bottom: 100px;
-    justify-content: space-around;
-    border-radius: 40px;
-    max-width: 1100px;
-
+    justify-content: space-between;
+    padding: 25px 30px;
+    border-radius: 45px;
+    background-color: #fff;
 }
 
-.head .inner-menu .menu ul {
+.header .inner-logo img {
+    height: 30px;
+    width: auto;
+}
+
+.header .inner-menu ul {
+    list-style: none;
     display: flex;
     margin: 0;
+    padding: 0;
 }
 
-.head .inner-menu .menu ul li a {
-    color: #1e1e1e;
+.header .inner-menu li {
+    margin-left: 30px;
+}
+
+.header .inner-menu li a {
     font-size: 13px;
     font-weight: 500;
-    letter-spacing: 1.4px;
-
 }
 
-.head .inner-menu .menu ul li a:hover {
-    color: #ff589e;
+a:hover {
+    color: var(--color-two);
     text-decoration: none;
 }
 
-.head .inner-menu .menu {
+.header .inner-menu li a.active {
+    color: var(--color-two);
+}
+
+/* End header */
+
+
+/* section-one*/
+.section-one {
+    background-image: url(../image/banner-bg.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.head .inner-menu .menu ul li {
-    list-style: none;
-    margin-right: 40px;
+.section-one .inner-wrap {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.head .inner-menu .menu ul li:last-child {
-    margin-right: 0;
+.section-one .inner-title {
+    font-size: 41px;
+    color: #fff;
+    margin-bottom: 20px
 }
 
-.head .row {
+.section-one .inner-desc {
+    color: #fff;
+    margin-bottom: 20px
+}
+
+/* End section-one */
+
+/* section-two */
+.section-two {
+    margin-top: -200px;
+}
+
+.section-two .inner-box {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.10);
     text-align: center;
 }
 
-.head .row .inner-title h1 {
-    color: #fff;
-    font-size: 36px;
-    font-weight: 500;
-    letter-spacing: 1.4px;
-    line-height: 54px
-}
-
-.head .row .inner-desc p {
-    color: #fff;
-    line-height: 2;
-}
-
-.head .row .button button {
-    background-color: #ff589e;
-    border: none;
-    padding: 15px;
-    font-size: 14px;
-    border-radius: 40px;
-    color: #fff;
-    font-weight: 500;
-}
-
-/* End head */
-
-/* section-one */
-.section-one .inner-box .logo{
+.section-two .inner-box .inner-icon {
+    background-color: var(--color-one);
     width: 90px;
     height: 90px;
-    margin: auto;
-    position: relative;
-    margin-bottom: 30px;
-    background: #8261ee;
-    border-radius: 50%;
-    display:flex;
-    align-items: center;
+    display: inline-flex;
     justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 15px;
 }
-.section-one .inner-box .logo img {
-    color: #fff;
+
+.section-two .inner-box .inner-icon:hover {
+    background-color: var(--color-two);
+    transition: all 0.3s ease 0s;
+
+
 }
-.section-one .box {
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
-    margin-right: 20px;
-    padding: 30px;
-    margin-top: -250px;
+
+.section-two .inner-box .inner-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
-.section-one .box:last-child{
-    margin-right: 0;
-}
-.section-one .box .inner-title h2 {
-    margin: 0;
+
+.section-two .inner-box .inner-title {
     font-size: 18px;
-    letter-spacing: 1.4px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
-.section-one .box .inner-desc p {
-    margin: 0;
-    font-size: 15px;
+
+.section-two .inner-box .inner-desc {
+    font-size: 13px;
     color: #777777;
-    line-height: 1.5;
+    margin-bottom: 0;
 }
-/* End section-one */
+
+/* End secion-two */
