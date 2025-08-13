@@ -104,7 +104,7 @@ a:hover {
     padding: 15px;
 }
 
-.section-two .inner-box .inner-icon:hover {
+.section-two .inner-box:hover>.inner-icon {
     background-color: var(--color-two);
     transition: all 0.3s ease 0s;
 
@@ -131,3 +131,29 @@ a:hover {
 }
 
 /* End secion-two */
+
+/* section-three */
+.section-three{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.section-three .inner-icon {
+    text-align: center;
+}
+.section-three .inner-icon img{
+    max-width: 100%;
+    height: auto;
+}
+.section-three .inner-content .inner-title{
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+.section-three .inner-content .inner-desc{
+    color: #777777;
+}
+.section-three .inner-border-bottom{
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+}
+/* End section-three */
