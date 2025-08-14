@@ -270,18 +270,22 @@ a:hover {
     transform: translateY(-20px);
     transition: all 0.3s ease 0s;
 }
+
 @media (max-width:1199.98px) {
-    .work-process .inner-box{
+    .work-process .inner-box {
         margin-bottom: 30px;
     }
-    .work-process .inner-box::before{
+
+    .work-process .inner-box::before {
         display: none;
     }
-    .work-process .inner-content:hover .inner-box{
+
+    .work-process .inner-content:hover .inner-box {
         transform: none;
         transition: none;
     }
 }
+
 /* End Work Process */
 
 /* section-four */
@@ -412,11 +416,12 @@ a:hover {
 /* End blog-entries */
 
 /* do they say */
-.they-say .box-head{
+.they-say .box-head {
     padding-top: 100px;
     padding-bottom: 30px;
 }
-.they-say .inner-box{
+
+.they-say .inner-box {
     background-color: #fff;
     padding: 20px 30px;
     box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.10);
@@ -424,58 +429,70 @@ a:hover {
     border-radius: 18px;
     margin-bottom: 120px;
 }
-.they-say .inner-box .inner-icon{
+
+.they-say .inner-box .inner-icon {
     padding: 20px 0;
 }
-.they-say .inner-box .inner-desc{
+
+.they-say .inner-box .inner-desc {
     color: #777777;
     text-align: left;
 }
-.they-say .inner-box .inner-title{
+
+.they-say .inner-box .inner-title {
     color: #000;
     font-size: 16px;
     padding-top: 10px;
 }
-.they-say .inner-box .inner-position{
+
+.they-say .inner-box .inner-position {
     color: var(--color-two);
     font-size: 16px;
     padding-bottom: 10px;
 }
+
 .they-say .inner-box:hover .inner-title,
-.they-say .inner-box:hover .inner-position{
+.they-say .inner-box:hover .inner-position {
     transform: translateX(15px);
     transition: all 0.5s ease 0s;
 }
+
 @media (max-width:991.98px) {
-    .they-say .inner-box{
+    .they-say .inner-box {
         margin-bottom: 30px;
     }
 }
+
 /* End do they say */
 
 /* Pricing Plans */
-.pricing-plans{
+.pricing-plans {
     background-color: #f2f2fe;
 }
-.pricing-plans .box-head{
+
+.pricing-plans .box-head {
     padding-top: 100px;
     padding-bottom: 50px;
 }
-.pricing-plans .inner-box{
+
+.pricing-plans .inner-box {
     background-color: #fff;
     padding: 30px;
     margin-bottom: 100px;
     border-radius: 20px;
     text-align: center;
 }
-.pricing-plans .inner-box ul{
+
+.pricing-plans .inner-box ul {
     margin: 0;
     padding: 0;
 }
-.pricing-plans .inner-box .inner-title{
+
+.pricing-plans .inner-box .inner-title {
     font-size: 18px;
     padding: 10px 0;
 }
+
 .pricing-plans .inner-box .inner-price {
     background-color: var(--color-one);
     padding: 15px 28px;
@@ -483,34 +500,127 @@ a:hover {
     text-align: center;
     margin-bottom: 40px;
 }
-.pricing-plans .inner-box .inner-price .price{
+
+.pricing-plans .inner-box .inner-price .price {
     font-size: 26px;
     color: #fff;
     font-weight: 600;
 }
-.pricing-plans .inner-box .inner-price .desc-price{
+
+.pricing-plans .inner-box .inner-price .desc-price {
     color: #fff;
     margin: 0;
     padding: 0;
 }
+
 .pricing-plans .inner-box .list li {
     font-size: 13px;
     color: #777777;
     line-height: 2.5;
 }
-.pricing-plans .inner-box .list .active{
+
+.pricing-plans .inner-box .list .active {
     text-decoration: line-through;
 }
-.pricing-plans .inner-box .button{
+
+.pricing-plans .inner-box .button {
     margin-top: 30px;
 }
-.pricing-plans .row .col-xl-4:nth-child(2) .inner-price{
+
+.pricing-plans .row .col-xl-4:nth-child(2) .inner-price {
     background-color: var(--color-two);
 }
 
 @media (max-width:991.98px) {
-    .pricing-plans .inner-box{
+    .pricing-plans .inner-box {
         margin-bottom: 30px;
     }
 }
+
 /* End Pricing Plans */
+
+/* talk-to-us */
+.talk-us {
+    background-color: #f2f2fe;
+    padding: 150px 0;
+}
+
+.talk-us .box-head {
+    margin-bottom: 50px;
+}
+
+.talk-us .inner-content .inner-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.talk-us .inner-content .inner-desc {
+    font-size: 15px;
+    color: #777777;
+    margin-bottom: 30px;
+}
+
+.talk-us .inner-content .inner-detail {
+    font-size: 15px;
+    color: #777777;
+}
+
+.talk-us .contact-form .full-name,
+.mail-address {
+    padding: 15px 30px;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 40px;
+    border: none;
+    font-size: 15px;
+}
+
+.talk-us .contact-form textarea {
+    width: 100%;
+    padding: 15px 30px;
+    height: 200px;
+    border: none;
+    border-radius: 40px;
+    margin-bottom: 30px;
+}
+
+.talk-us .contact-form .button {
+    padding: 15px 25px;
+}
+
+/* End talk-to-us */
+
+/* footer */
+.footer {
+    background-image: linear-gradient(127deg, #a759d1 0%, #8261ee 91%);
+    padding-top: 30px;
+    text-align: center;
+}
+.footer .social{
+    overflow: hidden;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dddddd4d;
+}
+.footer .social li{
+    display: inline-block;
+    overflow: hidden;
+}
+.footer .social li a{
+    background-color: #fff;
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    line-height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #9d5bd9;
+  
+}
+.footer .desc-footer{
+    color: #fff;
+    padding: 20px 0;
+}
+/* End footer */
