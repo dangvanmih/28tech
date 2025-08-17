@@ -1,77 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-<script>
+    <script>
 
-// câu lệnh if lồng nhau
-    // var a = 10
-    // var b = 10
-    // if (a != undefined && b != undefined) {
-    //     if (a == b) {
-    //         console.log("a bằng b");
-    //     }
-    //     else {
-    //         console.log("a khác b");
-    //     }
-    // }
-    // else{
-    //     console.log("a hoặc b chưa được gán giá trị");
-    // }
+        // câu lệnh if lồng nhau
+        // var a = 10
+        // var b = 10
+        // if (a != undefined && b != undefined) {
+        //     if (a == b) {
+        //         console.log("a bằng b");
+        //     }
+        //     else {
+        //         console.log("a khác b");
+        //     }
+        // }
+        // else{
+        //     console.log("a hoặc b chưa được gán giá trị");
+        // }
 
-//câu lệnh if else rút gọn:
-    // var age = 18
-    // var result = age >= 18 ? "Bạn đã đủ 18 tuổi" : "Bạn chưa đủ 18 tuổi";
-    // console.log(result);
-    
-//Swich Case
-    // var a = 1;
-    // switch (a) {
-    //     case 1:
-    //          console.log("Đây là giá trị 1");
-    //         break;
-    //     case 2:
-    //         console.log("Đây là giá trị 2");
-    //         break;
-    //     case 3:
-    //         console.log("Đây là giá trị 3");
-    //     default:
-    //         console.log("Không xác định");
-    //         break;
-    // }
+        //câu lệnh if else rút gọn:
+        // var age = 18
+        // var result = age >= 18 ? "Bạn đã đủ 18 tuổi" : "Bạn chưa đủ 18 tuổi";
+        // console.log(result);
 
-// Vòng lặp For In: dùng để lấy ra key của một object(cũng có thể áp dụng cho array và string)
-    // var inforUser = {
-    //     fullName: "Đặng văn Minh",
-    //     age: 20,
-    //     phone: "0987654321",
-    // };
-    
-    // var keyTest = "phone";
-    // console.log(inforUser.age);
-    // console.log(inforUser[keyTest]);
-    // for ( key in inforUser) {
-    //     console.log(key,inforUser[key]);
-        
-    // }
-    
-// Vòng lặp for of: dùng để lấy ra phần tử của một array,string (không áp dụng với object)
-    // var listUser = [
-    //     "Le Van A",
-    //     "Nguyen Thi B",
-    //     "Do Thi C"
-    // ]
-    // for (item of listUser) {
-    //     console.log(item);
-    // }
+        //Swich Case
+        // var a = 1;
+        // switch (a) { 
+        // so sánh từng giá trị case với giá trị a, nếu bằng thì thực hiện bên trong case
+        // nếu ko có break thì nó sẽ chạy xuống các case bên dưới đến khi nào nó gặp case có break thì mới dừng
+        //     case 1:
+        //          console.log("Đây là giá trị 1");
+        //         break;
+        //     case 2:
+        //         console.log("Đây là giá trị 2");
+        //         break;
+        //     case 3:
+        //         console.log("Đây là giá trị 3");
+        //     default:
+        //         console.log("Không xác định");
+        //         break;
+        // }
 
-// khai báo biến let: biến let chỉ có phạm vi trong vòng khối khai báo
-// const: là  một hằng số vì vậy khi khai báo biến const thì bạn phải gán giá trị cho nó luôn, sau này cũng không thể thay đổi giá trị cho biến và cũng chỉ có trong phạm vi khối
+        // Vòng lặp For In: dùng để lấy ra key của một object(cũng có thể áp dụng cho array và string)
+        // var inforUser = {
+        //     fullName: "Đặng văn Minh",
+        //     age: 20,
+        //     phone: "0987654321",
+        // };
 
-</script>
+        // var keyTest = "phone";
+        // console.log(inforUser.age);
+        // console.log(inforUser[keyTest]);
+        // for ( key in inforUser) {
+        //     console.log(key,inforUser[key]);
+
+        // }
+
+        // Vòng lặp for of: dùng để lấy ra phần tử của một array,string (không áp dụng với object)
+        // var listUser = [
+        //     "Le Van A",
+        //     "Nguyen Thi B",
+        //     "Do Thi C"
+        // ]
+        // for (item of listUser) {
+        //     console.log(item);
+        // }
+
+        // var listUser = [
+        //     {
+        //         name: "Le Van A",
+        //         age: 18
+        //     },
+        //     {
+        //         name: "Le Van b",
+        //         age: 19
+        //     },
+        //     {
+        //         name: "Le Van c",
+        //         age: 20
+        //     }
+        // ]
+        // for(items of listUser){
+        //     console.log(items);
+
+        // }
+
+        // vòng lặp while: kiểm tra điều kiện trước rồi mới thực hiện
+
+        // var i = 0;
+        // while(i < 10){
+        //     console.log(i);
+        //     i++;
+        // }
+
+        // vòng lặp do - while: thực hiện ít nhất 1 vòng lặp
+        // var i = 0;
+        // do {
+        //     console.log(i);
+        //     i++;
+        // } while(i < 10)
+
+        // break: dừng vòng lặp mặc dù điều kiện của vòng lặp vẫn đang đúng
+        // for(var i =  0 ; i < 10; i++) {
+        //         console.log(i);
+        //         if(i == 5) {
+        //             break;
+        //         }
+        // }
+
+        // continute: bỏ qua 1 bước lặp và bước sang vòng lặp mới
+        // for (var i = 0; i < 10; i++) {
+        //     if (i == 5) {
+        //         continute;
+        //     }
+        //     console.log(i);
+
+        // }
+
+        // khai báo biến let: biến let chỉ có phạm vi trong vòng khối khai báo
+        // const: là  một hằng số vì vậy khi khai báo biến const thì bạn phải gán giá trị cho nó luôn, sau này cũng không thể thay đổi giá trị cho biến và cũng chỉ có trong phạm vi khối
+
+    </script>
 </body>
+
 </html>
