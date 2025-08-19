@@ -1,107 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
 
-        // function sum (a ,b) {
-        //     console.log(a+b);
-        // }
-        // sum(10,20)
+//         function sum(a, b) {
+//             console.log(a + b);
+//         }
+//         sum(10, 20)
+
+
+
+
 // arguments lấy ra các tham số mà người dùng truyền vào hàm và chuyển thành mảng
-        // function tinhtoan() {
-        //     let tong = 0;
-        //     for(item of arguments)
-        // {
-        //     tong += item;
-        // }
-        //     return tong;
-        // }
-        // var ketQua = tinhtoan(10,20,30,40,50);
-        // console.log(ketQua)
+//         function tinhtoan() {
+//             let tong = 0;
+//             for (item of arguments) {
+//                 tong += item;
+//             }
+//             return tong;
+//         }
+//         var ketQua = tinhtoan(10, 20, 30, 40, 50);
+//         console.log(ketQua)
+
+
+
 // Declaraton function(hàm định nghĩa)
 // tính hoisting: gọi hàm trước khi khai báo hàm đó
-        // var ketQua = tinhtoan(10,20,30,40,50);
-        // console.log(ketQua);
+//         var ketQua = tinhtoan(10, 20, 30, 40, 50);
+//         console.log(ketQua);
 
-        // function tinhtoan() {
-        //     let tong = 0;
-        //     for(item of arguments)
-        // {
-        //     tong += item;
-        // }
-        //     return tong;
-        // }
+//         function tinhtoan() {
+//             let tong = 0;
+//             for (item of arguments) {
+//                 tong += item;
+//             }
+//             return tong;
+//         }
     
+
+
+
 // Expression function(Hàm biểu thức): không có tính hoisting
-        // const tinhTong = function() {
-        //     let tong = 0;
-        //     for(item of arguments){
-        //         tong += item
-        //     }
-        // }
-        // return tong;
-        // let ketQua = tinhtong(10,20,30,40,50)
-        // console.log(ketQua);
+//         const tinhTong = function () {
+//             let tong = 0;
+//             for (item of arguments) {
+//                 tong += item
+//             }
+//         }
+//         return tong;
+//         let ketQua = tinhtong(10, 20, 30, 40, 50)
+//         console.log(ketQua);
+
+
 
 // Arrow function(Hàm mũi tên): ko có tính hoisting và không có argument
-        // const tinhTong = (...args) => {
-        //     console.log(args);
-        //     let tong = 0;
-        //         for(item of args){
-        //             tong += item
-        //         }
-        //         return tong;
-        //     }
-        //     let ketQua = tinhTong(10,20,30,40,50)
-        //     console.log(ketQua);
+//         const tinhTong = (...args) => {
+//             console.log(args);
+//             let tong = 0;
+//             for (item of args) {
+//                 tong += item
+//             }
+//             return tong;
+//         }
+//         let ketQua = tinhTong(10, 20, 30, 40, 50)
+//         console.log(ketQua);
 
 
 // VÍ DỤ VỀ HÀM:
-    // vd1: tính tổng các số chẵn của mảng sau:
-        // var mang = [1,2,3,4,5,6,7,8,9,10]
-        // function tinhTongSoChan(array) {
-        //     let tong = 0;
-        //     for (const item of array) {
-        //        if(item % 2 == 0)
-        //        tong += item;
-        //     }
-        //     return tong;
-        // }
-        // let ketQua = tinhTongSoChan(mang);
-        // console.log(ketQua);
-        
+//         vd1: tính tổng các số chẵn của mảng sau:
+//         var mang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//         const tinhTongSoChan = (args) => {
+//             let tong = 0;
+//             for (const items of args) {
+//                 if (items % 2 == 0) {
+//                     tong += items;
+//                 }
+//             }
+//             return tong;
+//         }
+//         let ketQua = tinhTongSoChan(mang)
+//         console.log(ketQua);
 
-    // vd2: Viết chương trình cho người dùng nhập vào số n lớn hơn 0.
-        //  sau đó dựa vào n tính giá trị của biểu thức: 
-        // bieuThuc = 1/n + 2/n +3/n +....+n/n
+//         function tinhTongSoChan(array) {
+//             let tong = 0;
+//             for (const item of array) {
+//                 if (item % 2 == 0)
+//                     tong += item;
+//             }
+//             return tong;
+//         }
+//         let ketQua = tinhTongSoChan(mang);
+//         console.log(ketQua);
 
-        // function tinhBieuThuc(n) {
-        //     let ketQua = 0;
-        //     for(let i = 1 ; i <= n; i++){
-        //         ketQua = 1/n;
-        //     }
-        //     return ketQua;
-        // }
 
-        // let n;
 
-        // do {
-        //     n = prompt("Nhap vao n");
-        //     n = parseInt(n);
-        //     if(n <= 0) {
-        //         console.log("Nhap so lon hon 0");
-        //     }
-        //     else {
-        //         let ketQua = tinhBieuThuc(n)
-        //     }
-        //     console.log(ketQua);  
-        // }
-        //     while(n <= 0)
+
+
+//         vd2: Viết chương trình cho người dùng nhập vào số n lớn hơn 0.
+//          sau đó dựa vào n tính giá trị của biểu thức:
+//         bieuThuc = 1 / n + 2 / n + 3 / n +....+n / n
+
+//         function tinhBieuThuc(n) {
+//             let ketQua = 0;
+//             for (let i = 1; i <= n; i++) {
+//                 ketQua = 1 / n;
+//             }
+//             return ketQua;
+//         }
+
+//         let n;
+
+//         do {
+//             n = prompt("Nhap vao n");
+//             n = parseInt(n);
+//             if (n <= 0) {
+//                 console.log("Nhap so lon hon 0");
+//             }
+//             else {
+//                 let ketQua = tinhBieuThuc(n)
+//             }
+//             console.log(ketQua);
+//         }
+//         while (n <= 0)
     </script>
 </body>
+
 </html>
