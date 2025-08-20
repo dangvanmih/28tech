@@ -8,6 +8,11 @@
 </head>
 
 <body>
+
+
+
+
+
     <!-- Dom element    -->
     <!-- <div>
         <style>
@@ -32,10 +37,15 @@
             // // add thêm class vào thẻ div
             // box.classList.add('dark')
         </script>
-    </div>
+    </div> -->
 
 
-    <div>
+<!-- 
+======================================================================================================= -->
+
+
+
+    <!-- <div>
         <ul id="menu">
             <li>Mục 1</li>
             <li>Mục 2</li>
@@ -47,8 +57,14 @@
             // console.log(menu);
         </script>
     
-    </div>
+    </div> -->
     
+
+
+
+<!-- =======================================================================================================
+
+
 
     <div>
         <h2>Thẻ h2 01</h2>
@@ -64,7 +80,13 @@
         </script>    
     </div>
 
-    <div>
+
+ -->
+
+
+<!-- ======================================================================================================= -->
+
+    <!-- <div>
         <h3 class="test">Thẻ 01</h3>
         <h4 class="test">Thẻ 02</h4>
         <h5 class="test">Thẻ 03</h5>
@@ -80,17 +102,18 @@
             const listTest = document.getElementsByClassName('test');
             // console.log(listTest);
             // console.log(...listTest)
-            // console.log([...listTest])
-            [...listTest].forEach(item => {
-                item.classList.add('test2'); // add clas = test2 vao cac item
-                item.classList.remove('test'); // xoa class = test
-            });            
+             console.log([...listTest]) 
+            //[...listTest]: lấy ra các phần tử bên trong mảng
+            // [...listTest].forEach(item => {
+            //     item.classList.add('test2'); // add clas = test2 vao cac item
+            //     item.classList.remove('test'); // xoa class = test
+            // });            
         </script>
 
     </div> -->
 
 
-    <div>
+    <!-- <div>
 
         <style>
             .box-1 .box-2 h2 .link{
@@ -116,15 +139,56 @@
         <script>
             const elements = document.querySelector('.box-1 .box-2 h2 .link')
             elements.classList.add('active')
-            console.log(active);
+            console.log(elements);
 
             const element = document.querySelectorAll('.box-1 .box-2 h2 .link');
             [...element].forEach(item =>{
                 item.classList.add('test')
             })
+        </script> 
+    </div>-->
+
+
+
+
+<!-- =============================================================================================================== -->
+         <!-- <style>
+            #box{
+                color: black;
+            }
+            .box-6{
+                background-color: brown;
+            }
+        </style> -->
+
+      
+            <!-- <h3 id="box">Nội dung thẻ h3</h3>
+            <h3 class="box">Nội dung thẻ h6</h3>
+        
+        <script>
+            const element = document.querySelector("#box");
+            console.log(element);
+            
+            
+        </script> -->
+ 
+    <!-- dùng querySelector và querySelectorAll sẽ bao gồm tất cả các getElementById và getElementsByClassName và getElementsByTagName -->
+    <!-- End Dom element    -->
+
+        <h3 id="box1">box1</h3>
+        <h3 id="box2">box2</h3>
+        <h3 id="box3">box3</h3>
+        <h3 id="box4">box4</h3>
+
+        <script>
+            const listBox = document.querySelectorAll("h3")
+            console.log(listBox);
+            // console.log([...listBox]);
+            // [...listBox].forEach(item =>{
+            //     item.classList.add('test')
+            // })
+            
         </script>
-    </div>
-   <!-- End Dom element    -->
 </body>
 
 </html>
