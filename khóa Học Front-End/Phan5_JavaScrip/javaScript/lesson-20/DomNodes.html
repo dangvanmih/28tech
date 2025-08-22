@@ -8,30 +8,32 @@
 <body>
     
 <div>
+    <div>
+        <div id="ads"></div>
 
-    <!-- <div id="ads"></div> -->
+            <script>
+                // const div = document.createElement("div");
+                // div.innerHTML = "Quảng Cáo...";
+                // console.log(div);
+                
+                // setInterval(()=>{
+                //     const divAds = document.querySelector("#ads");
+                //     divAds.appendChill(div);
+                // },3000);
+            </script>
 
-    <script>
-        // const div = document.createElement("div");
-        // div.innerHTML = "Quảng Cáo...";
-        // console.log(div);
-        
-        // setInterval(()=>{
-        //     const divAds = document.querySelector("#ads");
-        //     divAds.appendChill(div);
-        // },3000);
-    </script>
+            <script>
+                const div = document.createElement("div");
+                const text = document.createTextNode("Quảng cáo 2...");
+                div.appendChild(text)
+                console.log(div);
 
-    <script>
-        // const div = document.createElement("div");
-        // const text = document.createTextNode("Quảng cáo 2...");
-        // div.appendChild(text)
-        // console.log(div);
-
-        // const divAds = document.querySelector("#ads");
-        // divAds.appendChild(div);
-        
-    </script>
+                const divAds = document.querySelector("#ads");
+                divAds.appendChild(div);
+                
+            </script>
+            </div>
+    
 
     <div>
 
@@ -45,26 +47,32 @@
         <button id="buttonAdd">Thêm mới</button>
         <script>
             const menu = document.querySelector("#menu")
-            
             const buttonAdd = document.querySelector("#buttonAdd")
-            
+
             buttonAdd.onclick = function(){
                 const firstElement = menu.firstElementChild;
-
                 const newItem = document.createElement("li");
+          
                 newItem.innerHTML = "item mới"
-                // menu.appendChild(newItem)
-                menu.insertBefore(newItem,firstElement)
+                menu.appendChild(newItem)
+                
+                // menu.insertBefore(newItem,firstElement)
             }
-            //removeChild
-            const listItem = document.querySelectorAll("li");
+
+
+            // removeChild
+            // const listItem = menu.querySelectorAll("li");
             // listItem.forEach(item =>{
             //     console.log(item);
             //     item.onclick = function(){
             //         menu.removeChild(item)
             //     }
             // })
+
+
+
             //replaceChild
+            const listItem = menu.querySelectorAll("li");
             listItem.forEach(item =>{
                 item.onclick = function(){
                     const newItem = document.createElement("li");
