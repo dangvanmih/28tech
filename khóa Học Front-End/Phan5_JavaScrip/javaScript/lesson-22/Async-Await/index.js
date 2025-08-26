@@ -1,6 +1,6 @@
 import { fetchApi } from "../helpers/fetchApi.js";
 // Get Product
-    fetchApi("https://dummyjson.com/products")
+    fetchApi("http://localhost:3000/products")
     .then(data => {
         let htmls = "";
         data.products.forEach(items => {

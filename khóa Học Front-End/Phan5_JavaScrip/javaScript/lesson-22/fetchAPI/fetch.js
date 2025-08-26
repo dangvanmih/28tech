@@ -32,7 +32,7 @@ const fetchApi = (url) =>{  //fetchApi nhận 1 tham số url (chuỗi URL).
 //End get category
 
 // Get Product
-    fetchApi("https://dummyjson.com/products")
+    fetchApi("http://localhost:3000/products")
     .then(data => {
         let htmls = "";
         data.products.forEach(items => {
