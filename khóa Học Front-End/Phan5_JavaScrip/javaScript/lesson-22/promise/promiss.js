@@ -1,20 +1,27 @@
-// var a = 10;
+// Khi bạn tạo một Promise bằng new Promise(...), bạn truyền vào một executor function có 2 tham số:
+// resolve là hàm callback: gọi nó khi công việc thành công.
+// reject là hàm callback: gọi nó khi công việc thất bại.
 
-// var promise = new promise((resolve , reject) => {
-//     if (a !== undefined && a !== null && a !== "") {
-//         resolve(a); // Thành công => sẽ chạy vào .then
-//     }
-//     else {
-//         reject(a) // không thành công sẽ chạy vào .catch
-//     }
+
+
+
+
+var a = 10;
+var promise = new promise((resolve , reject) => {
+    if (a !== undefined && a !== null && a !== "") {
+        resolve(a); // → Promise fulfilled (thành công) và dữ liệu kết quả = 10 => sau đó chạy đến then
+    }
+    else {
+        reject(a) // không thành công sẽ chạy vào .catch
+    }
    
-// })
+})
 
-// promise 
-//     .then((success) =>{
-//         console.log(success);
-//         return success; // return để trả ra giá trị để sử dụng tiếp cho then bên dưới , nếu ko có return thì sẽ là undifined
-//     })
+promise 
+    .then((success) =>{  //.then((success) => {...}) sẽ nhận giá trị đó, tức là success = 10.
+        console.log(success);
+        return success; // return để trả ra giá trị để sử dụng tiếp cho then bên dưới , nếu ko có return thì sẽ là undifined
+    })
 
 //     .then((success2) =>{  // hàm then 2 này phải chờ kết quả của then trên rồi mới bắt đầu chạy
 //         const b = 20;
