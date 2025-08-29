@@ -18,11 +18,11 @@ const fetchApi = (url) =>{  //fetchApi nhận 1 tham số url (chuỗi URL).
     return result;
 }
 // // get category:
-    fetchApi("https://dummyjson.com/products/categories")
+    fetchApi("http://localhost:3000/categories")
     .then(data => {
         let htmls = ""
         data.forEach(items => {
-            htmls += `<div class="category-item">${items.name}</div>`
+            htmls += `<div class="category-item">${items}</div>`
         });
         const divCategory = document.querySelector("#category");
         divCategory.innerHTML = htmls;
@@ -35,7 +35,7 @@ const fetchApi = (url) =>{  //fetchApi nhận 1 tham số url (chuỗi URL).
     fetchApi("http://localhost:3000/products")
     .then(data => {
         let htmls = "";
-        data.products.forEach(items => {
+        data.forEach(items => {
             htmls += `<div class="product-item">
             <img src="${items.thumbnail}" alt="${items.title}">
             <h3>${items.title}</h3>
