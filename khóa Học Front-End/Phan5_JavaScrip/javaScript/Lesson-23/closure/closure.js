@@ -1,4 +1,4 @@
-// một hàm bên trong hàm khác được gọi là closure
+// một hàm bên trong hàm khác được gọi là closure (hàm bao đóng)
 const c = 10; // biến toàn cục
 const caculator = () => {
     const tong = (a,b) => {
@@ -56,6 +56,3 @@ console.log(infoUser);
 console.log(infoUser.get());
 console.log(infoUser.set("Minhxje"));
 console.log(infoUser.get());
-
-
-
