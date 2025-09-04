@@ -1,0 +1,88 @@
+
+// khai báo tên biến
+$color-red:#c30000;
+$color-green:#007200;
+$color-gray:#494343;
+$color-while:#fff;
+
+
+%button {
+    background-color: #c9c9c9;
+    color: #000;
+    padding: 0;
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+.button--red{
+    @extend %button;
+    background-color: $color-red;
+    color: #fff;
+}
+
+.button--green{
+    @extend %button;
+    background-color: $color-green;
+    color: $color-while;
+}
+
+
+
+.nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+    margin: 0 15px;
+    }
+    &__link {
+
+        text-decoration: none;
+        color: $color-gray;
+
+        &--active{
+            color: $color-green;
+        }
+        &--disabled{
+            color: #ddd;
+            cursor: no-drop;
+        }
+        &:hover{
+            color: $color-red;
+        }
+    }
+
+}
+
+
+
+.pagination {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    &__item {
+    margin: 0 5px;
+
+    }
+
+    &__link {
+        color: $color-gray;
+        text-decoration: none;
+    }
+
+    &__item--active &__link {
+        color: $color-red;
+    }
+
+    &__item--disabled &__link {
+        color: #ddd;
+        cursor: no-drop;
+    }
+}
+
+  
