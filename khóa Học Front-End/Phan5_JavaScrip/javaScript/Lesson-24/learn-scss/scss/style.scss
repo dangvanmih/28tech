@@ -1,10 +1,45 @@
-
+// câu lệnh biên dịch sang css: npx sass --watch scss:css
 // khai báo tên biến
-$color-red:#c30000;
-$color-green:#007200;
-$color-gray:#494343;
-$color-while:#fff;
+$color-red: #c30000;
+$color-green: #007200;
+$color-gray: #494343;
+$color-while: #fff;
 
+
+@mixin display-flex() {
+    display: flex;
+}
+
+@mixin flex-wrap() {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+@mixin border-radius($value) {
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    border-radius: $value;
+}
+@mixin pos-abs($positon, $x , $y) {
+    position: absolute;
+    @if($positon == "top-left") {
+        top: $x;
+        left: $y;
+    }
+    @else if($positon == "top-right") {
+        top: $x;
+        right: $y;
+    }
+     @else if($positon == "bottom-left") {
+        bottom: $x;
+        left: $y;
+    }
+    @else if($positon == "bottom-right") {
+        bottom: $x;
+        right: $y;
+    }
+     @else{}
+}
 
 %button {
     background-color: #c9c9c9;
@@ -14,13 +49,14 @@ $color-while:#fff;
     padding: 10px 30px;
     border-radius: 5px;
 }
-.button--red{
+
+.button--red {
     @extend %button;
     background-color: $color-red;
     color: #fff;
 }
 
-.button--green{
+.button--green {
     @extend %button;
     background-color: $color-green;
     color: $color-while;
@@ -28,29 +64,32 @@ $color-while:#fff;
 
 
 
-.nav{
+.nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
+    @include display-flex();
+    @include flex-wrap();
 
     &__item {
-    margin: 0 15px;
+        margin: 0 15px;
     }
+
     &__link {
 
         text-decoration: none;
         color: $color-gray;
 
-        &--active{
+        &--active {
             color: $color-green;
         }
-        &--disabled{
+
+        &--disabled {
             color: #ddd;
             cursor: no-drop;
         }
-        &:hover{
+
+        &:hover {
             color: $color-red;
         }
     }
@@ -63,16 +102,20 @@ $color-while:#fff;
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    @include display-flex();
 
     &__item {
-    margin: 0 5px;
+        margin: 0 5px;
 
     }
 
     &__link {
         color: $color-gray;
         text-decoration: none;
+        display: inline-block;
+        border: 1px solid #ddd;
+        padding: 6px 10px;
+        @include border-radius(8px);
     }
 
     &__item--active &__link {
@@ -85,4 +128,58 @@ $color-while:#fff;
     }
 }
 
-  
+
+
+.box {
+    position: relative;
+    background: rgb(186, 45, 208);
+    width: 100%;
+    height: 500px;
+    @include border-radius(10px);
+
+    &__item {
+        background-color:#fff ;
+        width: 100px;
+        height: 50px;
+
+        &--one {
+          @include pos-abs("top-left",10px ,10px )
+        }
+        &--two {
+           @include pos-abs("top-right",20px ,20px )
+        }
+        &--three {
+            @include pos-abs("bottom-left",30px ,30px )
+        }
+        &--four {
+            @include pos-abs("bottom-right",40px ,40px )
+        }
+    }
+}
+
+
+
+
+@for $i from 0 through 10 {
+    .opacity-#{$i} {
+        opacity: 0.1 * $i;
+    }
+}
+
+
+.box-2 {
+    background-color: orange;
+    width: calc(50px - 10px );
+}
+
+$i: 0;
+$length: 100;
+
+@while $i <= $length {
+  .mb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+  $i: $i + 5;
+}
+// 1:44
+
