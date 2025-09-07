@@ -1,45 +1,8 @@
 // câu lệnh biên dịch sang css: npx sass --watch scss:css
-// khai báo tên biến
-$color-red: #c30000;
-$color-green: #007200;
-$color-gray: #494343;
-$color-while: #fff;
+@import "variable";
+@import "mixin";
+//extend được dùng trong trường hợp bạn muốn một selector sử dụng lại những thuộc tính của selector khác. Giúp giảm trùng lặp code.Sử dụng trong trường hợp styles tĩnh. @include Dùng để gọi @mixin
 
-
-@mixin display-flex() {
-    display: flex;
-}
-
-@mixin flex-wrap() {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-@mixin border-radius($value) {
-    -webkit-border-radius: $value;
-    -moz-border-radius: $value;
-    border-radius: $value;
-}
-@mixin pos-abs($positon, $x , $y) {
-    position: absolute;
-    @if($positon == "top-left") {
-        top: $x;
-        left: $y;
-    }
-    @else if($positon == "top-right") {
-        top: $x;
-        right: $y;
-    }
-     @else if($positon == "bottom-left") {
-        bottom: $x;
-        left: $y;
-    }
-    @else if($positon == "bottom-right") {
-        bottom: $x;
-        right: $y;
-    }
-     @else{}
-}
 
 %button {
     background-color: #c9c9c9;
@@ -62,7 +25,7 @@ $color-while: #fff;
     color: $color-while;
 }
 
-
+// kiểu viết nesting
 
 .nav {
     list-style: none;
@@ -157,8 +120,9 @@ $color-while: #fff;
     }
 }
 
+// end nesting
 
-
+//Vòng lặp @for
 
 @for $i from 0 through 10 {
     .opacity-#{$i} {
@@ -172,6 +136,9 @@ $color-while: #fff;
     width: calc(50px - 10px );
 }
 
+
+
+//Vòng lặp @while
 $i: 0;
 $length: 100;
 
@@ -181,5 +148,31 @@ $length: 100;
   }
   $i: $i + 5;
 }
-// 1:44
 
+
+//Vòng lặp @each
+.btn {
+    background-color: #ddd;
+    color: #000;
+}
+
+$colors : ("blue","#3939ee","#fff"), ("red","#ec7575","#000"),("green","#5fee5f","#000") ,("yellow","#efb851","#000") ;
+@each $label , $bg , $colorText in $colors {
+    .btn--#{$label} {
+        background-color: $bg;
+        color: $colorText;
+    }
+}
+
+
+//Hàm trong SCSS luôn trả về một giá trị. Trong @function phải có @return
+
+@function sum($a , $b) {
+    $c : $a + $b;
+    @return $c;
+}
+.box-test {
+    width: sum(10px , 20px);
+}
+
+//@import

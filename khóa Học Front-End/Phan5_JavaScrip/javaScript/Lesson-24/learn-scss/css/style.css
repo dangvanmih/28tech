@@ -238,4 +238,33 @@
   margin-bottom: 100px;
 }
 
+.btn {
+  background-color: #ddd;
+  color: #000;
+}
+
+.btn--blue {
+  background-color: "#3939ee";
+  color: "#fff";
+}
+
+.btn--red {
+  background-color: "#ec7575";
+  color: "#000";
+}
+
+.btn--green {
+  background-color: "#5fee5f";
+  color: "#000";
+}
+
+.btn--yellow {
+  background-color: "#efb851";
+  color: "#000";
+}
+
+.box-test {
+  width: 30px;
+}
+
 /*# sourceMappingURL=style.css.map */
