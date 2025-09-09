@@ -1,0 +1,30 @@
+.category__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.category__item {
+    width: 15%;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    background-color: blueviolet;
+    color: #fff;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.products__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.product__item {
+    width: 15%;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px  solid #ddd;
+}
