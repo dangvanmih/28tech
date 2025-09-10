@@ -1,6 +1,11 @@
 import { fetchApi } from "./fetchApi.js";
+import { API_CATEGORY } from "./constants.js";
+
+
+
+
 const category = document.querySelector("#category")
-fetchApi("http://localhost:3000/categories")
+fetchApi(API_CATEGORY)
     .then(data => {
       let htmls = data.map(item => { // vòng lặp map là để trả ra một mảng mới
         return `<div class="category__item">
