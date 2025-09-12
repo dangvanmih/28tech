@@ -1,18 +1,26 @@
 import { fetchApi } from "./fetchApi.js";
 import { API_PRODUCT } from "./constants.js";
-import { params } from "./variable.js";
+import { params, products } from "./variable.js";
+// để gợi ý import ấn ctrl+space 
 
 
 
 
 
-const products = document.querySelector("#products")
+
 
 export const drawProduct = () => {
 
-    console.log(params); // chỗ này để in ra value từ người dùng nhập vào sau đó vẽ giao diện 
+    // phần này để check chánh danh mục rỗng thì sẽ bị trả về mảng rỗng và giao diện sẽ ko vẽ ra sản phẩm
+    let category = "";
+    if (params.category != "") {
+        category = `&category=${params.category}`;
+    }
 
-    const api = `${API_PRODUCT}?q=${params.q}` // nối chuỗi API PRODUCT với chuỗi giá trị trong input search
+
+
+
+    const api = `${API_PRODUCT}?q=${params.q}&_sort=${params.sort}&_order=${params.order}&_page=${params.page}$_limit=${params.limit}${category}` // nối chuỗi API PRODUCT với chuỗi giá trị trong input search
 
     fetchApi(api)
         .then(data => {
