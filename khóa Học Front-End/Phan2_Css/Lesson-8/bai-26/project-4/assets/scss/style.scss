@@ -1,4 +1,4 @@
-//npx sass --watch assets/scss : assets/css 
+//npx sass --watch assets/scss:assets/css 
 /* header */
 .header {
     position: fixed;
@@ -114,8 +114,6 @@
     }
 }
 
-
-
 /* End banner-main__ */
 
 /* box-highlight */
@@ -130,92 +128,91 @@
         text-align: center;
         margin-bottom: 30px;
 
-        }
+    }
 
-        &__icon {
-            background-color: var(--color-one);
-            width: 90px;
-            height: 90px;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            padding: 15px;
+    &__icon {
+        background-color: var(--color-one);
+        width: 90px;
+        height: 90px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        padding: 15px;
 
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            }
-        }
-
-        &__box:hover &__icon {
-            background-color: var(--color-two);
-            transition: all 0.3s ease 0s;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
     }
 
+    &__box:hover &__icon {
+        background-color: var(--color-two);
+        transition: all 0.3s ease 0s;
+    }
 
+    &__title {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-weight: 500;
+    }
 
-.section-two .inner-box .inner-title {
-    font-size: 18px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    font-weight: 500;
-}
+    &__desc {
+        font-size: 13px;
+        color: #777777;
+        margin-bottom: 0;
+    }
 
-.section-two .inner-box .inner-desc {
-    font-size: 13px;
-    color: #777777;
-    margin-bottom: 0;
-}
-
-@media (max-width: 991.98px) {
-    .section-two {
-        margin-top: 0px;
+    @media (max-width: 991.98px) {
+        & {
+            margin-top: 0px;
+        }
     }
 }
 
 /* End box-highlight */
 
-/* section-three */
-.section-three {
+/* banner-text*/
+.banner-text {
     margin-top: 80px;
     margin-bottom: 80px;
-}
 
-.section-three .inner-icon {
-    text-align: center;
-}
 
-.section-three .inner-icon img {
-    max-width: 100%;
-    height: auto;
-}
+    &__icon {
+        text-align: center;
 
-.section-three .inner-content .inner-title {
-    font-size: 28px;
-    margin-bottom: 25px;
-}
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
 
-.section-three .inner-content .inner-desc {
-    color: #777777;
-}
+    &__title {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
 
-.section-three .inner-border-bottom {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 100px;
-    margin-bottom: 100px;
-}
+    &__-desc {
+        color: #777777;
+    }
 
-@media (max-width: 991.98px) {
-    .section-three .inner-content {
-        margin-bottom: 30px;
-        margin-top: 30px;
+    &--border-bottom {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 100px;
+        margin-bottom: 100px;
+    }
+
+    @media (max-width: 991.98px) {
+        &__content {
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
     }
 }
 
-/* End section-three */
+/* End banner-text */
 
 
 /* Work Process */

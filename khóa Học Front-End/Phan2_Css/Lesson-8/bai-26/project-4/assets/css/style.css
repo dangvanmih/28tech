@@ -121,63 +121,56 @@
   background-color: var(--color-two);
   transition: all 0.3s ease 0s;
 }
-
-.section-two .inner-box .inner-title {
+.box-highlight__title {
   font-size: 18px;
   margin-top: 20px;
   margin-bottom: 15px;
   font-weight: 500;
 }
-
-.section-two .inner-box .inner-desc {
+.box-highlight__desc {
   font-size: 13px;
   color: #777777;
   margin-bottom: 0;
 }
-
 @media (max-width: 991.98px) {
-  .section-two {
+  .box-highlight {
     margin-top: 0px;
   }
 }
+
 /* End box-highlight */
-/* section-three */
-.section-three {
+/* banner-text*/
+.banner-text {
   margin-top: 80px;
   margin-bottom: 80px;
 }
-
-.section-three .inner-icon {
+.banner-text__icon {
   text-align: center;
 }
-
-.section-three .inner-icon img {
+.banner-text__icon img {
   max-width: 100%;
   height: auto;
 }
-
-.section-three .inner-content .inner-title {
+.banner-text__title {
   font-size: 28px;
   margin-bottom: 25px;
 }
-
-.section-three .inner-content .inner-desc {
+.banner-text__-desc {
   color: #777777;
 }
-
-.section-three .inner-border-bottom {
+.banner-text--border-bottom {
   border-bottom: 1px solid #ddd;
   padding-bottom: 100px;
   margin-bottom: 100px;
 }
-
 @media (max-width: 991.98px) {
-  .section-three .inner-content {
+  .banner-text__content {
     margin-bottom: 30px;
     margin-top: 30px;
   }
 }
-/* End section-three */
+
+/* End banner-text */
 /* Work Process */
 .work-process {
   background-image: url(../image/work-process-bg.png);
