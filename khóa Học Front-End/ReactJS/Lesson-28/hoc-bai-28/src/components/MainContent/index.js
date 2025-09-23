@@ -1,3 +1,4 @@
+import { FaApple, FaAward } from "react-icons/fa";
 function MainContent() {
 
     let name = "Đặng Văn Minh";
@@ -17,7 +18,10 @@ function MainContent() {
                 <div className='test' style={css}>
                     Xin chào {name}!
                 </div>
+                <FaApple />
+                <FaAward />
             </div>
+            
         </>
     )
 }

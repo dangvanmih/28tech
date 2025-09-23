@@ -64,7 +64,7 @@
 // console.log(sum(10,20,30,40,50,60));
 
 
-//Destructuring
+//DestructuringDestructuring (phá vỡ cấu trúc) cho phép chúng ta dễ dàng sử dụng các giá trị phần tử của Array hoặc Object (Mỗi lần lấy giá trị sẽ ngắn hơn).
 
 let infoUser = {
     fullName: "Đặng Văn Minh",
