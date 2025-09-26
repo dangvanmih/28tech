@@ -18,8 +18,8 @@ function MainContent() {
                 <div className='test' style={css}>
                     Xin chào {name}!
                 </div>
-                <FaApple />
-                <FaAward />
+                <FaApple className="icon" />
+                <FaAward className="icon" />
             </div>
             
         </>
