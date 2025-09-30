@@ -1,5 +1,6 @@
 import { product } from "../../database/product"
 import ProductItems from "./productItems";
+import "./ProductList.css"
 function ProductList() {
 
     console.log(product);
