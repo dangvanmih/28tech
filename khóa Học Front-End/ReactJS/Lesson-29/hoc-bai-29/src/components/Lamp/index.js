@@ -25,4 +25,3 @@ function Lamp() {
     )
 }
 export default Lamp;
-// 1:34:55

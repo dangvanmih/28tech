@@ -1,6 +1,8 @@
 import './App.css';
+// import Cart from './components/Cart';
+import Modal from './components/Modal';
 // import Country from './components/Country';
-import Lamp from './components/Lamp';
+// import Lamp from './components/Lamp';
 // import Login from './components/Login';
 // import Menu from './components/menu';
 // import ProductList from './components/ProductList';
@@ -13,7 +15,9 @@ function App() {
         <Menu/>
         <ProductList/> */}
         {/* <Country/> */}
-        <Lamp/>
+        {/* <Lamp/> */}
+        {/* <Cart/> */}
+        <Modal/>
     </>
 
   );
