@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+
+        #light {
+            background-color: #fff ;
+            width: 200px;
+            height: 200px;
+            color: #000;
+        }
+        #light.on {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+
+    <div id="light">
+        Nội dung...
+
+    </div>
+    <button id="btn" onclick="handleOnclick()">Tắt</button>
+    <script>
+        function handleOnclick() {
+            const light = document.querySelector("#light");
+            const btn = document.querySelector("#btn");
+            light.classList.toggle("on");
+            if(light.classList.contains("on"))
+            {
+
+                btn.innerHTML = "Bật";
+            }
+            else
+            {
+                btn.innerHTML = "Tắt";
+            }
+  
+        }
+
+    </script>
+
+
+</body>
+
+</html>

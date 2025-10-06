@@ -1,5 +1,5 @@
 import './App.css';
-// import Cart from './components/Cart';
+import Cart from './components/Cart';
 import Modal from './components/Modal';
 // import Country from './components/Country';
 // import Lamp from './components/Lamp';
@@ -17,7 +17,7 @@ function App() {
         {/* <Country/> */}
         {/* <Lamp/> */}
         {/* <Cart/> */}
-        <Modal/>
+        {/* <Modal/> */}
     </>
 
   );
