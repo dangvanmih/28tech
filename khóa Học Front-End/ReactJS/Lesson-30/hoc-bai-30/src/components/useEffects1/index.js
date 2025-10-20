@@ -1,4 +1,4 @@
-//trường hợp 1 khi useEffect không có dependence là nó sẽ render ra giao diện thì hàm callback sẽ được gọi lại kể cả render lần thứ 2 thì hàm callback vẫn được gọi lại
+//trường hợp 1 khi useEffect không có dependency là nó sẽ render ra giao diện thì hàm callback sẽ được gọi lại kể cả render lần thứ 2 thì hàm callback vẫn được gọi lại
 import { useEffect } from "react";
 function UseEffect1() {
     // truyền vào 1 hàm callback : hàm callback là 1 hàm được truyền vào đối số của 1 hàm khác

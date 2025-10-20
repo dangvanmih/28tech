@@ -1,3 +1,11 @@
+// nếu ở đây useEffect mà ko truyền vào dependency thì mỗi lần render ra giao diện thì lại gọi vào hàm callback 
+// mà gọi vào hàm callback thì nó lại fetch API sau đó setData của useState lại set lại data
+//  mà cập nhật lại data thì nó lại render lại mà render lại thì lại chạy vào callback nên nó bị lặp vô hạn
+
+// nên ở dưới đây truyền vào 1 dependency rỗng "[]" là khi render giao diện lần thứ 2 trở đi thì callback ko bị gọi lại nữa
+// cách đoạn code dưới đây chạy là nó sẽ console.log ra data ( ở đây là data rỗng chưa có gì)
+// tiếp theo nps render ra giao diện ở trong câu lệnh return 
+// rồi sau đó nó mới chạy vào hàm useEffect 
 import { useEffect, useState } from "react";
 import "./useEffect.scss"
 function UseEffect2() {
@@ -11,7 +19,7 @@ function UseEffect2() {
                 setData(data.products);
             })
     }, [])
-    // console.log(data);
+    console.log(data);
 
     return (
         <>
