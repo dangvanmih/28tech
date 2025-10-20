@@ -1,3 +1,6 @@
+//dưới đây là trường hợp useEffect dùng dependency và có truyền 1 biến vào dependency đó 
+// Khi render lại giao diện (tức render lần 2 trở đi), thì callback của useEffect được gọi lại khi dependency thay đổi.
+
 import { useEffect, useState } from "react";
 import "./useEffect.scss"
 function UseEffect3() {
@@ -39,6 +42,7 @@ function UseEffect3() {
                 ))}
             </div>
             <ul>
+                {/* vì quatityPage là 1 số nên phải chuyển nó thành 1 mảng như bên dưới đây */}
                 {[...Array(quatityPage)].map((_,index) => (  // _ không dùng đến thì viết như thế
                     <li key={index} onClick={() =>{handlePage(index)} }>{index+1}</li>
                 ))}
