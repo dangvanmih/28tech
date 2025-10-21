@@ -9,7 +9,7 @@ function ProductList() {
         <>
             <div className="product__list">
                 {product.map((items) => (
-                    <ProductItems item = {items} key={items.id} />
+                    <ProductItems item = {items} key={items.id} /> //Bạn đang truyền props tên là item, có giá trị là items.
                 ))}
             </div>
 
