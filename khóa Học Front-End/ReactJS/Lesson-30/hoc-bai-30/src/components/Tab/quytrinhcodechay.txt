@@ -1,0 +1,7 @@
+1:đầu tiên tạo 3 tab và phần tab__content bên dưới để chứa nội dung của các tab
+2: tạo 2 useState:
+    1. useState setData: để load lại data rồi render ra giao diện
+    2. useState setTabActive để mỗi khi người dùng chuyển tab 
+    thì useState báo cho react biết là data đã thay đổi để cập nhật lại giao diện
+3:sau đó viết hàm fetch API: vì 3 API đều chung đoạn đầu nên ở phần đuôi
+ta chỉ cần nối thêm ${tabActive} thì mỗi khi người dùng chuyển tab thì API lại được thay đổi
