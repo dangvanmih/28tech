@@ -1,3 +1,4 @@
+//useContext (bối cảnh) giúp đơn giản hóa việc chuyền dữ liệu từ component cha xuống các component con mà không cần phải sử dụng đến props.
 import { useContext } from "react";
 import { Menucontext } from "../Layout";
 function Menu() {

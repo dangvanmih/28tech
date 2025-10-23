@@ -1,3 +1,4 @@
+// useState giúp cập nhật lại giao diện khi dữ liệu thay đổi
 import { useState } from "react";
 import "./modal.scss"
 function Modal() {
