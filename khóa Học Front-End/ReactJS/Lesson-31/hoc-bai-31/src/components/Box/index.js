@@ -1,10 +1,21 @@
-import { memo } from "react"; // check kết quả hiện tại và trước đó có gì khác không nếu không thì ko cần phải render lại giao diện
+import { memo } from "react"; 
+// dùng để tối ưu: check kết quả hiện tại và trước đó có gì khác không nếu không thì ko cần phải render lại giao diện
+function Box (props) {
+    const {onCounter, onReset} = props;
 
-function Box () {
     console.log("Render box");
-    
+    const handleClick = () => {
+        onCounter();
+    }
+    const handleReset = () => {
+        onReset();
+    }
     return (
-        <></>
+        <>
+        
+            <button onClick={handleClick}>Couter</button>
+            <button onClick={handleReset}>Reset</button>
+        </>
     )
 }
 export default memo(Box);
