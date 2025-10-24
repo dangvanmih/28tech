@@ -1,5 +1,6 @@
 import './App.css';
-import UseRef4 from './components/UseRef4';
+import Counter from './components/Counter';
+// import UseRef4 from './components/UseRef4';
 // import RandomGift from './components/RandomGift';
 // import Layout from "./components/Layout";
 // import UseRef from './components/UseRef';
@@ -11,7 +12,8 @@ function App() {
       {/* <UseRef/> */}
       {/* <UseRef2/> */}
       {/* <RandomGift /> */}
-      <UseRef4 />
+      {/* <UseRef4 /> */}
+      <Counter />
     </>
   );
 }
