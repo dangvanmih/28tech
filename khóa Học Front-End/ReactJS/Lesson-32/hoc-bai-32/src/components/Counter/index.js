@@ -24,7 +24,7 @@ function Counter () {
         <>
             
             {/* tại vì thằng này ko liên quan gì đến thằng Counter nên mỗi khi thằng Counter thay đổi dữ liệu
-            thì thằng này ko cần phải render lại giao diện nên ta cần dùng UseMemo */}
+            thì thằng này ko cần phải render lại giao diện nên ta cần dùng Memo() */}
             <div>Kết quả: {counter} </div>
             <button onClick={handleCounter}>Couter</button> 
             <div>{resultPow}</div>
