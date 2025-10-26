@@ -13,7 +13,7 @@ function Counter () {
         // dùng hàm này để khi useState render lại thì hàm này ko cần phải khởi tạo 1 hàm mới
         () => {
             setCounter( counter => counter + 1); // Hãy lấy giá trị hiện tại của counter, rồi cộng thêm 1
-            // setCounter(counter + 1); kết quả sẽ luôn bẳng 1 vì callback chỉ lưu giá trị cũ ko cập nhật lại dù counter có bằng bao nhiêu đi nữa
+            // setCounter(counter + 1); kết quả sẽ luôn bẳng 1 vì usecallback chỉ lưu giá trị cũ ko cập nhật lại dù counter có bằng bao nhiêu đi nữa
         },[])
 
     const handleReset = useCallback( () => {
@@ -30,4 +30,3 @@ function Counter () {
     )
 }
 export default Counter; 
-// 1:19:43
