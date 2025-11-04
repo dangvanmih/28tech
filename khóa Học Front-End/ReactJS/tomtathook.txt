@@ -1,0 +1,51 @@
+1.useState giúp cập nhật lại trạng thái của dữ liệu (hay cập nhật lại giá trị của dữ liệu).
+Khi dữ liệu thay đổi thì giao diện được cập nhật lại theo dữ liệu mới.
+Một vài ví dụ trong thực tế:
+Bóng đèn có 2 trạng thái là bật hoặc tắt.
+Trạng thái đã đăng nhập hoặc chưa đăng nhập vào tài khoản.
+Khi tăng số lượng sản phẩm thì tổng tiền được cập nhật lại.
+
+----------------------------------------------------------
+2.useEffect dùng để xử lý logic nào đó khi data (dữ liệu) được thay đổi.
+Component sau khi được render ra giao diện lần đầu,
+thì sẽ gọi tới hàm callback của useEffect (vì chúng ta ưu tiên việc render ra giao diện trước,
+xử lý logic sau nên callback của useEffect sẽ chạy sau khi component được render ra).
+useEffect(callback) :Khi render lại giao diện (tức render lần 2 trở đi), thì callback của useEffect vẫn được gọi lại.
+useEffect(callback, []) :Khi render lại giao diện (tức render lần 2 trở đi), thì callback của useEffect không được gọi lại.
+useEffect(callback, [dependency]): Khi render lại giao diện (tức render lần 2 trở đi), thì callback của useEffect được gọi lại khi dependency thay đổi.
+----------------------------------------------------------
+3.useContext (bối cảnh) giúp đơn giản hóa việc chuyền dữ liệu từ component cha xuống các component con mà không cần phải sử dụng đến props.
+Tức là chuyền trực tiếp từ component cha xuống các component con mà không cần phải thông qua 1 component gián tiếp.
+
+----------------------------------------------------------
+4.useRef trả về một object với thuộc tính current được khởi tạo thông qua tham số truyền vào.
+Object được trả về không bị khởi tạo lại khi component render lại.
+Giá trị trong object thay đổi nhưng component không bị render lại (useState thay đổi thì làm component render lại).
+Cú pháp: const tenBien = useRef(initialValue);
+Trong đó:
+initialValue: là giá trị khởi tạo.
+useRef được sử dụng để truy cập được các phần tử trong DOM.
+-----------------------------------------------------------
+
+5.useCallback giúp tránh thực hiện lại một hàm không cần thiết.
+Giúp tạo ra một vùng nhớ để lưu hàm callback và chỉ tạo ra hàm callback mới khi dependencies thay đổi.
+Cú pháp: const functionName = useCallback(callback, dependency);
+Trong đó:
+callback: là một hàm được gọi lại, lần render đầu tiên luôn chạy vào hàm này.
+dependency: là sự phụ thuộc, khi dependency thay đổi thì useCallback mới tạo ra một hàm mới.
+
+-----------------------------------------------------------
+6.React.memo() dùng để ghi nhớ kết quả.
+React.memo() sẽ không render lại component khi component đó không có gì thay đổi.
+React.memo() là Higher Order Component (Thành phần bậc cao hơn) được sử dụng để bọc các component.
+Cú pháp:
+-----------------------------------------------------------
+7.useMemo giúp tránh thực hiện lại một logic không cần thiết.
+useMemo tạo ra một vùng nhớ để lưu giá trị đầu ra và chỉ ghi nhớ giá trị mới khi dependencies thay đổi.
+Cú pháp: const variableName = useMemo(callback, dependency);
+Trong đó:
+callback: là một hàm được gọi lại, lần render đầu tiên luôn chạy vào hàm này.
+dependency: là sự phụ thuộc, khi dependency thay đổi thì useMemo cập nhật lại giá trị.
+Sự khác biệt giữa useCallback và useMemo:
+useCallback lưu vào bộ nhớ một hàm.
+useMemo lưu vào bộ nhớ một giá trị.

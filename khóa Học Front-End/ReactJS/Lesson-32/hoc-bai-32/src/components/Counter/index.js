@@ -13,7 +13,7 @@ function Counter () {
     }
     
     // const resultPow = pow();
-    // useMemo giúp tránh thực hiện lại 1 logic nào đó. và nó tạo ra 1 vùng nhớ để lưu giá trị đầu vào và chỉ ghi nhớ giá trị mới khi dependency thay đổi
+    // useMemo giúp tránh thực hiện lại 1 logic nào đó. và nó tạo ra 1 vùng nhớ để lưu giá trị đầu ra và chỉ ghi nhớ giá trị mới khi dependency thay đổi
     const resultPow = useMemo( () => { 
         pow()
     },[]) 

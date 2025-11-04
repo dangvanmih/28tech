@@ -1,10 +1,14 @@
 import './App.css';
-import Counter from './components/Counter';
+import CounterReducer from './components/CounterReducer';
+// import CounterState from './components/CounterState';
+// import Counter from './components/Counter';
 
 function App() {
   return (
       <>
-        <Counter />
+        {/* <Counter /> */}
+        {/* <CounterState /> */}
+        <CounterReducer />
       </>
   );
 }
