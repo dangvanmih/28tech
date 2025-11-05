@@ -49,3 +49,12 @@ dependency: là sự phụ thuộc, khi dependency thay đổi thì useMemo cậ
 Sự khác biệt giữa useCallback và useMemo:
 useCallback lưu vào bộ nhớ một hàm.
 useMemo lưu vào bộ nhớ một giá trị.
+-----------------------------------------------------------
+8.useReducer giống như một phiên bản nâng cao của useState.
+useReducer được sử dụng trong trường hợp component có state phức tạp.
+Cú pháp: const [state, dispatch] = useReducer(reducer, initialState);
+Các bước sử dụng useReducer:
+Bước 1: Khởi tạo useReducer và xác định giá trị khởi tạo.
+Bước 2: Xây dựng hàm reducer (Như là một hàm chuyển đổi, đầu vào là 2 tham số gồm state và action, đầu ra là new state - state mới).
+Bước 3: Xác định những Action (Xác định những hành động sẽ xảy ra).
+Bước 4: Sử dụng Dispatch để kích hoạt một action.
