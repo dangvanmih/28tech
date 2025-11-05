@@ -1,0 +1,27 @@
+.product__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product__item {
+    width: 300px;
+    margin: 50px 0;
+    text-align: center;
+    /* border: 1px solid #ddd; */
+    padding: 10px 0;
+}
+
+.product__image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    border-radius: 10px;
+
+    
+}
+
+.product__title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
