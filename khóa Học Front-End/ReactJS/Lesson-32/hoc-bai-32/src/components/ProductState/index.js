@@ -25,10 +25,13 @@ function ProductState () {
             {loading ? (
                 <>
                 <div className="product__list">
-                   <div className="product__item">
-                        <Skeleton className="product__image" />
-                        <Skeleton className="product__item" />
-                    </div>
+                     {[...Array(6)].map((_, index) => (
+                          <div className="product__item" key={index}>
+                            <Skeleton className="product__image" />
+                            <Skeleton className="product__item" />
+                            <Skeleton className="product__image__cricle" />
+                        </div>
+                     ))}
                 </div>
                 </>
 
@@ -38,6 +41,7 @@ function ProductState () {
                         <div className="product__item" key={item.id}>{item.title}
                             <img className="product__image" src= {item.thumbnail} alt= {item.title}  />
                             <h3 className="product__title">{item.title}</h3>
+                            <img className="product__image__cricle" src= {item.thumbnail} alt= {item.title}  />
                         </div>
                         
                     ))}

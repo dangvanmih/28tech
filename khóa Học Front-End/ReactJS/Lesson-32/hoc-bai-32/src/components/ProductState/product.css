@@ -10,6 +10,7 @@
     text-align: center;
     /* border: 1px solid #ddd; */
     padding: 10px 0;
+    margin-right: 20px;
 }
 
 .product__image {
@@ -24,4 +25,10 @@
 .product__title {
     margin-top: 0px;
     margin-bottom: 10px;
+}
+.product__image__cricle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
