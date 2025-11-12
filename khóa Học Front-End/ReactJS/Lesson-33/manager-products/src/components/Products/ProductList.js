@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-function ProductList() {
+function ProductList(props) {
+    const {reload} = props
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -8,15 +9,12 @@ function ProductList() {
             fetch("http://localhost:3000/products")
             .then(res => res.json())
             .then(data => {
-                setData(data)
-                console.log(data);
+                setData(data.reverse()) // là sản phẩm khi thêm mới sẽ được đổi lên đầu trang
             })
         }
         fecthApi()
-    },[]);
+    },[reload]);  // mỗi khi reload thay đổi thì call lại API vẽ lại giao diện
 
-
-    console.log(data);
     
     return (
         <>
@@ -27,8 +25,8 @@ function ProductList() {
                             <img src={item.thumbnail} alt={item.title} />
                         </div>
                         <h4 className="product__title">{item.title}</h4>
-                        <p className="product__price">{item.price}</p>
-                        <p className="product__discount">{item.discountPercentage} %</p>
+                        <p className="product__price">{item.price}$</p>
+                        <p className="product__discount">{item.discountPercentage}%</p>
                         <button>Edit</button>
                         <button>Delete</button>
                     </div>
