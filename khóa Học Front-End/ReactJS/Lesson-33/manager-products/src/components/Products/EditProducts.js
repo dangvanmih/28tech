@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import Modal from 'react-modal';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
-
-function CreateProduct(props) {
-    const {onReload} = props;
+function EditProduct(props) {
+    const {item, onEditReload} = props
     const [showModal, setShowModal] = useState(false);
-    const [data, setData] = useState({});
+    const [data, setData] = useState(item);
     const [dataCategory, setDataCatefory] = useState([]);
 
 
@@ -39,6 +40,7 @@ function CreateProduct(props) {
         })
     }
     const openModal = () => {
+
         setShowModal(true);
     }
     const closeModal = () => {
@@ -46,8 +48,8 @@ function CreateProduct(props) {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch("http://localhost:3000/products", {
-            method: "POST",
+        fetch(`http://localhost:3000/products/${item.id}`, {
+            method: "PATCH",  // phương thức chỉnh sửa sản phẩm
             header: {
                 Accept: "application/json",
                 "Content-Type": "application/json"
@@ -56,16 +58,23 @@ function CreateProduct(props) {
         })
             .then(res => res.json())
             .then(data => {
-               if(data) {
-                    setShowModal(false)
-                    onReload();
-               }
+                if (data) {
+                    setShowModal(false);
+                    onEditReload();
+                    Swal.fire({
+                        position: "center-center",
+                        icon: "success",
+                        title: "Bạn đã cập nhật sản phẩm thành công!",
+                        showConfirmButton: false,
+                        timer: 2000
+                    });
+                }
             })
     }
     return (
         <>
 
-            <button onClick={openModal}>Tạo sản phẩm mới</button>
+            <button onClick={openModal}>Chỉnh Sửa</button>
 
 
 
@@ -81,14 +90,14 @@ function CreateProduct(props) {
                             <tr>
                                 <td>Tiêu Đề</td>
                                 <td>
-                                    <input type='text' name='title' onChange={handelChange} required />
+                                    <input type='text' name='title' onChange={handelChange} value={data.title} required />
                                 </td>
                             </tr>
                             {dataCategory.length > 0 && (
                                 <tr>
                                     <td>Danh mục</td>
                                     <td>
-                                        <select name='category' onChange={handelChange}>
+                                        <select name='category' onChange={handelChange} value={data.category}>
                                             {dataCategory.map((item) => (
                                                 <option key={item.id} value={item.title}> {item.title} </option>
                                             ))}
@@ -100,31 +109,31 @@ function CreateProduct(props) {
                             <tr>
                                 <td>Giá</td>
                                 <td>
-                                    <input type='text' name='price' onChange={handelChange} required />
+                                    <input type='text' name='price' value={data.price} onChange={handelChange} required />
                                 </td>
                             </tr>
                             <tr>
                                 <td>Giảm giá</td>
                                 <td>
-                                    <input type='text' name='discountPercentage' onChange={handelChange} required />
+                                    <input type='text' name='discountPercentage' value={data.discountPercentage} onChange={handelChange} required />
                                 </td>
                             </tr>
                             <tr>
                                 <td>Số lượng còn lại</td>
                                 <td>required
-                                    <input type='text' name='stock' onChange={handelChange} />
+                                    <input type='text' name='stock' value={data.stock} onChange={handelChange} />
                                 </td>
                             </tr>
                             <tr>
                                 <td>Đường dẫn ảnh</td>
                                 <td>
-                                    <input type='text' name='thumbnail' onChange={handelChange} required />
+                                    <input type='text' name='thumbnail' value={data.thumbnail} onChange={handelChange} required />
                                 </td>
                             </tr>
                             <tr>
                                 <td>Mô tả</td>
                                 <td>
-                                    <textarea rows={4} name='description' onChange={handelChange}></textarea>
+                                    <textarea rows={4} name='description' value={data.description} onChange={handelChange}></textarea>
                                 </td>
                             </tr>
                             <tr>
@@ -132,7 +141,7 @@ function CreateProduct(props) {
                                     <button onClick={closeModal}>Hủy</button>
                                 </td>
                                 <td>
-                                    <input type='submit' value="Tạo mới" />
+                                    <input type='submit' value="lưu" />
                                 </td>
                             </tr>
                         </tbody>
@@ -144,5 +153,4 @@ function CreateProduct(props) {
         </>
     )
 }
-export default CreateProduct;
-//1:13:17
+export default EditProduct;

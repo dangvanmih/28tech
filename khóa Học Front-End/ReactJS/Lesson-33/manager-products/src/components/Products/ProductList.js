@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
-
+import EditProduct from "./EditProducts";
+import DeleteProduct from "./DeleteProduct"
 function ProductList(props) {
     const {reload} = props
     const [data, setData] = useState([]);
-
+    const [editreload, setEditreload] = useState(false)
+    const handleEditreload = () => {
+        setEditreload(!editreload)
+    }
     useEffect(() => {
         const fecthApi = async () => {
             fetch("http://localhost:3000/products")
@@ -13,7 +17,7 @@ function ProductList(props) {
             })
         }
         fecthApi()
-    },[reload]);  // mỗi khi reload thay đổi thì call lại API vẽ lại giao diện
+    },[reload, editreload]);  // mỗi khi dependency thay đổi thì call lại API vẽ lại giao diện
 
     
     return (
@@ -27,8 +31,8 @@ function ProductList(props) {
                         <h4 className="product__title">{item.title}</h4>
                         <p className="product__price">{item.price}$</p>
                         <p className="product__discount">{item.discountPercentage}%</p>
-                        <button>Edit</button>
-                        <button>Delete</button>
+                        <EditProduct item = {item} onEditReload = {handleEditreload} />
+                        <DeleteProduct item = {item} onEditReload = {handleEditreload} />
                     </div>
                  ))}
            </div>
