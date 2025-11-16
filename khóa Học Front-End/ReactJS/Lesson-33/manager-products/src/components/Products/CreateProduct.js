@@ -46,7 +46,7 @@ function CreateProduct(props) {
         setShowModal(false);
     }
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault(); // ngăn reload lại form 
         fetch("http://localhost:3000/products", {
             method: "POST",
             header: {
