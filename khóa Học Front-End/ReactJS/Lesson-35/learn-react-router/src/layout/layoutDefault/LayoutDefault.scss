@@ -3,33 +3,11 @@
     background-color: orange;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 10px 20px;
   }
 
-  &__menu {
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
 
-      li {
-        margin-left: 20px;
-
-        a {
-          color: #000;
-          text-decoration: none;
-          font-weight: 500;
-
-          .active {
-            color: #fff;
-          }
-        }
-      }
-    }
-
-  }
 
   &__main {
     padding: 20px;
@@ -40,4 +18,50 @@
     text-align: center;
     padding: 10px 0;
   }
+}
+
+.menu {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    li {
+      margin-left: 20px;
+      position: relative;
+    }
+  }
+
+  &__link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+
+    &--active {
+      color: #fff;
+    }
+  }
+
+  &__sub {
+    position: absolute;
+    top: 100%;
+    background-color: violet;
+    display:flex;
+    flex-direction: column;
+    display:  none !important;
+    
+    li {
+      margin-left: 0 !important;
+    }
+    a {
+      white-space: nowrap; // ngăn text xuống dòng
+      display: block;
+      padding: 4px 10px;
+    }
+  }
+  li:hover > &__sub {
+    display: flex !important;
+  }
+
 }
