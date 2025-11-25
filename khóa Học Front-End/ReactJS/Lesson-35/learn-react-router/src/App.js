@@ -8,6 +8,7 @@ import LayoutDefault from "./layout/layoutDefault"
 import Blog from './pages/Blog';
 import BlogNews from './pages/Blog/BlogNews';
 import BlogRelated from './pages/Blog/BLogRelated';
+import BlogAll from './pages/Blog/BlogAll';
 function App() {
   return (
     <>
@@ -19,8 +20,9 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="blog" element={<Blog />} >
-            <Route path='news' element = {<BlogNews />}/>
-            <Route path='related' element = {<BlogRelated />}/>
+            <Route index element={<BlogAll />} /> {/*index routes: dùng để khi cpn cha render thì nó cũng đc render */}
+            <Route path='news' element={<BlogNews />} />
+            <Route path='related' element={<BlogRelated />} />
           </Route>
           <Route path="*" element={<Error404 />} />
         </Route>

@@ -2,7 +2,7 @@ import "./LayoutDefault.scss";
 import { NavLink, Outlet } from "react-router-dom";
 function LayoutDefault() {
     const navLinkActive = (e) => {
-        console.log(e);
+        
         return e.isActive ? "menu__link menu__link--active" : "menu__link"
     }
     return (
@@ -49,4 +49,4 @@ function LayoutDefault() {
 }
 
 export default LayoutDefault;
-// 59:31
+
