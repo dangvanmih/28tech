@@ -9,6 +9,7 @@ import Blog from './pages/Blog';
 import BlogNews from './pages/Blog/BlogNews';
 import BlogRelated from './pages/Blog/BLogRelated';
 import BlogAll from './pages/Blog/BlogAll';
+import BlogDetail from './pages/Blog/BlogDetail';
 function App() {
   return (
     <>
@@ -23,6 +24,7 @@ function App() {
             <Route index element={<BlogAll />} /> {/*index routes: dùng để khi cpn cha render thì nó cũng đc render */}
             <Route path='news' element={<BlogNews />} />
             <Route path='related' element={<BlogRelated />} />
+            <Route path=":id" element={<BlogDetail />} />
           </Route>
           <Route path="*" element={<Error404 />} />
         </Route>
