@@ -10,6 +10,9 @@ import BlogNews from './pages/Blog/BlogNews';
 import BlogRelated from './pages/Blog/BLogRelated';
 import BlogAll from './pages/Blog/BlogAll';
 import BlogDetail from './pages/Blog/BlogDetail';
+import InforUser from './pages/InforUser';
+import Login from './pages/Login';
+import PrivateRoutes from './components/PrivateRoutes';
 function App() {
   return (
     <>
@@ -26,7 +29,11 @@ function App() {
             <Route path='related' element={<BlogRelated />} />
             <Route path=":id" element={<BlogDetail />} />
           </Route>
+          <Route path="login" element={<Login />} />
           <Route path="*" element={<Error404 />} />
+          <Route element={<PrivateRoutes/>}>
+            <Route path="infor-user" element={<InforUser />} />
+          </Route>
         </Route>
       </Routes>
       {/* Nội dung sẽ thay đổi phần bên trong thông qua <Outlet />. */}
