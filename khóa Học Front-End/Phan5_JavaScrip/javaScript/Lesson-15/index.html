@@ -1,27 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body> 
+
+<body>
     <!-- js cũng có 3 kiểu nhúng như Css -->
-     <!-- 1.Inline -->
+    <!-- 1.Inline -->
     <!-- <button onclick="alert('Xin Chào')">
         Click Me
     </button> -->
     <!-- 2. Internal -->
-     <button>
+    <!-- <button>
         Click Me
-     </button>
-     <!-- <script>
+     </button onclick = "handleOnclick()"> -->
+    <!-- <script>
         var button = document.querySelector('button');
         button.onclick = function() {
             alert('Hello Word');
         }
      </script> -->
-     <!-- 3. External -->
-      <script src="index.js"></script>
+    <!-- 3. External -->
+         <!-- <script src="index.js">
+        
+    </script> -->
+
+
+
+
+
+
+
+
+    <button onclick="handleOnclick()">
+        Click Me
+    </button>
+    <div id="result"></div>
+    <script>
+    const handleOnclick = () => {
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = `
+            <form>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Tiêu Đề</td>
+                            <td><input type='text' name='title' required /></td>
+                        </tr>
+                        <tr>
+                            <td>Giá</td>
+                            <td><input type='text' name='price' required /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" onclick="handleCancel()">Hủy</button>
+                            </td>
+                            <td>
+                                <input type='submit' value="Tạo mới" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        `;
+    }
+
+    const handleCancel = () => {
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = ""; // Xóa nội dung => ẩn form
+    }
+</script>
+
+    </script>
 </body>
+
 </html>

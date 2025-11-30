@@ -1,3 +1,5 @@
+cú pháp cài đặt:npx create-react-app-hoc bai
+
 1.useState giúp cập nhật lại trạng thái của dữ liệu (hay cập nhật lại giá trị của dữ liệu).
 Khi dữ liệu thay đổi thì giao diện được cập nhật lại theo dữ liệu mới.
 Một vài ví dụ trong thực tế:
@@ -53,6 +55,7 @@ useMemo lưu vào bộ nhớ một giá trị.
 8.useReducer giống như một phiên bản nâng cao của useState.
 useReducer được sử dụng trong trường hợp component có state phức tạp.
 Cú pháp: const [state, dispatch] = useReducer(reducer, initialState);
+dispatch: có nhiệm vụ gửi lên reducer 1 action
 Các bước sử dụng useReducer:
 Bước 1: Khởi tạo useReducer và xác định giá trị khởi tạo.
 Bước 2: Xây dựng hàm reducer (Như là một hàm chuyển đổi, đầu vào là 2 tham số gồm state và action, đầu ra là new state - state mới).
