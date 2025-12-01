@@ -12,7 +12,7 @@ function Product() {
         }
         fetchAPI()
     }, [])
-    console.log(product);
+    // console.log(product);
     return (
         <><div className="product">
             {product.map(item => (
