@@ -24,4 +24,3 @@ function Product() {
     )
 }
 export default Product
-// 43/17
