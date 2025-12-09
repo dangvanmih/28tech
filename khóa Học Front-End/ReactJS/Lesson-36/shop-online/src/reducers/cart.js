@@ -1,6 +1,6 @@
 const cartReducer = (state = [], action) => {
     // console.log(state, action);
-    const newState = [...state];
+    let newState = [...state];
     switch (action.type) {
         case "ADD_TO_CART":
             return [
@@ -12,9 +12,14 @@ const cartReducer = (state = [], action) => {
                 }
             ]
         case "UPDATE_QUANTITY":
-            const itemUpdate = newState.find(item => item.id === action.id);
-            itemUpdate.quantity++;
+            const itemUpdate = newState.find(item => item.id === action.id); // hàm tìm kiếm
+            itemUpdate.quantity = itemUpdate.quantity + action.quantity;
             return newState;
+        case "DELETE_ITEM":
+            newState = newState.filter(item => item.id !== action.id); // hàm lọc ra item
+            return newState
+        case "DELETE_ALL":
+        return [];
         default:
             break;
     }
