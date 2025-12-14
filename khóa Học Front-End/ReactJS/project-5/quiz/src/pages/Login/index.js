@@ -1,3 +1,4 @@
+import { setCookie } from "../../helper/cookie";
 import { login } from "../../service/userService";
 import {useNavigate} from "react-router-dom"
 function Login () {
@@ -10,17 +11,17 @@ function Login () {
 
         const response = await login(userName,passWord);
         if(response.length > 0) {
-            alert("Đăng nhập thành công!")
+            // lưu data vào cookie
+            setCookie("id", response[0].id,1);
+            setCookie("fullName", response[0].fullName,1);
+            setCookie("email", response[0].email,1);
+            setCookie("token", response[0].token,1);
+            //hết lưu cookie
             navigate("/")
         }
         else {
             alert("Tài khoản hoặc mật khẩu không chính xác!")
         }
-        
-
-        // console.log(userName);
-        // console.log(passWord);
-        
     }
     return (
         <>

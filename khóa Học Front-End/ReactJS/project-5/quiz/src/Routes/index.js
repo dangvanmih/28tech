@@ -8,6 +8,7 @@ import Result from "../pages/Result";
 import Topic from "../pages/Topic";
 import Error404 from "../pages/Error404";
 import Quiz from "../pages/Quiz";
+import Logout from "../pages/Logout";
 export const routes = [
     {
         path: "/",
@@ -24,6 +25,10 @@ export const routes = [
             {
                 path: "register",
                 element: <Register />
+            },
+            {
+                path: "logout",
+                element: <Logout />
             },
             {
                 path:"*",
