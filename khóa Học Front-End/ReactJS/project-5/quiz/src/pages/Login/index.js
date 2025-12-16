@@ -1,9 +1,12 @@
 import { setCookie } from "../../helper/cookie";
 import { login } from "../../service/userService";
 import {useNavigate} from "react-router-dom"
+import {useDispatch} from "react-redux"
+import { checkLogin } from "../../actions/login";
+import "./login.scss"
 function Login () {
     const navigate = useNavigate() // dùng để điều hướng sang trang khác
-
+    const dispatch = useDispatch()
     const handleSubmit = async  (e) => {
         e.preventDefault();
         const userName = e.target[0].value;
@@ -17,6 +20,7 @@ function Login () {
             setCookie("email", response[0].email,1);
             setCookie("token", response[0].token,1);
             //hết lưu cookie
+            dispatch(checkLogin(true))
             navigate("/")
         }
         else {
@@ -25,15 +29,15 @@ function Login () {
     }
     return (
         <>
-            <form  onSubmit={handleSubmit}>
-                <h2>Login</h2>
-                <div>
+            <form className="login"  onSubmit={handleSubmit}>
+                <h2 className="login__title">Login</h2>
+                <div className="login__input">
                     <input type="email" placeholder="Nhập email" />
                 </div>
-                 <div>
+                 <div className="login__input">
                     <input type="password" placeholder="Nhập password" />
                 </div>
-                <button type="submit" >
+                <button className="login__submit" type="submit" >
                     Login
                 </button>
             </form>
@@ -41,4 +45,3 @@ function Login () {
     )
 }
 export default Login;
-// 50:51

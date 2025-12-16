@@ -1,13 +1,18 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useNavigate } from "react-router-dom"
 import { deleteAllCookies } from "../../helper/cookie";
 import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { checkLogin } from "../../actions/login";
 
 function Logout () {
     const navigate = useNavigate();
+    const dispatch = useDispatch()
     deleteAllCookies();
     useEffect(() => {
-        navigate("login")
-    },[navigate])
+        navigate("/login");
+        dispatch(checkLogin(false))
+    },[])
     return (
         <>
         
