@@ -6,7 +6,7 @@ function LayoutDefault() {
     const token = getCookie("token");
     const isLogin = useSelector(state => state.loginReducer);
     console.log(isLogin);
-    
+       
     return (
         <>
             <div className="layout-default">
@@ -51,3 +51,4 @@ function LayoutDefault() {
 
 export default LayoutDefault;
 
+// 1:34

@@ -1,8 +1,8 @@
 .layout-default {
   a {
     text-decoration: none;
-    color: #000;
-    font-weight: 500;
+    color: #030303;
+    font-weight: 600;
   }
   &__header {
     background-color: orange;
@@ -13,8 +13,9 @@
   }
 
   &__logo {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 24px;
+    color: #000000;
   }
 
   &__main {
@@ -55,25 +56,25 @@
     }
   }
 
-  &__sub {
-    position: absolute;
-    top: 100%;
-    background-color: violet;
-    display:flex;
-    flex-direction: column;
-    display:  none !important;
+  // &__sub {
+  //   position: absolute;
+  //   top: 100%;
+  //   background-color: violet;
+  //   display:flex;
+  //   flex-direction: column;
+  //   display:  none !important;
     
-    li {
-      margin-left: 0 !important;
-    }
-    a {
-      white-space: nowrap; // ngăn text xuống dòng
-      display: block;
-      padding: 4px 10px;
-    }
-  }
-  li:hover > &__sub {
-    display: flex !important;
-  }
+  //   li {
+  //     margin-left: 0 !important;
+  //   }
+  //   a {
+  //     white-space: nowrap; // ngăn text xuống dòng
+  //     display: block;
+  //     padding: 4px 10px;
+  //   }
+  // }
+  // li:hover > &__sub {
+  //   display: flex !important;
+  // }
 
 }
