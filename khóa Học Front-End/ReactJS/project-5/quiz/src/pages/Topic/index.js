@@ -43,4 +43,3 @@ function Topic() {
     )
 }
 export default Topic;
-// 1:37

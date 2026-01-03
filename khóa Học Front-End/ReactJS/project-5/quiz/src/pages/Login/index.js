@@ -13,9 +13,10 @@ function Login () {
         const passWord =  e.target[1].value;
 
         const response = await login(userName,passWord);
+        
         if(response.length > 0) {
             // lưu data vào cookie
-            setCookie("id", response[0].id,1);
+            setCookie("id", response[0].id,1); // [0] user đầu tiên tìm được
             setCookie("fullName", response[0].fullName,1);
             setCookie("email", response[0].email,1);
             setCookie("token", response[0].token,1);
