@@ -50,7 +50,7 @@ export const routes = [
                         element: <Topic />
                     },
                     {
-                        path: "result",
+                        path: "result/:id",
                         element: <Result />
                     }
                 ]

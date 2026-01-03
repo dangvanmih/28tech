@@ -2,7 +2,7 @@ import { get, post } from "../utils/request";
 
 // API lấy data
 export const login = async (email, password) => {
-    const result = await get(`users?email=${email}&password=${password}`)
+    const result = await get(`users?email=${email}&passWord=${password}`)
     return result;
 }
 

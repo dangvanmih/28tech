@@ -16,7 +16,7 @@ function Register() {
         else {
             const options = {
                 fullName: userName,
-                email: email,
+                email:email,
                 passWord: passWord,
                 token: generateToken(),
             };
@@ -53,4 +53,3 @@ function Register() {
     )
 }
 export default Register;
-// 1:21;51
