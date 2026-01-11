@@ -91,7 +91,7 @@
   ],
   "questions": [
     {
-      "id": "1",
+      "id": 1,
       "topicId": 1,
       "question": "HTML5 là viết tắt của..?",
       "answers": [
@@ -102,7 +102,7 @@
       "correctAnswer": 2
     },
     {
-      "id": "2",
+      "id": 2,
       "topicId": 1,
       "question": "Thẻ nào dùng để tạo một liên kết (link) trong HTML?",
       "answers": [
@@ -113,7 +113,7 @@
       "correctAnswer": 0
     },
     {
-      "id": "3",
+      "id": 3,
       "topicId": 1,
       "question": "Thuộc tính nào dùng để hiển thị hình ảnh trong HTML?",
       "answers": [
@@ -124,7 +124,7 @@
       "correctAnswer": 1
     },
     {
-      "id": "4",
+      "id": 4,
       "topicId": 1,
       "question": "Thẻ nào dùng để tạo tiêu đề lớn nhất trong HTML?",
       "answers": [
@@ -135,7 +135,7 @@
       "correctAnswer": 2
     },
     {
-      "id": "5",
+      "id": 5,
       "topicId": 1,
       "question": "Thẻ nào chứa toàn bộ nội dung hiển thị trên trang web?",
       "answers": [
@@ -146,7 +146,7 @@
       "correctAnswer": 2
     },
     {
-      "id": "6",
+      "id": 6,
       "topicId": 1,
       "question": "Thuộc tính nào dùng để thay đổi màu nền của thẻ HTML?",
       "answers": [
@@ -157,7 +157,7 @@
       "correctAnswer": 0
     },
     {
-      "id": "7",
+      "id": 7,
       "topicId": 1,
       "question": "Định dạng tệp nào là chuẩn để tạo trang web?",
       "answers": [
@@ -168,7 +168,7 @@
       "correctAnswer": 1
     },
     {
-      "id": "8",
+      "id": 8,
       "topicId": 1,
       "question": "Thẻ nào được dùng để tạo dòng mới trong HTML?",
       "answers": [
@@ -179,7 +179,7 @@
       "correctAnswer": 1
     },
     {
-      "id": "9",
+      "id": 9,
       "topicId": 2,
       "question": "CSS là viết tắt của gì?",
       "answers": [
@@ -190,7 +190,7 @@
       "correctAnswer": 2
     },
     {
-      "id": "10",
+      "id": 10,
       "topicId": 2,
       "question": "Thuộc tính nào dùng để thay đổi màu chữ?",
       "answers": [
@@ -201,7 +201,7 @@
       "correctAnswer": 2
     },
     {
-      "id": "11",
+      "id": 11,
       "topicId": 2,
       "question": "Thuộc tính nào dùng để căn giữa văn bản?",
       "answers": [
@@ -212,7 +212,7 @@
       "correctAnswer": 2
     },
     {
-      "id": "12",
+      "id": 12,
       "topicId": 2,
       "question": "Thuộc tính nào dùng để thay đổi kích thước chữ?",
       "answers": [
@@ -223,7 +223,7 @@
       "correctAnswer": 2
     },
     {
-      "id": "13",
+      "id": 13,
       "topicId": 2,
       "question": "Thuộc tính nào dùng để thay đổi màu nền?",
       "answers": [
@@ -234,7 +234,7 @@
       "correctAnswer": 0
     },
     {
-      "id": "14",
+      "id": 14,
       "topicId": 2,
       "question": "CSS3 hỗ trợ hiệu ứng nào dưới đây?",
       "answers": [
@@ -245,7 +245,7 @@
       "correctAnswer": 0
     },
     {
-      "id": "15",
+      "id": 15,
       "topicId": 2,
       "question": "Thẻ HTML nào dùng để nhúng file CSS ngoài?",
       "answers": [
@@ -256,7 +256,7 @@
       "correctAnswer": 2
     },
     {
-      "id": "16",
+      "id": 16,
       "topicId": 3,
       "question": "JavaScript chủ yếu được chạy ở đâu?",
       "answers": [
@@ -267,7 +267,7 @@
       "correctAnswer": 1
     },
     {
-      "id": "17",
+      "id": 17,
       "topicId": 3,
       "question": "Từ khóa nào dùng để khai báo biến trong ES6?",
       "answers": [
@@ -278,7 +278,7 @@
       "correctAnswer": 1
     },
     {
-      "id": "18",
+      "id": 18,
       "topicId": 3,
       "question": "Hàm nào dùng để in ra console?",
       "answers": [
@@ -289,7 +289,7 @@
       "correctAnswer": 1
     },
     {
-      "id": "19",
+      "id": 19,
       "topicId": 3,
       "question": "Kiểu dữ liệu nào sau đây KHÔNG tồn tại trong JavaScript?",
       "answers": [
@@ -300,7 +300,7 @@
       "correctAnswer": 2
     },
     {
-      "id": "20",
+      "id": 20,
       "topicId": 3,
       "question": "Toán tử nào dùng để so sánh bằng tuyệt đối?",
       "answers": [
@@ -311,7 +311,7 @@
       "correctAnswer": 2
     },
     {
-      "id": "21",
+      "id": 21,
       "topicId": 3,
       "question": "Hàm nào dùng để chuyển chữ thường thành chữ in hoa?",
       "answers": [
@@ -322,7 +322,7 @@
       "correctAnswer": 2
     },
     {
-      "id": "22",
+      "id": 22,
       "topicId": 3,
       "question": "JavaScript thuộc loại ngôn ngữ nào?",
       "answers": [
@@ -333,7 +333,7 @@
       "correctAnswer": 2
     },
     {
-      "id": "23",
+      "id": 23,
       "topicId": 4,
       "question": "ReactJS được phát triển bởi công ty nào?",
       "answers": [
@@ -344,7 +344,7 @@
       "correctAnswer": 1
     },
     {
-      "id": "24",
+      "id": 24,
       "topicId": 4,
       "question": "React sử dụng khái niệm nào để mô tả giao diện?",
       "answers": [
@@ -355,7 +355,7 @@
       "correctAnswer": 0
     },
     {
-      "id": "25",
+      "id": 25,
       "topicId": 4,
       "question": "Hook nào dùng để quản lý state trong React?",
       "answers": [
@@ -366,7 +366,7 @@
       "correctAnswer": 1
     },
     {
-      "id": "26",
+      "id": 26,
       "topicId": 4,
       "question": "Component trong React có thể được hiểu là gì?",
       "answers": [
@@ -377,7 +377,7 @@
       "correctAnswer": 1
     },
     {
-      "id": "27",
+      "id": 27,
       "topicId": 4,
       "question": "JSX trong React là gì?",
       "answers": [
@@ -388,7 +388,7 @@
       "correctAnswer": 1
     },
     {
-      "id": "28",
+      "id": 28,
       "topicId": 4,
       "question": "Hook nào dùng để chạy side effects trong React?",
       "answers": [
@@ -399,7 +399,7 @@
       "correctAnswer": 1
     },
     {
-      "id": "29",
+      "id": 29,
       "topicId": 4,
       "question": "ReactJS là thư viện dùng cho mục đích gì?",
       "answers": [
@@ -880,6 +880,123 @@
         }
       ],
       "id": 10
+    },
+    {
+      "userId": 1,
+      "topicId": 1,
+      "answer": [
+        {
+          "questionId": 1,
+          "answer": 0
+        },
+        {
+          "questionId": 2,
+          "answer": 2
+        },
+        {
+          "questionId": 3,
+          "answer": 1
+        },
+        {
+          "questionId": 4,
+          "answer": 2
+        },
+        {
+          "questionId": 5,
+          "answer": 2
+        },
+        {
+          "questionId": 6,
+          "answer": 0
+        },
+        {
+          "questionId": 7,
+          "answer": 1
+        },
+        {
+          "questionId": 8,
+          "answer": 0
+        }
+      ],
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "topicId": 1,
+      "answer": [
+        {
+          "questionId": 1,
+          "answer": 1
+        },
+        {
+          "questionId": 2,
+          "answer": 1
+        },
+        {
+          "questionId": 3,
+          "answer": 0
+        },
+        {
+          "questionId": 4,
+          "answer": 2
+        },
+        {
+          "questionId": 5,
+          "answer": 2
+        },
+        {
+          "questionId": 6,
+          "answer": 0
+        },
+        {
+          "questionId": 7,
+          "answer": 1
+        },
+        {
+          "questionId": 8,
+          "answer": 1
+        }
+      ],
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "topicId": 1,
+      "answer": [
+        {
+          "questionId": 1,
+          "answer": 2
+        },
+        {
+          "questionId": 2,
+          "answer": 2
+        },
+        {
+          "questionId": 3,
+          "answer": 1
+        },
+        {
+          "questionId": 4,
+          "answer": 0
+        },
+        {
+          "questionId": 5,
+          "answer": 2
+        },
+        {
+          "questionId": 6,
+          "answer": 0
+        },
+        {
+          "questionId": 7,
+          "answer": 0
+        },
+        {
+          "questionId": 8,
+          "answer": 2
+        }
+      ],
+      "id": 13
     }
   ]
 }

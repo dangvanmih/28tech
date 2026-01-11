@@ -16,4 +16,3 @@ function CartMini () {
 }
 
 export default CartMini
-// 1:12

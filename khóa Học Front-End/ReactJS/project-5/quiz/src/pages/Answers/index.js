@@ -3,7 +3,7 @@ import { getListAnswersByUser } from "../../service/answersService";
 import { getListTopic } from "../../service/topicService";
 import { Link } from "react-router-dom";
 function Answers () {
-    const [dataAnswers, setDataAnswers] = useState();
+    const [dataAnswers, setDataAnswers] = useState([]);
 
     useEffect(() => {
         const fetchApi = async () => {

@@ -50,5 +50,3 @@ function LayoutDefault() {
 }
 
 export default LayoutDefault;
-
-// 1:34

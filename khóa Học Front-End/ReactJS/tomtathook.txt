@@ -68,4 +68,6 @@ tắt cảnh báo khi ko có dependency: /* eslint-disable react-hooks/exhaustiv
 
 khởi tạo mảng rỗng trong useState để làm gì?
 - khi giao diện render lần đầu tiên thì cần giá trị khởi tạo an, toàn bởi vì hàm luôn chạy cuối cùng sau khi giao diện đc render nên khi render lần đầu tiền thì hàm mới chạy
-và khi đó mới có data từ API và lúc đó data thay đổi thì giao diện mới render ra data
+và khi đó mới có data từ API và lúc đó data thay đổi thì giao diện mới render ra data.
+
+
