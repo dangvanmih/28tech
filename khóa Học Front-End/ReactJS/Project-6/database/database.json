@@ -1,0 +1,117 @@
+{
+  "users": [
+    {
+      "fullName": "Dang Van M",
+      "email": "dangm@gmail.com",
+      "passWord": "m123",
+      "token": "H7B9zs4Nx5erpcorcC31",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "fullName": "Tran Thi B",
+      "email": "tranthib@gmail.com",
+      "passWord": "password123",
+      "token": "mn7x2pq9asw34edcrfvb"
+    },
+    {
+      "id": 3,
+      "fullName": "Le Hoang C",
+      "email": "lehoangc@gmail.com",
+      "passWord": "hoangcle",
+      "token": "bgt56plmoknji98uhytr"
+    },
+    {
+      "id": 4,
+      "fullName": "Pham Minh D",
+      "email": "phamminhd@gmail.com",
+      "passWord": "minhdpham",
+      "token": "zaq12wsx34edcvfr56tg"
+    },
+    {
+      "id": 5,
+      "fullName": "Vo Quoc E",
+      "email": "voquoce@gmail.com",
+      "passWord": "quocevo",
+      "token": "ujm98ikn76yhbtgv54rf"
+    },
+    {
+      "id": 6,
+      "fullName": "Nguyen Thi F",
+      "email": "nguyenthif@gmail.com",
+      "passWord": "fnguyen123",
+      "token": "plm09okn87ijuhbv65yt"
+    },
+    {
+      "id": 7,
+      "fullName": "Do Thanh G",
+      "email": "dothanhg@gmail.com",
+      "passWord": "gthanhd",
+      "token": "tgb56rfv43edcwsx21qa"
+    },
+    {
+      "id": 8,
+      "fullName": "Bui Van H",
+      "email": "buivanh@gmail.com",
+      "passWord": "hbui456",
+      "token": "wsx21zaq34edcvfr56tg"
+    },
+    {
+      "id": 9,
+      "fullName": "Dang Kim I",
+      "email": "dangkimi@gmail.com",
+      "passWord": "ikimdang",
+      "token": "okm87ijn65uhbvgt43rf"
+    },
+    {
+      "id": 10,
+      "fullName": "Hoang Nhat J",
+      "email": "hoangnhatj@gmail.com",
+      "passWord": "jnhathoang",
+      "token": "qwe45rty78uipasd90fg"
+    }
+  ],
+
+  "products" :[
+    {
+      "id": 1,
+      "title": "Giày đá bóng Nike Air Zoom Mercurial Vapor 16 Academy TF Mad Energy - Ember Glow/Aurora Green FQ8449-800",
+      "description": "CAM KẾT SẢN PHẨM CHÍNH HÃNG 100%. ĐƯỢC BỒI HOÀN GẤP 10 LẦN NẾU KHÔNG PHẢI CHÍNH HÃNG",
+      "category": "nikevapor",
+      "price": 2699000,
+      "discountPercentage": 25,
+      "rating": 2.56,
+      "stock": 99,
+      "sizes": [
+      { "size": 38, "stock": 10 },
+      { "size": 39, "stock": 15 },
+      { "size": 40, "stock": 20 },
+      { "size": 41, "stock": 25 },
+      { "size": 42, "stock": 29 }
+      ],
+      "images": [
+        "https://product.hstatic.net/1000061481/product/anh_sp_add-01-01-01-04-03-03-2_5b5076b64d954478b159702cc1e49c1a_medium.jpg"
+      ],
+      "thumbnail": "https://product.hstatic.net/1000061481/product/anh_sp_add-01-01-01-04-03-03-2_5b5076b64d954478b159702cc1e49c1a_1024x1024.jpg"
+    }
+  ],
+
+  "category" : [
+    { 
+      "id": 1,
+      "name": "nikevapor" 
+    },
+    { 
+      "id": 2,
+      "name": "nikemercurial" 
+    },
+    { 
+      "id": 3, 
+      "name": "mizuno" 
+    },
+    { 
+      "id": 4, 
+      "name": "zocker" 
+    }
+  ]
+}

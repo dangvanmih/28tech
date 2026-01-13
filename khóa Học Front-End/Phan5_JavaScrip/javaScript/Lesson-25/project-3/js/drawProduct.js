@@ -4,11 +4,6 @@ import { params, products } from "./variable.js";
 // để gợi ý import ấn ctrl+space 
 
 
-
-
-
-
-
 export const drawProduct = () => {
 
     // phần này để check chánh danh mục rỗng thì sẽ bị trả về mảng rỗng và giao diện sẽ ko vẽ ra sản phẩm
@@ -16,9 +11,6 @@ export const drawProduct = () => {
     if (params.category != "") {
         category = `&category=${params.category}`;
     }
-
-
-
 
     const api = `${API_PRODUCT}?q=${params.q}&_sort=${params.sort}&_order=${params.order}&_page=${params.page}$_limit=${params.limit}${category}` // nối chuỗi API PRODUCT với chuỗi giá trị trong input search
 

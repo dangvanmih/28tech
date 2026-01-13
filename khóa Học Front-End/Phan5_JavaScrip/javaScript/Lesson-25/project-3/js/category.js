@@ -28,7 +28,4 @@ fetchApi(API_CATEGORY)
       drawProduct();
     })
   })
-  
-
-
-    })
+})
