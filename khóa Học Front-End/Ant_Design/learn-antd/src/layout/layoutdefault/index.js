@@ -5,6 +5,8 @@ import logo from "../../images/logo.png";
 import logoFold from "../../images/logo-fold.png"
 import {MenuFoldOutlined, MenuUnfoldOutlined, SearchOutlined} from "@ant-design/icons";
 import { useState } from "react";
+import Notify from "../../components/Notify";
+import MenuSider from "../../components/MenuSider";
 const {Sider, Content} = Layout;
 function LayoutDefault () {
     const [collapsed, setCollapsed] = useState(false)
@@ -25,14 +27,14 @@ function LayoutDefault () {
                             </div>
                         </div>
                         <div className="header__nav-right">
-                            Nội dung..
+                            <Notify />
                         </div>
                     </div>
                 </header>
 
                 <Layout>
-                    <Sider className="sider">
-                        Sider
+                    <Sider className="sider" collapsed={collapsed} theme="light">
+                        <MenuSider />
                     </Sider>
 
                     <Content className="content">
@@ -44,4 +46,3 @@ function LayoutDefault () {
     )
 }
 export default LayoutDefault
-// 51/59
