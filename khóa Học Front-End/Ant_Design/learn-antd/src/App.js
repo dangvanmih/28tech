@@ -1,13 +1,11 @@
 import './App.css';
-// import LearnButton from './components/LearnButton/button';
-import LearnGrid from './components/learnGrid';
+import LayoutDefault from './layout/layoutdefault';
 
 function App() {
   
   return (
     <>
-      {/* <LearnButton/> */}
-      <LearnGrid/>
+      <LayoutDefault />
     </>
   );
 }
