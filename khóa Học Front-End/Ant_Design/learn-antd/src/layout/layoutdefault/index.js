@@ -1,5 +1,5 @@
 import {Layout} from "antd"
-import LearnGrid from "../../components/learnGrid";
+import {Outlet} from "react-router-dom"
 import "./LayoutDefault.css";
 import logo from "../../images/logo.png";
 import logoFold from "../../images/logo-fold.png"
@@ -38,7 +38,7 @@ function LayoutDefault () {
                     </Sider>
 
                     <Content className="content">
-                        <LearnGrid />
+                        <Outlet />
                     </Content>
                 </Layout>
             </Layout>

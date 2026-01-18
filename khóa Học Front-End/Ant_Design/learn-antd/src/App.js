@@ -1,11 +1,10 @@
 import './App.css';
-import LayoutDefault from './layout/layoutdefault';
-
+import AllRoutes from "./components/AllRoutes"
 function App() {
   
   return (
     <>
-      <LayoutDefault />
+      <AllRoutes />
     </>
   );
 }

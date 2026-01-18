@@ -1,5 +1,6 @@
 import { Menu } from "antd";
 import { ChromeOutlined, GithubOutlined, WindowsOutlined } from "@ant-design/icons"
+import { Link } from "react-router-dom";
 function MenuSider() {
     const items = [
         {
@@ -8,8 +9,8 @@ function MenuSider() {
             key: "menu-1",
             children: [
                 {
-                    label: "Github",
-                    key: "menu-1-1",
+                    label: <Link to="/">Dash Board</Link>,
+                    key: "/",
                 },
                 {
                     label: "Chorme",
@@ -23,11 +24,30 @@ function MenuSider() {
         },
         {
             label: "Menu 2",
-            icon: <ChromeOutlined />
+            icon: <ChromeOutlined />,
+            children: [
+                {
+                    label: "Github",
+                    key: "menu-2-1",
+                },
+                {
+                    label: "Chorme",
+                    key: "menu-2-2",
+                },
+                {
+                    label: "Coc Coc",
+                    key: "menu-2-3",
+                }
+            ],   
         },
         {
             label: "Menu 3",
             icon: <WindowsOutlined />
+        },
+         {
+            label: <Link to="book-room">Book Room</Link>,
+            icon: <ChromeOutlined />,
+            key: "/book-room"
         },
     ]
     return (
@@ -35,9 +55,10 @@ function MenuSider() {
             <Menu
                 mode="inline"
                 items={items}
+                defaultSelectedKeys={["/"]} // mặc định key nào đc active
+                defaultOpenKeys={["menu-1"]} // mặc định key nào được mở
             />
         </>
     )
 }
 export default MenuSider;
-// 1/39/46
