@@ -1,8 +1,11 @@
-import { Button, Checkbox, Col, DatePicker, Input, Row, Space } from "antd";
+import { Button, Checkbox, Col, DatePicker, Input, Radio, Row, Select, Space } from "antd";
 import { useState } from "react";
+import { bookRoom } from "../../service/bookRoomService";
 const { RangePicker } = DatePicker;
 function BookRoom() {
-    const [data, setData] = useState({})
+    const [data, setData] = useState({
+        time: "14 giờ"
+    })
 
     const handleChangeInput = (e) => {
         const object = {
@@ -26,8 +29,25 @@ function BookRoom() {
         setData(object)
 
     }
-    const handleSubmit = () => {
-        console.log("submit to json server", data);
+    const handleSubmit = async () => {
+        const response = await bookRoom(data)
+        console.log(response);
+    }
+
+    const optiontime = [];
+    for( let i = 7 ; i <= 24; i++)
+    {
+        optiontime.push({
+            value: i > 9 ? `${i} giờ` : `0${i} giờ` ,
+            label: i > 9 ? `${i} giờ` : `0${i} giờ`,
+        })
+    }
+    const handleChangeSelect = (e) => {
+        const object = {
+            ...data,
+            time: e
+        }
+        setData(object)
     }
     return (
         <>
@@ -59,19 +79,41 @@ function BookRoom() {
                         </Space>
                     </Checkbox.Group>
                 </Col>
+                <Col span={12}>
+                    <p>Quà tặng</p>
+                    <Radio.Group name="gift" onChange={handleChangeInput}>
+                        <Space orientation="vertical">
+                            <Radio value="Mũ">Mũ</Radio>
+                            <Radio value="Áo phông">Áo phông</Radio>
+                            <Radio value="Kem chống nắng">Kem chống nắng</Radio>
+                        </Space>
+                    </Radio.Group>
+                </Col>
                 <Col span={12} >
                     <p>
                         Chọn ngày
                     </p>
-                    <RangePicker format="DD-MM-YYYY" onChange={handleChangeDate} />
+                    <RangePicker placeholder={["Nhận phòng", "Trả phòng"]} format="DD-MM-YYYY" onChange={handleChangeDate} />
                 </Col>
-                <Col>
+
+                <Col span={12}>
+                    <p>
+                        Giờ nhận phòng
+                    </p>
+                    <Select style={{width: "100%" }} defaultValue={data.time} options = {optiontime} onChange={handleChangeSelect}/>
+                </Col>
+
+
+                <Col span={24}>
                     <Button type="primary" onClick={handleSubmit}>
                         Đặt Phòng
                     </Button>
                 </Col>
+
+
             </Row>
         </>
     )
 }
 export default BookRoom;
+// 1/19/37

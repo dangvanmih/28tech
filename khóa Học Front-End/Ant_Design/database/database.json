@@ -1,0 +1,21 @@
+{
+  "book-room": [
+    {
+      "time": "14 giờ",
+      "fullName": "Đặng Văn Minh",
+      "phone": "0908723648",
+      "email": "tanminh1303204@gmail.com",
+      "gift": "Mũ",
+      "service": [
+        "Thuê xe máy",
+        "Thuê ô tô 7 chỗ",
+        "Thuê xe điện"
+      ],
+      "date": [
+        "21-01-2026",
+        "24-01-2026"
+      ],
+      "id": 1
+    }
+  ]
+}
