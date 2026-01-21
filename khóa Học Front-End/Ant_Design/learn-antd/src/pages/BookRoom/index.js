@@ -31,7 +31,7 @@ function BookRoom() {
     }
     const handleSubmit = async () => {
         const response = await bookRoom(data)
-        console.log(response);
+        response ? alert("Đặt phòng thành công!") : alert("Đặt phòng không thành công!")
     }
 
     const optiontime = [];
@@ -116,4 +116,3 @@ function BookRoom() {
     )
 }
 export default BookRoom;
-// 1/19/37
