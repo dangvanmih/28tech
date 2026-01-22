@@ -1,7 +1,7 @@
-import {Col , Row} from "antd"
+import { Carousel, Col, Row } from "antd"
 import "./LearnGrid.css"
 import CardItem from "../LearnCardItem";
-function LearnGrid () {
+function LearnGrid() {
     return (
         <>
             {/* <Row gutter={[15, 10]}>
@@ -27,53 +27,69 @@ function LearnGrid () {
                 </Col>
             </Row> */}
 
-
+            <Carousel arrows infinite={false} autoplay>
+                <div className="slider-item" >
+                    <img src="https://bizweb.dktcdn.net/100/414/728/themes/867455/assets/slider_1.jpg?1760674276246" alt="banner" />
+                </div>
+                <div className="slider-item">
+                    <img src="https://bizweb.dktcdn.net/100/414/728/themes/867455/assets/slider_1.jpg?1760674276246" alt="banner"  />
+                </div>
+                <div className="slider-item">
+                    <img src="https://bizweb.dktcdn.net/100/414/728/themes/867455/assets/slider_1.jpg?1760674276246" alt="banner"  />
+                </div>
+                <div className="slider-item">
+                    <img src="https://bizweb.dktcdn.net/100/414/728/themes/867455/assets/slider_1.jpg?1760674276246" alt="banner" />
+                </div>
+            </Carousel>
 
             <Row gutter={[20, 20]} className="mt-20">
                 <Col xxl={6} xl={6} lg={6} md={12} sm={24} xs={24}>
-                    <CardItem title = "Box 1"/>
+                    <CardItem title="Box 1" />
                 </Col>
                 <Col xxl={6} xl={6} lg={6} md={12} sm={24} xs={24}>
-                    <CardItem title = "Box 2"/>
+                    <CardItem title="Box 2" />
                 </Col>
                 <Col xxl={6} xl={6} lg={6} md={12} sm={24} xs={24}>
-                    <CardItem title = "Box 3"/>
+                    <CardItem title="Box 3" />
                 </Col>
                 <Col xxl={6} xl={6} lg={6} md={12} sm={24} xs={24}>
-                    <CardItem title = "Box 4"/>
+                    <CardItem title="Box 4" />
                 </Col>
             </Row>
 
             <Row gutter={[20, 20]} className="mt-20">
                 <Col xxl={16} xl={16} lg={16} md={24} sm={24} xs={24}>
-                    <CardItem title = "Box 5" style={{height: "400px"}}/>
+                    <CardItem title="Box 5" style={{ height: "400px" }} />
                 </Col>
                 <Col xxl={8} xl={8} lg={8} md={24} sm={24} xs={24}>
-                    <CardItem title = "Box 6" style={{height: "400px"}}/>
+                    <CardItem title="Box 6" style={{ height: "400px" }} />
                 </Col>
             </Row>
 
             <Row gutter={[20, 20]} className="mt-20">
                 <Col xxl={8} xl={8} lg={8} md={24} sm={24} xs={24}>
-                    <CardItem title = "Box 7" style={{height: "400px"}}/>
+                    <CardItem title="Box 7" style={{ height: "400px" }} />
                 </Col>
                 <Col xxl={16} xl={16} lg={16} md={24} sm={24} xs={24}>
-                    <CardItem title = "Box 8" style={{height: "400px"}}/>
+                    <CardItem title="Box 8" style={{ height: "400px" }} />
                 </Col>
             </Row>
 
             <Row gutter={[20, 20]} className="mt-20">
                 <Col xxl={8} xl={8} lg={8} md={24} sm={24} xs={24}>
-                    <CardItem title = "Box 9" style={{height: "400px"}}/>
+                    <CardItem title="Box 9" style={{ height: "400px" }} />
                 </Col>
                 <Col xxl={8} xl={8} lg={8} md={24} sm={24} xs={24}>
-                    <CardItem title = "Box 10" style={{height: "400px"}}/>
+                    <CardItem title="Box 10" style={{ height: "400px" }} />
                 </Col>
                 <Col xxl={8} xl={8} lg={8} md={24} sm={24} xs={24}>
-                    <CardItem title = "Box 11" style={{height: "400px"}}/>
+                    <CardItem title="Box 11" style={{ height: "400px" }} />
                 </Col>
             </Row>
+
+            
         </>
     )
 }
 export default LearnGrid;
+//46:00

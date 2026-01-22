@@ -1,3 +1,12 @@
 .box {
     background-color: orange;
 }
+.slider-item {
+    text-align: center;
+    background-color: #ddd;
+}
+.slider-item img {
+    width: 100%;
+    margin: 0 auto;
+    
+}
