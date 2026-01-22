@@ -1,8 +1,13 @@
 import { Button, Form, Input, InputNumber, Select, Switch } from "antd";
+import { createRoom } from "../../service/roomsService";
 const { Option } = Select;
+
 function CreateRoom() {
-    const handleSubmit = (e) => {
-        console.log(e);
+    const [form] = Form.useForm();
+    const handleSubmit = async (values) => {
+        const request = await createRoom(values);
+        request ? alert("Thêm phòng thành công!") : alert("Thêm phòng thất bại!");
+        form.resetFields();
     }
     const rule =
         [{
@@ -12,15 +17,25 @@ function CreateRoom() {
     return (
         <>
             <h2>Thêm phòng mới</h2>
-            <Form layout="vertical" name="create-room" onFinish={handleSubmit}>
+            <Form layout="vertical" name="create-room" onFinish={handleSubmit} form={form}>
                 <Form.Item
                     label="Trạng thái"
                     name="status"
                     valuePropName="checked"
 
                 >
-                    <Switch />
+                    <Switch checkedChildren = "Còn Phòng" unCheckedChildren ="Hết phòng"/>
                 </Form.Item>
+
+                <Form.Item
+                    label="Loại phòng"
+                    name="typeRoom"
+                    valuePropName="checked"
+
+                >
+                    <Switch checkedChildren="VIP" unCheckedChildren="Nomarl"/>
+                </Form.Item>
+
                 <Form.Item
                     label="Tên phòng"
                     name="name"
@@ -43,7 +58,7 @@ function CreateRoom() {
                     <InputNumber min={1} />
                 </Form.Item>
 
-                <Form.Item name="utils"  label="Tiện ích">
+                <Form.Item name="utils" label="Tiện ích">
                     <Select style={{ width: "100%" }} defaultActiveFirstOption={"Wifi"} mode="multiple" allowClear>
                         <Option value={"Wifi"}>Wifi</Option>
                         <Option value={"Nóng lạnh"}>Nóng lạnh</Option>

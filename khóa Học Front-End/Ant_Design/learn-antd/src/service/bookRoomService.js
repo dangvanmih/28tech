@@ -1,6 +1,6 @@
-import { get, post } from "../utils/request";
+import { post } from "../utils/request";
 
-// API lấy data
+// API post data vào database
 export const bookRoom = async (option) => {
     const result = await post("book-room", option)
     return result;

@@ -34,5 +34,98 @@
       ],
       "id": 2
     }
+  ],
+  "rooms": [
+    {
+      "name": "Phòng A1",
+      "typeRoom": true,
+      "quantityBed": 2,
+      "quantityPeople": 4,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "phòng chất lượng cao đầy đủ tiện nghi!",
+      "id": 1
+    },
+    {
+      "name": "Phòng A2",
+      "typeRoom": true,
+      "quantityBed": 2,
+      "quantityPeople": 4,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "phòng chất lượng cao đầy đủ tiện nghi!",
+      "id": 2
+    },
+    {
+      "name": "Phòng A3",
+      "quantityBed": 1,
+      "quantityPeople": 2,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Phòng đầy đủ tiện nghi!",
+      "id": 3
+    },
+    {
+      "status": true,
+      "name": "Phòng A4",
+      "quantityBed": 2,
+      "quantityPeople": 4,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đầy đủ tiện nghi",
+      "id": 4
+    },
+    {
+      "status": true,
+      "name": "Phòng A5",
+      "quantityBed": 2,
+      "quantityPeople": 4,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đầy đủ tiện nghi",
+      "id": 5
+    },
+    {
+      "status": true,
+      "name": "Phòng A6",
+      "quantityBed": 3,
+      "quantityPeople": 6,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đầy đủ tiện nghi",
+      "id": 6
+    },
+    {
+      "status": true,
+      "typeRoom": true,
+      "name": "Phòng A7",
+      "quantityBed": 3,
+      "quantityPeople": 3,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đầy đủ tiện nghi!",
+      "id": 7
+    }
   ]
 }

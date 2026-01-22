@@ -1,5 +1,5 @@
 import { Menu } from "antd";
-import { ChromeOutlined, GithubOutlined, PlusCircleOutlined, WindowsOutlined } from "@ant-design/icons"
+import { ChromeOutlined, GithubOutlined, PlusCircleOutlined, UnorderedListOutlined, WindowsOutlined } from "@ant-design/icons"
 import { Link } from "react-router-dom";
 function MenuSider() {
     const items = [
@@ -53,6 +53,11 @@ function MenuSider() {
             label: <Link to="create-room">Create Room</Link>,
             icon: <PlusCircleOutlined />,
             key: "/create-room"
+        },
+        {
+            label: <Link to="list-room">List Room</Link>,
+            icon: <UnorderedListOutlined />,
+            key: "/list-room"
         },
     ]
     return (
