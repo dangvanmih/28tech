@@ -1,25 +1,19 @@
 //useState: giúp cập nhật lại trạng thái của dữ liệu (hay cập nhật lại giá trị của dữ liệu).
 //Khi dữ liệu thay đổi thì giao diện được cập nhật lại theo dữ liệu mới.
-
-import { use, useState } from "react";
-
+import {useState } from "react";
+import "./lamp.css"
 function Lamp() {
-    // let status = false;
-    const [status, setState] = useState(false);
-    const handleClick = () =>  {  
-        // status = !status;
-        setState(!status)
+    const [isTheme, setTheme] = useState(false);
+    const handleClick = () => {
+        setTheme(!isTheme)
     }
-    console.log(status);
 
     return (
         <>
-            <button onClick={handleClick}>
-                {status ? "Tắt đi" : "Bật lên"}
-            </button>
-            <div>
-
-                {status ? "Đèn đang bật" : "Đèn đang tắt"}
+            <div className={isTheme ? "theme-light" : "theme-dark"}>
+                <button onClick={handleClick}>
+                    {isTheme ? "Tắt đi" : "Bật lên"}
+                </button>
             </div>
         </>
     )
