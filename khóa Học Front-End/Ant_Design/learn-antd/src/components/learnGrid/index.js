@@ -1,4 +1,4 @@
-import { Carousel, Col, Collapse, Row } from "antd"
+import { Carousel, Col, Collapse, Image, Row } from "antd"
 import "./LearnGrid.css"
 import CardItem from "../LearnCardItem";
 const { Panel } = Collapse;
@@ -67,6 +67,8 @@ function LearnGrid() {
                     </Panel>
                 ))}
             </Collapse>
+
+            <Image width={200} src="https://tse3.mm.bing.net/th/id/OIP.EAvyHywktlpy5ltqju0NPgHaFj?pid=Api&P=0&h=180" />
 
             <Row gutter={[20, 20]} className="mt-20">
                 <Col xxl={6} xl={6} lg={6} md={12} sm={24} xs={24}>
