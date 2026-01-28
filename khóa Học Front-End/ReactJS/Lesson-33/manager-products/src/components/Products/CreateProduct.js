@@ -13,7 +13,7 @@ function CreateProduct(props) {
 
     useEffect(() => {
         const fecthApi = async () => {
-            fetch("http://localhost:3000/categories")
+            fetch("http://localhost:3002/categories")
                 .then(res => res.json())
                 .then(data => {
                     setDataCatefory(data)
@@ -47,7 +47,7 @@ function CreateProduct(props) {
     }
     const handleSubmit = (e) => {
         e.preventDefault(); // ngăn reload lại form 
-        fetch("http://localhost:3000/products", {
+        fetch("http://localhost:3002/products", {
             method: "POST",
             header: {
                 Accept: "application/json",
@@ -153,4 +153,3 @@ function CreateProduct(props) {
     )
 }
 export default CreateProduct;
-//1:13:17

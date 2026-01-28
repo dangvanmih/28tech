@@ -31,7 +31,7 @@ function Login () {
     return (
         <>
             <form className="login"  onSubmit={handleSubmit}>
-                <h2 className="login__title">Login</h2>``
+                <h2 className="login__title">Login</h2>
                 <div className="login__input">
                     <input type="email" placeholder="Nhập email" />
                 </div>

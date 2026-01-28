@@ -1,7 +1,8 @@
 import { Badge, Table } from "antd";
+import DeleteRoom from "../DeleteRoom";
 
 function RoomTable(props) {
-    const { rooms } = props;
+    const { rooms, onReload } = props;
     const columns = [
         {
             title: 'Tên phòng',
@@ -24,7 +25,7 @@ function RoomTable(props) {
             key: 'typeRoom',
             render: (_, record) => {
                 return <>
-                    {record.typeRoom ?  <Badge color="purple" text="VIP" />:  <Badge color="green" text="Thường" />}
+                    {record.typeRoom ? <Badge color="purple" text="VIP" /> : <Badge color="green" text="Thường" />}
                 </>;
             }
         },
@@ -34,16 +35,28 @@ function RoomTable(props) {
             key: 'status',
             render: (_, record) => {
                 return <>
-                    {record.status ?  <Badge color="green" text="Còn phòng" />:  <Badge color="red" text="Hết phòng" />}
+                    {record.status ? <Badge color="green" text="Còn phòng" /> : <Badge color="red" text="Hết phòng" />}
                 </>;
             }
         },
-        
+        {
+            title: 'Hành động',
+            key: 'actions',
+            render: (_, record) => {
+                return (
+                <>
+                    <DeleteRoom record = {record} onReload = {onReload} />
+                </>
+                )
+            }
+        },
+
     ]
     return (
         <>
-            <Table dataSource={rooms} columns={columns} rowKey="id"/>
+            <Table dataSource={rooms} columns={columns} rowKey="id" />
         </>
     )
 }
 export default RoomTable;
+// 1:26

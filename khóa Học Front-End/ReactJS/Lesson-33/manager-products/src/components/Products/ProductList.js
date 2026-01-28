@@ -10,7 +10,7 @@ function ProductList(props) {
     }
     useEffect(() => {
         const fecthApi = async () => {
-            fetch("http://localhost:3000/products")
+            fetch("http://localhost:3002/products")
             .then(res => res.json())
             .then(data => {
                 setData(data.reverse()) // là sản phẩm khi thêm mới sẽ được đổi lên đầu trang

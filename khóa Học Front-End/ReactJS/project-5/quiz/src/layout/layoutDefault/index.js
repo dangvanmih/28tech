@@ -4,7 +4,7 @@ import "./LayoutDefault.scss";
 import { NavLink, Outlet } from "react-router-dom";
 function LayoutDefault() {
     const token = getCookie("token");
-    const isLogin = useSelector(state => state.loginReducer);
+    const isLogin = useSelector(state => state.loginReducer); // kiểm tra state thay đổi thì render laik gdien
     console.log(isLogin);
        
     return (

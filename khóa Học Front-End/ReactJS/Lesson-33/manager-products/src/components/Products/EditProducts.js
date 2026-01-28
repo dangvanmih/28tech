@@ -13,7 +13,7 @@ function EditProduct(props) {
 
     useEffect(() => {
         const fecthApi = async () => {
-            fetch("http://localhost:3000/categories")
+            fetch("http://localhost:3002/categories")
                 .then(res => res.json())
                 .then(data => {
                     setDataCatefory(data)
@@ -48,7 +48,7 @@ function EditProduct(props) {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:3000/products/${item.id}`, {
+        fetch(`http://localhost:3002/products/${item.id}`, {
             method: "PATCH",  // phương thức chỉnh sửa sản phẩm
             header: {
                 Accept: "application/json",

@@ -15,7 +15,7 @@ function DeleteProduct(props) {
             cancelButtonText: "Hủy"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/products/${item.id}`, {
+                fetch(`http://localhost:3002/products/${item.id}`, {
                     method: "DELETE",  // phương thức Xóa sản phẩm
                 })
                     .then(res => res.json())
