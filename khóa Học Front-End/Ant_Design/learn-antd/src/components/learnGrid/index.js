@@ -1,4 +1,4 @@
-import { Carousel, Col, Collapse, Image, Row } from "antd"
+import { Carousel, Col, Collapse, Image, Row, Tabs } from "antd"
 import "./LearnGrid.css"
 import CardItem from "../LearnCardItem";
 const { Panel } = Collapse;
@@ -20,6 +20,24 @@ function LearnGrid() {
             description: "Menu là..."
         },
     ]
+
+    const items = [
+        {
+            key: 1,
+            label: 'Tab 1',
+            children: 'Content of Tab Pane 1',
+        },
+        {
+            key: 2,
+            label: 'Tab 2',
+            children: 'Content of Tab Pane 2',
+        },
+        {
+            key: 3,
+            label: 'Tab 3',
+            children: 'Content of Tab Pane 3',
+        },
+    ];
     return (
         <>
             {/* <Row gutter={[15, 10]}>
@@ -60,13 +78,14 @@ function LearnGrid() {
                 </div>
             </Carousel>
 
-            <Collapse defaultActiveKey={"1"} accordion = {true}>
+            <Collapse defaultActiveKey={"1"} accordion={true}>
                 {List.map(item => (
-                    <Panel header= {item.title} key={item.id}>
+                    <Panel header={item.title} key={item.id}>
                         <p>{item.description}</p>
                     </Panel>
                 ))}
             </Collapse>
+            <Tabs items={items} />;
 
             <Image width={200} src="https://tse3.mm.bing.net/th/id/OIP.EAvyHywktlpy5ltqju0NPgHaFj?pid=Api&P=0&h=180" />
 

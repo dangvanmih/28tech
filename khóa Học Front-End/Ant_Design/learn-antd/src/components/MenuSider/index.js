@@ -65,8 +65,8 @@ function MenuSider() {
             <Menu
                 mode="inline"
                 items={items}
-                defaultSelectedKeys={["/"]} // mặc định key nào đc active
-                defaultOpenKeys={["menu-1"]} // mặc định key nào được mở
+                // defaultSelectedKeys={["/"]} // mặc định key nào đc active
+                // defaultOpenKeys={["menu-1"]} // mặc định key nào được mở
             />
         </>
     )

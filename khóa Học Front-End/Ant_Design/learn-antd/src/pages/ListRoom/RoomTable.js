@@ -1,4 +1,4 @@
-import { Badge, Table } from "antd";
+import { Badge, Table, Tag } from "antd";
 import DeleteRoom from "../DeleteRoom";
 
 function RoomTable(props) {
@@ -25,7 +25,21 @@ function RoomTable(props) {
             key: 'typeRoom',
             render: (_, record) => {
                 return <>
-                    {record.typeRoom ? <Badge color="purple" text="VIP" /> : <Badge color="green" text="Thường" />}
+                    {record.typeRoom ?
+                        <>
+                            <Tag color="purple">
+                                VIP
+                            </Tag>
+                            {/* <Badge color="purple" text="Vip" /> */}
+                        </>
+                        :
+                        <>
+                            {/* <Badge color="green" text="Thường" /> */}
+                            <Tag color="green">
+                                Thường
+                            </Tag>
+                        </>
+                    }
                 </>;
             }
         },
@@ -35,7 +49,19 @@ function RoomTable(props) {
             key: 'status',
             render: (_, record) => {
                 return <>
-                    {record.status ? <Badge color="green" text="Còn phòng" /> : <Badge color="red" text="Hết phòng" />}
+                    {record.status ? <>
+                            <Tag color="green">
+                                Còn phòng
+                            </Tag>
+                            {/* <Badge color="green" text="Còn phòng" /> */}
+                        </>
+                        :
+                        <>
+                            {/* <Badge color="red" text="Hết phòng" /> */}
+                            <Tag color="red">
+                                Hết phòng
+                            </Tag>
+                        </>}
                 </>;
             }
         },
@@ -44,9 +70,9 @@ function RoomTable(props) {
             key: 'actions',
             render: (_, record) => {
                 return (
-                <>
-                    <DeleteRoom record = {record} onReload = {onReload} />
-                </>
+                    <>
+                        <DeleteRoom record={record} onReload={onReload} />
+                    </>
                 )
             }
         },
