@@ -1,5 +1,6 @@
-import { Badge, Table, Tag } from "antd";
+import { Table, Tag, Tooltip } from "antd";
 import DeleteRoom from "../DeleteRoom";
+import EditRoom from "./editRoom";
 
 function RoomTable(props) {
     const { rooms, onReload } = props;
@@ -27,17 +28,21 @@ function RoomTable(props) {
                 return <>
                     {record.typeRoom ?
                         <>
-                            <Tag color="purple">
-                                VIP
-                            </Tag>
+                            <Tooltip title="Phòng chuẩn 5 sao" color = "purple">
+                                <Tag color="purple">
+                                    VIP
+                                </Tag>
+                            </Tooltip>
                             {/* <Badge color="purple" text="Vip" /> */}
                         </>
                         :
                         <>
                             {/* <Badge color="green" text="Thường" /> */}
-                            <Tag color="green">
-                                Thường
-                            </Tag>
+                            <Tooltip title="Phòng thường chuẩn 3 sao" color = "green">
+                                <Tag color="green" >
+                                    Thường
+                                </Tag>
+                            </Tooltip>
                         </>
                     }
                 </>;
@@ -50,17 +55,21 @@ function RoomTable(props) {
             render: (_, record) => {
                 return <>
                     {record.status ? <>
+                        <Tooltip title="Phòng chưa có khách đặt" color="green">
                             <Tag color="green">
                                 Còn phòng
                             </Tag>
-                            {/* <Badge color="green" text="Còn phòng" /> */}
-                        </>
+                        </Tooltip>
+                        {/* <Badge color="green" text="Còn phòng" /> */}
+                    </>
                         :
                         <>
                             {/* <Badge color="red" text="Hết phòng" /> */}
-                            <Tag color="red">
-                                Hết phòng
-                            </Tag>
+                            <Tooltip title = "Phòng đã có khách đặt" color = "red">
+                                <Tag color="red">
+                                    Hết phòng
+                                </Tag>
+                            </Tooltip>
                         </>}
                 </>;
             }
@@ -72,6 +81,7 @@ function RoomTable(props) {
                 return (
                     <>
                         <DeleteRoom record={record} onReload={onReload} />
+                        <EditRoom record={record} onReload={onReload}/>
                     </>
                 )
             }

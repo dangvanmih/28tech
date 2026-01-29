@@ -1,21 +1,36 @@
-import { Button, Form, Input, InputNumber, Select, Switch } from "antd";
+import { Button, Form, Input, InputNumber, message, Select, Switch } from "antd";
 import { createRoom } from "../../service/roomsService";
 const { Option } = Select;
 
 function CreateRoom() {
     const [form] = Form.useForm();
-    const handleSubmit = async (values) => {
-        const request = await createRoom(values);
-        request ? alert("Thêm phòng thành công!") : alert("Thêm phòng thất bại!");
-        form.resetFields();
-    }
+    const [messageApi, contextHolder] = message.useMessage(); // hiển messis khi tạo mới phòng
     const rule =
         [{
             required: true,
             message: 'require!'
         }];
+    const handleSubmit = async (values) => {
+        const response = await createRoom(values);
+        if (response) {
+            form.resetFields();
+            messageApi.open({
+                type: 'success',
+                content: 'Tạo phòng thành công!',
+                duration: 3
+            });
+        }
+        else {
+            messageApi.open({
+                type: 'error',
+                content: 'Tạo phòng không thành công!'
+            });
+        }
+
+    }
     return (
         <>
+            {contextHolder}
             <h2>Thêm phòng mới</h2>
             <Form layout="vertical" name="create-room" onFinish={handleSubmit} form={form}>
                 <Form.Item
@@ -24,7 +39,7 @@ function CreateRoom() {
                     valuePropName="checked"
 
                 >
-                    <Switch checkedChildren = "Còn Phòng" unCheckedChildren ="Hết phòng"/>
+                    <Switch checkedChildren="Còn Phòng" unCheckedChildren="Hết phòng" />
                 </Form.Item>
 
                 <Form.Item
@@ -33,7 +48,7 @@ function CreateRoom() {
                     valuePropName="checked"
 
                 >
-                    <Switch checkedChildren="VIP" unCheckedChildren="Nomarl"/>
+                    <Switch checkedChildren="VIP" unCheckedChildren="Nomarl" />
                 </Form.Item>
 
                 <Form.Item

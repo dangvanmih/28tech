@@ -39,8 +39,8 @@
     {
       "name": "Phòng A1",
       "typeRoom": true,
-      "quantityBed": 2,
-      "quantityPeople": 4,
+      "quantityBed": 4,
+      "quantityPeople": 7,
       "utils": [
         "Wifi",
         "Nóng lạnh",
@@ -126,8 +126,7 @@
       ],
       "description": "Đầy đủ tiện nghi!",
       "id": 7
-    }
-    ,
+    },
     {
       "status": true,
       "typeRoom": true,
@@ -141,8 +140,7 @@
       ],
       "description": "Đầy đủ tiện nghi!",
       "id": 8
-    }
-    ,
+    },
     {
       "status": true,
       "typeRoom": true,
@@ -156,8 +154,7 @@
       ],
       "description": "Đầy đủ tiện nghi!",
       "id": 9
-    }
-    ,
+    },
     {
       "status": true,
       "typeRoom": true,
@@ -171,8 +168,7 @@
       ],
       "description": "Đầy đủ tiện nghi!",
       "id": 10
-    }
-    ,
+    },
     {
       "status": true,
       "typeRoom": true,
@@ -186,8 +182,7 @@
       ],
       "description": "Đầy đủ tiện nghi!",
       "id": 11
-    }
-    ,
+    },
     {
       "status": true,
       "typeRoom": true,
@@ -201,6 +196,34 @@
       ],
       "description": "Đầy đủ tiện nghi!",
       "id": 12
+    },
+    {
+      "status": true,
+      "typeRoom": true,
+      "name": "Phòng B3",
+      "quantityBed": 2,
+      "quantityPeople": 4,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Phòng VIP chuẩn 5s",
+      "id": 13
+    },
+    {
+      "status": true,
+      "typeRoom": true,
+      "name": "Phòng B4",
+      "quantityBed": 2,
+      "quantityPeople": 4,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đủ tiện nghi",
+      "id": 14
     }
   ]
 }
