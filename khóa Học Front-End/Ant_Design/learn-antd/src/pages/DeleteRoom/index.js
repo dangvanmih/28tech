@@ -16,7 +16,7 @@ function DeleteRoom(props) {
     return (
         <>
             <Popconfirm title="Xác nhận xóa?" onConfirm={() => handleDelete(record.key)}>
-                <Button danger icon = {<DeleteOutlined/>}  />
+                <Button danger icon = {<DeleteOutlined/>} style={{marginRight:"10px"}}  />
             </Popconfirm>
         </>
     )

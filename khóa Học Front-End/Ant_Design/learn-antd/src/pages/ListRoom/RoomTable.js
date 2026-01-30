@@ -80,7 +80,7 @@ function RoomTable(props) {
             render: (_, record) => {
                 return (
                     <>
-                        <DeleteRoom record={record} onReload={onReload} />
+                        <DeleteRoom record={record} onReload={onReload}/>
                         <EditRoom record={record} onReload={onReload}/>
                     </>
                 )

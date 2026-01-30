@@ -9,7 +9,7 @@ function ListRoom() {
     const [isGrid, setIsGrid] = useState(true)
     const fetchApi = async () => {
         const response = await getListRoom();
-        setRooms(response)
+        setRooms(response.reverse()) // reverse để fill data mới sẽ hiển thị lên trên.
     }
     useEffect(() => {
         fetchApi();
@@ -20,7 +20,10 @@ function ListRoom() {
     return (
         <>
             <Button onClick={() => setIsGrid(!isGrid)}>
-                {isGrid ? <UnorderedListOutlined /> : <TableOutlined />}
+                <UnorderedListOutlined />
+            </Button>
+            <Button onClick={() => setIsGrid(!isGrid)}>
+                <TableOutlined />
             </Button>
             {isGrid
                 ?
@@ -30,7 +33,7 @@ function ListRoom() {
                 :
                 (<>
 
-                    <RoomTable rooms={rooms} onReload = {handeReload} />
+                    <RoomTable rooms={rooms} onReload={handeReload} />
                 </>)}
 
         </>
