@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <!-- 01. THẺ <a> CHÈN LINK
+        thẻ a chèn link với cú pháp <a href="">Text</a>
+        target: thuộc tính xác định nơi mà tài liệu được mở
+        + _self: mặc định mở tài liệu ở tab hiện tại
+        +_blank: mở tài liệu ở tab mới -->
+
+        <p>xem tài liệu: <a href="https://www.google.com" target="_blank" title="Đây là link sang trang google.com"> tại
+                đây
+        </p>
+
+        <!-- 02. THẺ <img> CHÈN ẢNH -->
+
+        <img width="240" height="160" src="https://tenten.vn/tin-tuc/wp-content/uploads/2022/08/code-4.png" alt="Đây là hình ảnh về code">
+
+        <!-- 03.File Paths(Đường dẫn)
+        đường dẫn tuyệt đối ví dụ: như thẻ img ở phần 02
+        đường dẫn tương đối là các ví dự dưới đây:
+        1.nằm cùng thư mục với trang hiện tại: -->
+        <img width="240" height="160" src="do more 3 xanh la.jpg" alt="ảnh nền lap top do more xanh lá">
+
+        <!-- 2.nằm trong thư mục images ở thư mục gốc của trang web hiện tại -->
+        <img width="240" height="160" src="/khóa Học Front-End/bai2/images/do more 3 xam (1).jpg" alt="ảnh nền lap top do more xám">
+
+        <!-- 3.Nằm trong thư mục images với thư mục hiện tại -->
+        <img width="240" height="160" src="images/do more 3 xam (1).jpg" alt="ảnh nền lap top do more xám">
+
+        <!-- 4.nằm trong thư mục tăng một cấp đối với thư mục hiện tại -->
+        <img width="240" height="160" src="../images.jpg" alt="">
+
+        <!-- Ví dụ về gắn link đường dãn vào ảnh -->
+        <a href="https://28tech.com.vn">
+            <img width="240" height="160" src="https://cdn-main.28tech.com.vn/media/core/logo-28tech.svg" alt="Đây là logo-28tech">
+        </a>
+    </div>
+<div> 
+       <!-- 04. Thẻ video (chèn video) -->
+        <!-- controls để điều chỉnh video 
+        loop để lặp lại video -->
+        <!-- autoplay chỉ tự động phát video  khi tắt tiếng-->
+         <!-- mutted để tắt âm thanh -->
+        <video width="320" height="240" controls loop autoplay muted>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+</div>
+
+<div>
+    <!-- 05. Thẻ <audio> (Chèn audio) -->
+        <audio controls loop autoplay muted> 
+            <source src="audio.mp3" type="audio/mpeg">
+        </audio>
+</div>
+</body>
+</html>

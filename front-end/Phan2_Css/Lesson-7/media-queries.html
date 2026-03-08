@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- PC firt: là code giao diện từ màn hình to đến màn hình nhỏ
+    Mobile firt: là code giao diện từ màn hình nhỏ đến màn hình to -->
+    <!-- dưới đây là code theo kiểu Pc firt -->
+
+    <style>
+        h1{
+            color: rgb(213, 89, 89);
+        }
+        @media screen and (max-width: 1024px) {
+            h1{
+                color: green;
+                font-size: 70px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            h1{
+                color: blue;
+                font-size: 50px;
+            }
+        }
+         @media screen and (max-width: 480px) {
+            h1{
+                color: violet;
+                font-size: 40px;
+            }
+        }
+        @media screen and (max-width: 320px) {
+            h1{
+                color: rgb(222, 87, 8);
+                font-size: 20px;
+            }
+        }
+    </style>
+    <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque tenetur provident, ea repellat itaque debitis velit commodi distinctio. Accusantium aspernatur temporibus id corporis quas magnam at modi est fuga eum?</h1>
+</body>
+</html>

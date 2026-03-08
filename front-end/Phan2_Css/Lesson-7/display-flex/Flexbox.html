@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: #7C4991;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .container .item{
+            background-color: #F7941F;
+            border: 3px solid #fff;
+            padding: 10px;
+            margin: 10px;
+            font-size: 20px;
+            color: black;
+            border-radius: 5px;
+            text-align: center;
+            width: 150px;
+        }
+        .container{
+            display: flex; 
+            /*chiều rộng của container bằng 100% */
+            /* display: inline-flex; */
+            /* chiều rộng container bằng với các item bên trong */
+            /* flex-direction: row-reverse; */
+            /* đảo ngược lại các item theo chiều ngang  từ phải qua trái */
+            /* flex-direction: column; */
+            /* các item được xếp theo chiều dọc */
+            /* flex-direction: column-reverse; */
+            /* vẫn xếp theo chiều dọc và đảo ngược lại các items */
+            flex-wrap: wrap;
+            /* khi tổng chiều rộng của các item mà lớn hơn chiều rộng của container thì sẽ tự động xuống dòng và mặc định thì là nowrap */
+            /* flex-wrap: wrap-reverse; */
+            /* ngược lại vs wrap thì các item sẽ nhảy lên trên thay vì xuống dưới */
+        }
+    </style>
+
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 8</div>
+    </div>
+    </div>
+    </div>
+
+
+</body>
+</html>

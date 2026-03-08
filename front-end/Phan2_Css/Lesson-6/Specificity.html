@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1-0-0-0: inline styles
+    0-x-0-0: số lượng ID selector
+    0-0-Y-0: số lượng classes, attribute và pseudo-classes 
+    0-0-0-z: số lượng element và pseudo-elements -->
+    
+    <!-- !important sẽ ưu tiên và quan trọng hơn tất cả các độ ưu tiên còn lại -->
+    <style>
+        li {
+            color: red!important;
+        }
+        ul li {
+            color: green;
+        }
+    </style>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</body>
+</html>

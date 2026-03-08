@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <style>
+        header {
+            background-color: #EF5D00;
+            width: 100%;
+            height: 40px;
+            margin: 0 auto;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        ul li {
+            float: left;
+            padding-left: 20px;
+            list-style: none;
+            font-weight: 600;
+            color: white;
+        }
+
+        ul {
+            padding-top: 10px;
+            padding-left: 2px;
+        }
+
+        .content {
+            background-color: #CDCDCD;
+            width: 100%;
+            height: 500px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .content-1 {
+            width: 100px;
+            height: 50px;
+            background-color: #EF5D00;
+            position: absolute;
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+            top: 10px;
+            left: 20px;
+        }
+
+        .content-2 {
+            background-color: red;
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            border-radius: 8px;
+            color: white;
+            right: 20px;
+            top: 10px;
+            text-align: center;
+        }
+
+        .content-3 {
+            background-color: green;
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+            border-radius: 50%;
+            text-align: center;
+            z-index: 2;
+
+        }
+
+        .fa-phone {
+            color: white;
+        }
+
+        .content-5 {
+            background-color: blue;
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            border-radius: 8px;
+            color: white;
+            left: 30px;
+            bottom: 20px;
+            text-align: center;
+        }
+
+        .content-6 {
+            background-color: green;
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            border-radius: 8px;
+            color: white;
+            right: 30px;
+            bottom: 20px;
+            text-align: center;
+        }
+
+        .content {
+            margin-bottom: 30px;
+        }
+
+        .content-7 {
+            background-color: rgb(60, 60, 188);
+            border-radius: 8px;
+            position: relative;
+            padding: 50px 30px;
+            overflow: hidden;
+        }
+
+        .content-7 .inner-content {
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content-7 .inner-content::first-letter {
+            font-size: 30px;
+        }
+
+        .content-7 .inner-content::first-line {
+            text-transform: uppercase;
+        }
+
+        .content-7::before {
+            content: "";
+            width: 90px;
+            height: 90px;
+            background-color: #0000002e;
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            display: block;
+            border-radius: 50%;
+        }
+        
+        .content-7::after {
+            content: "";
+            width: 150px;
+            height: 150px;
+            background-color: #0000002e;
+            position: absolute;
+            right: -27px;
+            bottom: -27px;
+            display: block;
+            border-radius: 50%;
+        }
+    </style>
+    <div>
+        <header>
+            <ul>
+                <li>Trang chủ</li>
+                <li>Giới thiệu</li>
+                <li>Sản phẩm</li>
+                <li>Tin tức</li>
+                <li>Liên hệ</li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="content-1">
+                <p>1</p>
+            </div>
+            <div class="content-2">
+                <p>2</p>
+            </div>
+            <div class="content-3">
+                <p class="fa-solid fa-phone"></p>
+            </div>
+            <div class="content-5">
+                <p>3</p>
+            </div>
+            <div class="content-6">
+                <p>4</p>
+            </div>
+        </div>
+        <div class="content-7">
+            <div class="inner-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, consequatur. Natus accusamus alias,
+                voluptates earum eos quam hic ducimus ad corporis est! Numquam nemo dolore deserunt in facilis
+                consectetur accusantium?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error natus ab autem aliquam unde fuga officiis
+                voluptatem placeat inventore, sed, nesciunt sunt? Nisi corrupti asperiores labore nulla tempora eius.
+                Reiciendis.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque inventore consectetur, deserunt facilis
+                quibusdam est sequi hic? Nesciunt labore quos recusandae, sit vero autem ex voluptatibus voluptate
+                mollitia cum aliquam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aspernatur, magnam quibusdam et
+                culpa aliquid in quod sit impedit quas nemo earum perspiciatis architecto pariatur veritatis tempora
+                soluta ipsa modi?
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

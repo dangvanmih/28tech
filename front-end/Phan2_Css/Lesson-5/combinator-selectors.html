@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- =============================CÁC BỘ CHỌN============================ -->
+<body>
+    <!-- Adjacent sibling selectors (Bộ chọn anh chị em liền kề):
+    Chọn phần tử tag02 được đặt cùng cấp và phải kề ngay sau phần tử tag01 (mỗi tag01 chỉ có một tag02 kề ngay sau).
+    Cú pháp:
+    tag01 + tag02 { /*Viết css trong này*/ } -->
+    <!-- BỘ CHỌN NÀY ÍT SỬ DỤNG -->
+
+    <!-- <style>
+        /* dùng dấu + chỉ áp dụng cho một element */
+        /* div+p {
+            background-color: yellow;
+        } */
+
+         /* dùng dấu ~ áp dụng được nhiều element */
+         div ~ p {
+            background-color: yellow;
+         }
+    </style>
+    <p>Nội dung 0</p>
+    <div>
+        <p>Nội dung 1</p>
+        <p>Nội dung 2</p>
+    </div>
+    <h2>Nội dung thẻ h2</h2>
+    <p>Nội dung 3</p>
+    <p>Nội dung 4</p> -->
+<!-- ====================================================== -->
+
+    <!-- Child selectors (Bộ chọn con) -->
+    <!-- Chọn tất cả phần tử tag02 là cấp con đầu tiên (cấp 1) của phần tử tag01.
+    Cú pháp:
+    tag01 > tag02 { /*Viết css trong này*/ -->
+
+<!-- ====================================================== -->
+
+<!-- Descendant selectors (Bộ chọn hậu duệ):
+Chọn tất cả phần tử tag02 bên trong phần tử tag01.
+Cú pháp:
+tag01 tag02 { /*Viết css trong này*/ } -->
+
+    <!-- <style>
+        /* bộ chọn con */
+        div > p {
+            background-color: yellow;
+        }
+        /* bộ chọn hậu duệ */
+        div  p {
+            background-color: yellow;
+        }
+    </style>
+    <div>
+        <p>Nội dung 1</p>
+        <p>Nội dung 2</p>
+        <section>
+            <p>Nội dung 3</p>
+            <p>Nội dung 4</p>
+        </section>
+    </div>
+    <p>Nội dung 5</p>
+    <p>Nội dung 6</p> -->
+    <style>
+        .parent .child h3 {
+            background-color: yellowgreen;
+        }
+    </style>
+
+    <h3>Nội dung khác</h3>
+    <div class="parent">
+        <div class="child">
+            <h3>Nội dung 1</h3>
+        </div>
+        <div class="child">
+            <h3>Nội dung 2</h3>
+        </div>
+        <div class="child">
+            <h3>Nội dung 3</h3>
+        </div>
+        <div class="child">
+            <h3>Nội dung 4</h3>
+        </div>
+    </div>
+
+</body>
+
+</html>

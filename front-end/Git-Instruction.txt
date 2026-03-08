@@ -1,0 +1,68 @@
+----------------------------------------------------------
+GIT:
+git chia ra 3 phần: 
+-- 1: Working directory (thư mục làm việc): được hiểu nhanh là khu vực chứa dự án mà ĐANG làm việc. "là khi mà chưa git add ."
+-- 2: staging area (khu vực sắp xếp): là khu vực chứa thông tin thay đổi của các file "là khi mà đã add . "
+-- 3: respository (kho lưu trữ) : để lưu trữ dữ liệu, lịch sử các phiên bản "là khi mà đã git commit -m "nội dung... "" lên rồi"
+
+Các câu lệnh GIT sử dụng phổ biến
+        git --version: Xem phiên bản hiện tại đang được cài trên máy tính.
+        git --help: Xem danh sách các câu lệnh Git.
+        git config: Để đặt username và email của bạn trong file config của git.
+        Để xem thông tin cấu hình username: git config --global user.name
+        Để xem thông tin cấu hình email: git config --global user.email
+        Để đặt username mới: git config --global user.name "Đặng Văn Minh"
+        Để đặt email mới: git config --global user.email "minhxje@gmail.com"
+
+--git init
+Khởi tạo 1 git repository (kho lưu trữ) trong một dự án mới hoặc dự án đã có (Dùng trong thư mục gốc của dự án).
+Khi khởi tạo xong, trong thư mục gốc (dự án đang làm) sẽ sinh ra một thư mục tên là .git, thư mục này sẽ lưu toàn bộ thông tin lịch sử của dự án mà bạn làm. Chúng ta không cần quan tâm bên trong thư mục này chứa gì.
+
+--git status
+Để xem trạng thái của những file đã được thay đổi (bao gồm: thêm, sửa, xóa) trong dự án.
+Ví dụ: tạo file README.md trong dự án (file này để giới thiệu và hướng dẫn cách cài đặt dự án). Sau đó gõ lệnh git status, ta sẽ thấy có file README.md được thêm mới
+
+--git add ten_file
+Thông tin của các file sẽ được lưu vào Staging area.
+Staging area có tác dụng sắp xếp lại nhưng file đã add vào.
+Ví dụ: tạo ra các file rồi thử lại câu lệnh này.
+
+--git add .
+Thêm thay đổi cho tất cả các file.
+Ví dụ: tạo ra các file rồi thử lại câu lệnh này.
+
+--git commit -m "Nội dung…"
+Để đưa những file ở vùng Staging area chuyển sang Repository, mục đích là tạo ra 1 phiên bản mới vào lưu vào lịch sử của Repository.
+Với điều kiện các tập tin, thư mục được thay đổi đã phải nằm trong Staging Area.
+
+--git log: Giúp bạn xem lại thông tin lịch sử commit, nhằm giám sát sự thay đổi của dự án. Commit mới sẽ hiện bên trên, commit cũ sẽ hiện bên dưới (Nếu gặp chữ END thì nhấn phím q để thoát).
+
+--git show commit_id: Dùng để xem chi tiết một commit
+
+--git diff: Xem sự thay đổi của một file sau khi chúng ta chỉnh sửa (File đó vẫn đang ở khu vực Working directory).
+
+--gitk: Mở dashboard xem trực quan hơn.
+
+--git checkout -- ten_file: Bỏ đi những thay đổi của file, để file đó trở về như lúc ban đầu. Áp dụng cho file đang ở vùng Working directory.
+
+--git reset HEAD ten_file hoặc git reset ten_file: Chuyển file đó từ vùng Staging area trở lại vùng Working directory.
+
+--git reset --soft commit_id
+Dùng để chuyển từ trạng thái đã commit về trạng thái trước lúc chạy lệnh git commit.
+Tức là từ Repository về lại Staging area. Trong đó commit_id là mã của nhánh mà ta muốn quay lại.
+
+--git reset --mixed commit_id
+Dùng để chuyển từ trạng thái đã commit về trạng thái trước lúc chạy lệnh git add.
+Tức là từ Repository về lại Working directory. Trong đó commit_id là mã của nhánh mà ta muốn quay lại.
+
+git branch: Xem danh sách các nhánh. Các branch (nhánh) đại diện cho các phiên bản cụ thể của một kho lưu trữ tách ra từ project chính của bạn.
+Nhánh master là nhánh chính, để sau này deploy lên server.
+
+git checkout -b ten_nhanh: Tạo một nhánh mới và chuyển sang nhánh đó. và những file code ở nhánh đó thì chỉ khi ở nhánh đó thì với xem được file đã code
+
+git checkout ten_nhanh: Chuyển sang nhánh khác.
+
+git merge ten_nhanh: Để merge nhánh <ten_nhanh> vào trong nhánh hiện tại.
+Ví dụ: Ta có 2 nhánh A và B, để hợp nhất nhánh B vào trong nhánh A ta làm như sau: Dùng lệnh git checkout A để chuyển sang nhánh A, sau đó chạy lệnh git merge B để hợp nhất nhánh B vào nhánh A.
+
+git branch -D ten_nhanh: Để xóa nhánh.

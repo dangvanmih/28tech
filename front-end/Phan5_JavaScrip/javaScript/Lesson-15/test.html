@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title> </title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div> <img src="sang.jpg" alt=""> </div>
+    <div>
+        <h1>Chế độ sáng</h1>
+    </div>
+    <div> <button onclick="doiCheDo()">Đổi chế độ</button> </div>
+    <script>
+        var troiSang = true;
+        function doiCheDo() {
+            if (troiSang == true) {
+                document.getElementsByTagName('body')[0].style = "background: #000";
+                document.getElementsByTagName('img')[0].src = "toi.jpg";
+                document.getElementsByTagName('h1')[0].innerHTML = "Chế độ tối";
+                document.getElementsByTagName('h1')[0].style = "color: #fff";
+                troiSang = false;
+            } else {
+                document.getElementsByTagName('body')[0].style = "background: #fff";
+                document.getElementsByTagName('img')[0].src = "sang.jpg";
+                document.getElementsByTagName('h1')[0].innerHTML = "Chế độ sáng";
+                document.getElementsByTagName('h1')[0].style = "color: #000";
+                troiSang = true;
+            }
+        } 
+    </script>
+</body>
+
+</html>

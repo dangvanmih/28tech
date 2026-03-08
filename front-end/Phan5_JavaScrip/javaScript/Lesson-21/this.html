@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // "use strict"
+        // function test() {
+        //     console.log(this);
+            
+        // }
+        // test();
+    </script>
+
+
+
+
+
+    <!-- <button id = "button">button</button> -->
+
+
+    <script>
+
+        // const button = document.querySelector("#button")
+        // button.addEventListener("click",function(){
+        //     console.log(this); // this ở đây là button đằng sau dấu .
+            
+        // })
+    </script>
+
+
+
+    <!-- 
+       <button id="button">button</button>
+        <ul id="menu">
+            <li>Mục 1</li>
+            <li>Mục 2</li>
+            <li>Mục 3</li>
+        </ul> -->
+
+
+    <script>
+        // const listItem = document.querySelectorAll("#menu li")
+        // console.log(listItem);
+        // [...listItem].forEach(function(item){
+        //     item.addEventListener("click",function(){
+        //         console.log(this);
+                
+        //     })
+        // })
+    </script>
+
+
+    <script>
+
+        let info = {
+            fullName: "Dang Van Minh",
+            age: 18,
+            email: "abc@gamil.com",
+            getFullName: function() {
+                console.log(info.fullName);
+                // console.log(this.fullName); từ khóa this trả về đối tượng trước dấu chấm đó là đối tượng info.
+            },
+            cccd:{
+                fullName: "Dang Minh",
+                address: "số 123 đường abc",
+                getInfoCccd: function() {
+                    console.log(this.fullName); ;// từ khóa this đang ở getInfoCccd nên this là đối tượg đứng trước dấu chấm là đối tượng cccd
+                    
+                }
+            }
+        };
+        info.getFullName();
+        info.cccd.getInfoCccd();
+    </script>
+
+    <script>
+        // từ khóa this không dùng được trong arrow function
+    </script>
+
+</body>
+</html>

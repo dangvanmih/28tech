@@ -1,0 +1,259 @@
+{
+  "book-room": [
+    {
+      "time": "14 giờ",
+      "fullName": "Đặng Văn Minh",
+      "phone": "0908723648",
+      "email": "tanminh1303204@gmail.com",
+      "gift": "Mũ",
+      "service": [
+        "Thuê xe máy",
+        "Thuê ô tô 7 chỗ",
+        "Thuê xe điện"
+      ],
+      "date": [
+        "21-01-2026",
+        "24-01-2026"
+      ],
+      "id": 1
+    },
+    {
+      "time": "07 giờ",
+      "fullName": "Trần Duy Phong",
+      "phone": "0908723648",
+      "email": "minh@gmail.com",
+      "gift": "Áo phông",
+      "service": [
+        "Thuê cano",
+        "Thuê xe điện",
+        "Thuê phao bơi"
+      ],
+      "date": [
+        "22-01-2026",
+        "25-02-2026"
+      ],
+      "id": 2
+    },
+    {
+      "time": "10 giờ",
+      "fullName": "Nguyễn  Đức Chính",
+      "phone": "0908723648",
+      "email": "minh@gmail.com",
+      "service": [
+        "Thuê xe máy",
+        "Thuê ô tô 7 chỗ"
+      ],
+      "gift": "Áo phông",
+      "date": [
+        "10-02-2026",
+        "12-03-2026"
+      ],
+      "id": 3
+    }
+  ],
+  "rooms": [
+    {
+      "name": "Phòng A1",
+      "typeRoom": true,
+      "quantityBed": 4,
+      "quantityPeople": 7,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "phòng chất lượng cao đầy đủ tiện nghi!",
+      "id": 1
+    },
+    {
+      "name": "Phòng A2",
+      "typeRoom": true,
+      "quantityBed": 2,
+      "quantityPeople": 4,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "phòng chất lượng cao đầy đủ tiện nghi!",
+      "id": 2
+    },
+    {
+      "name": "Phòng A3",
+      "quantityBed": 1,
+      "quantityPeople": 2,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Phòng đầy đủ tiện nghi!",
+      "id": 3
+    },
+    {
+      "status": true,
+      "name": "Phòng A4",
+      "quantityBed": 2,
+      "quantityPeople": 4,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đầy đủ tiện nghi",
+      "id": 4
+    },
+    {
+      "status": true,
+      "name": "Phòng A5",
+      "quantityBed": 2,
+      "quantityPeople": 4,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đầy đủ tiện nghi",
+      "id": 5
+    },
+    {
+      "status": false,
+      "name": "Phòng A6",
+      "quantityBed": 3,
+      "quantityPeople": 6,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đầy đủ tiện nghi chuẩn 5 sao có vịn luôn!",
+      "id": 6,
+      "typeRoom": true
+    },
+    {
+      "status": true,
+      "typeRoom": true,
+      "name": "Phòng A7",
+      "quantityBed": 3,
+      "quantityPeople": 3,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đầy đủ tiện nghi!",
+      "id": 7
+    },
+    {
+      "status": true,
+      "typeRoom": true,
+      "name": "Phòng A8",
+      "quantityBed": 3,
+      "quantityPeople": 3,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đầy đủ tiện nghi!",
+      "id": 8
+    },
+    {
+      "status": true,
+      "typeRoom": true,
+      "name": "Phòng A9",
+      "quantityBed": 3,
+      "quantityPeople": 3,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đầy đủ tiện nghi!",
+      "id": 9
+    },
+    {
+      "status": true,
+      "typeRoom": true,
+      "name": "Phòng A10",
+      "quantityBed": 3,
+      "quantityPeople": 3,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đầy đủ tiện nghi!",
+      "id": 10
+    },
+    {
+      "status": true,
+      "typeRoom": true,
+      "name": "Phòng B1",
+      "quantityBed": 3,
+      "quantityPeople": 3,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đầy đủ tiện nghi!",
+      "id": 11
+    },
+    {
+      "status": true,
+      "typeRoom": true,
+      "name": "Phòng B2",
+      "quantityBed": 3,
+      "quantityPeople": 3,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đầy đủ tiện nghi!",
+      "id": 12
+    },
+    {
+      "status": true,
+      "typeRoom": true,
+      "name": "Phòng B3",
+      "quantityBed": 2,
+      "quantityPeople": 4,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Phòng VIP chuẩn 5s",
+      "id": 13
+    },
+    {
+      "status": true,
+      "typeRoom": true,
+      "name": "Phòng B4",
+      "quantityBed": 2,
+      "quantityPeople": 4,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đủ tiện nghi",
+      "id": 14
+    },
+    {
+      "typeRoom": true,
+      "name": "Phòng C1",
+      "quantityBed": 2,
+      "quantityPeople": 4,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đủ chức năng!",
+      "id": 15
+    }
+  ]
+}
