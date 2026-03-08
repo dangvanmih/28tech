@@ -21,8 +21,8 @@ function Login () {
             setCookie("email", response[0].email,1);
             setCookie("token", response[0].token,1);
             //hết lưu cookie
-            dispatch(checkLogin(true))
-            navigate("/")
+            dispatch(checkLogin(true));
+            navigate("/");
         }
         else {
             alert("Tài khoản hoặc mật khẩu không chính xác!")

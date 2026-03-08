@@ -19,3 +19,4 @@ function Lamp() {
     )
 }
 export default Lamp;
+

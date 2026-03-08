@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { getListTopic } from "../../service/topicService";
 
 function Topic() {
+    
     const [topic, setTopic] = useState([]);
+
     useEffect(() => {
         const fetchApi = async () => {
             const response = await getListTopic();

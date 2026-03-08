@@ -42,7 +42,7 @@ function LayoutDefault() {
                     <Outlet />
                 </main>
                 <footer className="layout-default__footer">
-                    copyright @ 205 by 28tech
+                    Performed by Dang Van Minh
                 </footer>
             </div>
         </>

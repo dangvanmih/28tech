@@ -33,6 +33,22 @@
         "25-02-2026"
       ],
       "id": 2
+    },
+    {
+      "time": "10 giờ",
+      "fullName": "Nguyễn  Đức Chính",
+      "phone": "0908723648",
+      "email": "minh@gmail.com",
+      "service": [
+        "Thuê xe máy",
+        "Thuê ô tô 7 chỗ"
+      ],
+      "gift": "Áo phông",
+      "date": [
+        "10-02-2026",
+        "12-03-2026"
+      ],
+      "id": 3
     }
   ],
   "rooms": [
@@ -101,7 +117,7 @@
       "id": 5
     },
     {
-      "status": true,
+      "status": false,
       "name": "Phòng A6",
       "quantityBed": 3,
       "quantityPeople": 6,
@@ -110,8 +126,9 @@
         "Nóng lạnh",
         "Điều hòa"
       ],
-      "description": "Đầy đủ tiện nghi",
-      "id": 6
+      "description": "Đầy đủ tiện nghi chuẩn 5 sao có vịn luôn!",
+      "id": 6,
+      "typeRoom": true
     },
     {
       "status": true,
@@ -224,6 +241,19 @@
       ],
       "description": "Đủ tiện nghi",
       "id": 14
+    },
+    {
+      "typeRoom": true,
+      "name": "Phòng C1",
+      "quantityBed": 2,
+      "quantityPeople": 4,
+      "utils": [
+        "Wifi",
+        "Nóng lạnh",
+        "Điều hòa"
+      ],
+      "description": "Đủ chức năng!",
+      "id": 15
     }
   ]
 }
